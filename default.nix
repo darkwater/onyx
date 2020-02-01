@@ -7,6 +7,7 @@ let
   callPackage = pkgs.lib.callPackageWith (pkgs // self);
 
   self = {
-    factorio-headless = callPackage ./pkgs/games/factorio { };
+    brightctl         = callPackage ./pkgs/brightctl { };
+    factorio-headless = callPackage ./pkgs/factorio { };
   };
 in self

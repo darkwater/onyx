@@ -1,6 +1,7 @@
 {
   system ? builtins.currentSystem,
-  pkgs ? import <nixpkgs> { inherit system; }
+  pkgs ? import <nixpkgs> { inherit system; },
+  nonredistKey ? "",
 }:
 
 let
@@ -9,5 +10,6 @@ let
   self = {
     brightctl         = callPackage ./pkgs/brightctl { };
     factorio-headless = callPackage ./pkgs/factorio { };
+    starbound         = callPackage ./pkgs/starbound { inherit nonredistKey; };
   };
 in self

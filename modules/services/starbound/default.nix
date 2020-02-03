@@ -182,8 +182,8 @@ in {
 
     package = mkOption {
       type = types.package;
-      default = pkgs.onyx.starbound;
-      defaultText = "pkgs.onyx.starbound";
+      default = pkgs.starbound;
+      defaultText = "pkgs.starbound";
       description = ''
         The starbound package to use for running this game server.
       '';

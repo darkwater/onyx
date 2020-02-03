@@ -1,15 +1,16 @@
+{ nonredistKey ? "" }:
+
 {
-  system ? builtins.currentSystem,
-  pkgs ? import <nixpkgs> { inherit system; },
-  nonredistKey ? "",
-}:
-
-let
-  callPackage = pkgs.lib.callPackageWith (pkgs // self);
-
-  self = {
-    brightctl         = callPackage ./pkgs/brightctl { };
-    factorio-headless = callPackage ./pkgs/factorio { };
-    starbound         = callPackage ./pkgs/starbound { inherit nonredistKey; };
+  overlay = self: super: {
+    brightctl         = super.callPackage ./pkgs/brightctl { };
+    factorio-headless = super.callPackage ./pkgs/factorio { };
+    starbound         = super.callPackage ./pkgs/starbound { inherit nonredistKey; };
   };
-in self
+
+  modules = {
+    # :r!find modules -mindepth 2 -type d
+    imports = [
+      modules/services/starbound
+    ];
+  };
+}

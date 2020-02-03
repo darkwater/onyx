@@ -67,10 +67,14 @@ let
     queryServerPort = cfg.queryServer.port;
   } // cfg.extraConfig;
 
+  modDir = pkgs.linkFarm "starbound-server-mods" (
+    pkgs.lib.mapAttrsToList (name: path: { inherit name path; }) cfg.mods
+  );
+
   bootConfig = pkgs.writeText "sbinit.config" (builtins.toJSON {
     logFileBackups = 0;
     storageDirectory = cfg.dataDir;
-    assetDirectories = singleton (cfg.package.assets);
+    assetDirectories = [ cfg.package.assets modDir ];
     defaultConfiguration = serverConfig;
   });
 
@@ -186,6 +190,14 @@ in {
       defaultText = "pkgs.starbound";
       description = ''
         The starbound package to use for running this game server.
+      '';
+    };
+
+    mods = mkOption {
+      type = types.attrsOf types.package;
+      default = [];
+      description = ''
+        A list of folders to link to in the mods/ directory.
       '';
     };
 

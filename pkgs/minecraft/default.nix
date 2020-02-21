@@ -1,11 +1,11 @@
 { stdenv, fetchurl, jre }:
 stdenv.mkDerivation {
   pname = "minecraft-server";
-  version = "1.16-20w07a";
+  version = "1.16-20w08a";
 
   src = fetchurl {
-    url    = "https://launcher.mojang.com/v1/objects/3944965e1621a5ccbe99292479cc62e07bccd611/server.jar";
-    sha256 = "1xajd2hjrzv5jz9aqbsif46azib8vm2fwwk7958z5dvd5p7z1phn";
+    url    = "https://launcher.mojang.com/v1/objects/b46203f7cc23ec786710fdcf6f369935cf92dabb/server.jar";
+    sha256 = "0x4fm619fyn3lhyr29xaijlkhyfi4b5r7d5g8k9qld4kwz9mmhzy";
   };
 
   preferLocalBuild = true;

@@ -283,7 +283,7 @@ in stdenv.mkDerivation rec {
   version = "1.4.4";
 
   src = fetchurl {
-    url = "http://private.nix.dark.red/${nonredistKey}/starbound_${version}_linux.zip";
+    url = "https://private.nix.dark.red/${nonredistKey}/starbound_${version}_linux.zip";
     sha256 = "1x24662awr6a3j1lxawcqmn6xqwg7h5v4zvc3mzvxn52k9winmws";
   };
 

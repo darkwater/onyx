@@ -14,4 +14,10 @@
       modules/services/starbound
     ];
   };
+
+  sshKeys = {
+    dark = [
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzbL/PlKzLtFpKJM679rQWz41rhsmPhP/tqVKPQHJt7ribYAWSkXwLlgGj8ZmHXDrJdrcMETokebROlWR9rAN14IK+CVBk1elwLLpbTXUEyeUmLvYupPFnjMym6EuJYMuh06rhhHfDdUmGXfBSuiHlrEVvsByEdiSERIrJbJEgB8tpFT4EkFFIRuA6EhojJOOZJ/8s438QhVcA/lugPt4O0/7fOF0VpKyewxBLwCdpGEl3GwPSDL+x6llZZRH4F3ph3pPJ4dvZiqSc0q4Kk39OKms0bca+0+Nnyr5b+mNeGGQACrkyxAUJE1A9Mh5eg+iXnC2hBtzTdOoEV/FYL3k1 dark@novaember"
+    ];
+  };
 }

@@ -11,8 +11,12 @@
   modules = {
     # :r!find modules -mindepth 2 -type d
     imports = [
-      modules/services/starbound
+      ./modules/services/starbound
     ];
+  };
+
+  configs = {
+    shell = import ./configs/shell;
   };
 
   sshKeys = {

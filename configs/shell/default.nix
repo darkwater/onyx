@@ -57,6 +57,11 @@ in {
       bindkey "^F" fzf-file-widget
     '';
 
+    shellInit = ''
+      # disable newuser setup
+      zsh-newuser-install() { :; }
+    '';
+
     promptInit = ''
       autoload -U promptinit colors
       promptinit

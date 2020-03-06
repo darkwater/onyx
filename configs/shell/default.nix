@@ -166,4 +166,8 @@ in {
       --preview "(${bat} --color=always --style=header --paging=never {} 2> /dev/null || cat {} || ${exa} -lgFL2 --tree --color=always {} | head -200) 2> /dev/null"
     '';
   };
+
+  environment.systemPackages = with pkgs; [
+    bat exa git fzf
+  ];
 }

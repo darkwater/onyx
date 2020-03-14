@@ -42,3 +42,11 @@ bindkey "^V"      vi-cmd-mode
 source __FZF__/share/fzf/key-bindings.zsh
 bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget
+
+if groups | grep -q '\<wheel\>'; then
+    booted="$(readlink /run/booted-system/{initrd,kernel,kernel-modules})"
+    built="$(readlink /nix/var/nix/profiles/system/{initrd,kernel,kernel-modules})"
+    if [[ "$booted" != "$built" ]]; then
+        echo "Kernel upgraded; restart required"
+    fi
+fi

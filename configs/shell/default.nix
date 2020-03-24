@@ -35,7 +35,8 @@
       ll    = "exa -aallgF --group-directories-first";
       llr   = "exa -algFsnew";
       llt   = "exa -lgFL2 --tree";
-      nsn   = "nix-shell --command nvim";
+      nsn   = "nix-shell --run nvim";
+      nss   = "nix-shell --run zsh";
       scu   = "systemctl --user";
       ssc   = "sudo systemctl";
       s     = "ssh";

@@ -52,7 +52,7 @@ function onyx_zsh_prompt() {
             else
                 echo -n "%{$fg_bold[green]%}"
             fi
-            echo -n "[${ref#refs/heads/}]"
+            echo -n " [${ref#refs/heads/}]"
         fi
     fi
 

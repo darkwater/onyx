@@ -33,6 +33,7 @@ function onyx_zsh_prompt() {
     # user@host ~/dir
     echo -n "%{$fg_bold[green]%}%n@%m %{$fg_bold[blue]%}%~%{$reset_color%}"
 
+    # git repo info
     if timeout 0.01 git rev-parse --git-dir --is-bare-repository 2>&1 | grep -q 'false' 2>&1; then
         local ref="$(timeout 0.01 git symbolic-ref HEAD 2>/dev/null)"
         local attached=true
@@ -43,12 +44,15 @@ function onyx_zsh_prompt() {
 
         if [[ -n "$ref" ]]; then
             if [[ "$attached" = false ]]; then
-                echo -n "%{$fg_bold[magenta]%} [$ref]"
-            elif [[ "$(timeout 0.02 git status --porcelain 2>&1)" != "" ]]; then
-                echo -n "%{$fg_bold[yellow]%} [${ref#refs/heads/}]"
+                echo -n "%{$fg_bold[magenta]%}"
+            elif [[ "$(timeout 0.05 git status --porcelain 2>&1)" != "" ]]; then
+                echo -n "%{$fg_bold[yellow]%}"
+            elif [[ $? = 124 ]]; then # git status timed out
+                # default text color
             else
-                echo -n "%{$fg_bold[green]%} [${ref#refs/heads/}]"
+                echo -n "%{$fg_bold[green]%}"
             fi
+            echo -n "[${ref#refs/heads/}]"
         fi
     fi
 

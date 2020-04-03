@@ -6,6 +6,7 @@ colors
 onyx_zsh_prompt_in_ssh="$(pstree -p $$ | grep -q '[s]shd:' && echo true || echo false)"
 onyx_zsh_prompt_in_sudo="$([[ -n $SUDO_UID ]] && echo true || echo false)"
 onyx_zsh_prompt_in_nix_shell="$([[ -n $IN_NIX_SHELL ]] && echo true || echo false)"
+onyx_zsh_prompt_in_nix_shell_name="$name"
 
 function onyx_zsh_prompt() {
     # first line blank
@@ -15,11 +16,6 @@ function onyx_zsh_prompt() {
     # exit status of previous command
     echo -n "%(?.   .%{$fg_bold[red]%} ⨯ )"
 
-    # nix-shell indicator
-    if [[ "$onyx_zsh_prompt_in_nix_shell" = true ]]; then
-        echo -n "%{$fg_bold[blue]%}λ "
-    fi
-
     # ssh indicator
     if [[ "$onyx_zsh_prompt_in_ssh" = true ]]; then
         echo -n "%{$fg_bold[magenta]%}⇄ "
@@ -28,6 +24,11 @@ function onyx_zsh_prompt() {
     # sudo indicator
     if [[ "$onyx_zsh_prompt_in_sudo" = true ]]; then
         echo -n "%{$fg_bold[red]%}🡹 "
+    fi
+
+    # nix-shell indicator
+    if [[ "$onyx_zsh_prompt_in_nix_shell" = true ]]; then
+        echo -n "%{$fg_bold[blue]%}λ $onyx_zsh_prompt_in_nix_shell_name %{$reset_color%}"
     fi
 
     # user@host ~/dir

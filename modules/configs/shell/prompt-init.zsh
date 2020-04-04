@@ -66,3 +66,4 @@ function onyx_zsh_prompt() {
 prompt default
 setopt prompt_subst
 PS1='$(onyx_zsh_prompt)'
+PS2="%{%(!.$fg[red].$fg[cyan])%} | %{$reset_color%}"

@@ -9,6 +9,9 @@
     minecraft-server-snapshot = super.callPackage ./pkgs/minecraft {};
 
     nodePackages = (super.nodePackages or {}) // import ./pkgs/nodePackages {};
+
+    inherit (super.callPackage ./lib/extra-builders.nix {})
+      writeRubyScriptBin;
   };
 
   modules = {

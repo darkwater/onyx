@@ -12,6 +12,22 @@
 
     inherit (super.callPackage ./lib/extra-builders.nix {})
       writeRubyScriptBin;
+
+    # joins the contents of a sequence of derivations
+    overlay = layers: derivation {
+      inherit (builtins.head layers) name system;
+      inherit layers;
+
+      coreutils = self.coreutils;
+      builder = super.writeShellScript "overlay-builder" ''
+        PATH=$coreutils/bin
+        mkdir $out
+        for layer in $layers; do
+          cp -ar $layer/* $out/
+          chmod -R u+w $out/
+        done
+      '';
+    };
   };
 
   modules = {

@@ -30,8 +30,8 @@ stdenv.mkDerivation {
     src = fetchFromGitHub {
       owner = "darkwater";
       repo = "polybar";
-      rev = "3.4.0_1";
-      sha256 = "0h0kbn4sm935asbv4vaqwsyhs6yal2xkk73m2n0xlyb5ff4cd2mi";
+      rev = "3.4.0_2";
+      sha256 = "0038cmln4h1v9p819imkjnhxvzmxdqrd3zmc49m40p2qlsk0mssq";
       fetchSubmodules = true;
     };
 

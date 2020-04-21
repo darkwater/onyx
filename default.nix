@@ -5,8 +5,9 @@
     brightctl                 = super.callPackage ./pkgs/brightctl {};
     cargo-node                = super.callPackage ./pkgs/cargo-node {};
     factorio-headless         = super.callPackage ./pkgs/factorio {};
-    starbound                 = super.callPackage ./pkgs/starbound { inherit nonredistKey; };
     minecraft-server-snapshot = super.callPackage ./pkgs/minecraft {};
+    polybar                   = super.callPackage ./pkgs/polybar {};
+    starbound                 = super.callPackage ./pkgs/starbound { inherit nonredistKey; };
 
     nodePackages = (super.nodePackages or {}) // import ./pkgs/nodePackages {};
 

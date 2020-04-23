@@ -39,6 +39,18 @@ bindkey "^[[1~"   beginning-of-line
 bindkey "^[[3~"   delete-char
 bindkey "^V"      vi-cmd-mode
 
+# Press Alt+{`,1,2,3,...} to copy the last command plus {0,1,2,3,...} arguments
+bindkey -s '^[`' "^U!!0^I "
+bindkey -s "^[1" "^U!!0-1^I "
+bindkey -s "^[2" "^U!!0-2^I "
+bindkey -s "^[3" "^U!!0-3^I "
+bindkey -s "^[4" "^U!!0-4^I "
+bindkey -s "^[5" "^U!!0-5^I "
+bindkey -s "^[6" "^U!!0-6^I "
+bindkey -s "^[7" "^U!!0-7^I "
+bindkey -s "^[8" "^U!!0-8^I "
+bindkey -s "^[9" "^U!!0-9^I "
+
 source __FZF__/share/fzf/key-bindings.zsh
 bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget

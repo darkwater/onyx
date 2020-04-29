@@ -12,6 +12,8 @@ in {
       bat exa fzf git htop wget pstree
     ];
 
+    environment.pathsToLink == [ "/share/zsh" ];
+
     users.defaultUserShell = pkgs.zsh;
     programs.zsh = {
       enable = true;

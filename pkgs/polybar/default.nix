@@ -1,5 +1,5 @@
 { cairo, cmake, fetchFromGitHub, libXdmcp, libpthreadstubs, libxcb, pcre, pkgconfig
-, python2, stdenv, xcbproto, xcbutil, xcbutilcursor, xcbutilimage
+, python3, stdenv, xcbproto, xcbutil, xcbutilcursor, xcbutilimage
 , xcbutilrenderutil, xcbutilwm, xcbutilxrm, makeWrapper
 
 # optional packages-- override the variables ending in 'Support' to enable or
@@ -30,8 +30,8 @@ stdenv.mkDerivation {
     src = fetchFromGitHub {
       owner = "darkwater";
       repo = "polybar";
-      rev = "3.4.0_2";
-      sha256 = "0038cmln4h1v9p819imkjnhxvzmxdqrd3zmc49m40p2qlsk0mssq";
+      rev = "3.4.2_1";
+      sha256 = "09dfwr6091qs13zdhfhc1s9g6dhzxqpw594wyalwfkh49lh4vk3i";
       fetchSubmodules = true;
     };
 
@@ -49,7 +49,7 @@ stdenv.mkDerivation {
     };
 
     buildInputs = [
-      cairo libXdmcp libpthreadstubs libxcb pcre python2 xcbproto xcbutil
+      cairo libXdmcp libpthreadstubs libxcb pcre python3 xcbproto xcbutil
       xcbutilcursor xcbutilimage xcbutilrenderutil xcbutilwm xcbutilxrm
 
       (if alsaSupport   then alsaLib       else null)

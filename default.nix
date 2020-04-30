@@ -6,6 +6,7 @@
     cargo-node                = super.callPackage ./pkgs/cargo-node {};
     factorio-headless         = super.callPackage ./pkgs/factorio {};
     minecraft-server-snapshot = super.callPackage ./pkgs/minecraft {};
+    pjstore                   = super.callPackage ./pkgs/pjstore {};
     polybar                   = super.callPackage ./pkgs/polybar {};
     starbound                 = super.callPackage ./pkgs/starbound { inherit nonredistKey; };
 
@@ -34,6 +35,7 @@
   modules = {
     # :r!find ./modules -mindepth 2 -type d
     imports = [
+      ./modules/services/pjstore
       ./modules/services/starbound
       ./modules/configs/shell
     ];

@@ -6,6 +6,7 @@
     cargo-node                = super.callPackage ./pkgs/cargo-node {};
     factorio-headless         = super.callPackage ./pkgs/factorio {};
     minecraft-server-snapshot = super.callPackage ./pkgs/minecraft {};
+    mumble                    = (super.callPackage ./pkgs/mumble {}).mumble;
     pjstore                   = super.callPackage ./pkgs/pjstore {};
     polybar                   = super.callPackage ./pkgs/polybar {};
     starbound                 = super.callPackage ./pkgs/starbound { inherit nonredistKey; };

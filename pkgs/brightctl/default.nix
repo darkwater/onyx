@@ -9,8 +9,8 @@ rustPlatform.buildRustPackage rec {
     rev = "89298ab8c313689ca92bd9beae8856576f16a7c3";
   };
 
-  cargoSha256 = "0jacm96l1gw9nxwavqi1x4669cg6lzy9hr18zjpwlcyb3qkw9z7f";
-  verifyCargoDeps = true;
+  cargoSha256 = "1skvvagb18vdywh1cwx4qzjir40d04d8g8hv33rqq5vcba9b44l4";
+  verifyCargoDeps = false;
 
   meta = with stdenv.lib; {
     description = "Change display backlight brightness with fade";

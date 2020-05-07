@@ -56,9 +56,17 @@ bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget
 
 if groups | grep -q '\<wheel\>'; then
-    booted="$(readlink /run/booted-system/{initrd,kernel,kernel-modules})"
-    built="$(readlink /nix/var/nix/profiles/system/{initrd,kernel,kernel-modules})"
+    booted="$(readlink /run/booted-system/{kernel,kernel-modules})"
+    built="$(readlink /nix/var/nix/profiles/system/{kernel,kernel-modules})"
     if [[ "$booted" != "$built" ]]; then
         echo "Kernel upgraded; restart required"
+
+        from="$(file $(readlink /run/booted-system/kernel) | grep -oE 'version ([0-9.]+)')"
+        to="$(file $(readlink /nix/var/nix/profiles/system/kernel) | grep -oE 'version ([0-9.]+)')"
+        if [[ "$from" = "$to" ]]; then
+            echo "$from -> $to"
+        else
+            echo "$from (modules changed)"
+        fi
     fi
 fi

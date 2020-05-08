@@ -64,9 +64,9 @@ if groups | grep -q '\<wheel\>'; then
         from="$(file $(readlink /run/booted-system/kernel) | grep -oE 'version ([0-9.]+)')"
         to="$(file $(readlink /nix/var/nix/profiles/system/kernel) | grep -oE 'version ([0-9.]+)')"
         if [[ "$from" = "$to" ]]; then
-            echo "$from -> $to"
-        else
             echo "$from (modules changed)"
+        else
+            echo "$from -> $to"
         fi
     fi
 fi

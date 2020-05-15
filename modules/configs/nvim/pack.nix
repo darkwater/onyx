@@ -47,7 +47,7 @@ let
   };
 
   cocConfig = {
-    "coc.preferences.extensionUpdateCheck" = false;
+    "npm.binPath" = "${nodejs-12_x}/bin/npm";
     "rust-analyzer.serverPath" = "${rust-analyzer}/bin/rust-analyzer";
     languageserver = {
       rnix = {

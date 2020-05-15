@@ -1,5 +1,5 @@
 { lib, stdenv, linkFarm, writeShellScript, coreutils, fzf, yarn, nodejs-12_x,
-  neovim, writeText, callPackage }:
+  neovim, writeText, callPackage, rnix-lsp, nodePackages }:
 
 let
   unstable = import (builtins.fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
@@ -21,18 +21,18 @@ let
 
   mkEntryFromDrv = drv: { name = drv.name; path = drv; };
 
-  github = path: { ref ? "HEAD" }: let
+  github = path: { ref ? "HEAD", patches ? [] }: let
     name = builtins.baseNameOf path;
     generate-docs = "${neovim}/bin/nvim"
       + " --headless --noplugin --clean"
       + " -c 'helptags doc/' -c 'q'";
   in mkEntryFromDrv (stdenv.mkDerivation {
-    inherit name;
+    inherit name patches;
     src = builtins.fetchGit {
       inherit name ref;
       url = "https://github.com/${path}";
     };
-    phases = [ "unpackPhase" "buildPhase" "installPhase" ];
+    phases = [ "unpackPhase" "patchPhase" "buildPhase" "installPhase" ];
     buildPhase = ''[[ -d doc/ ]] && ${generate-docs} || true'';
     installPhase = ''cp -ax . $out'';
   });
@@ -46,6 +46,24 @@ let
     path = "${npm-plugins.${name}}/lib/node_modules/${name}";
   };
 
+  cocConfig = {
+    "coc.preferences.extensionUpdateCheck" = false;
+    "rust-analyzer.serverPath" = "${rust-analyzer}/bin/rust-analyzer";
+    languageserver = {
+      rnix = {
+        command = "${rnix-lsp}/bin/rnix-lsp";
+        filetypes = [ "nix" ];
+        rootPatterns = [ "default.nix" ];
+      };
+      bash = {
+        command = "${nodePackages.bash-language-server}/bin/bash-language-server";
+        args = [ "start" ];
+        filetypes = [ "sh" ];
+        ignoredRootPaths = [ "~" ];
+      };
+    };
+  };
+
   plugins = [
     {
       # must be loaded before most plugins
@@ -56,11 +74,10 @@ let
         phases = [ "unpackPhase" "buildPhase" "installPhase" ];
         installPhase = ''cp -ax . $out'';
 
+        # TODO: bundle npm somehow so :CocInstall etc. work
         generatedVim = writeText "generated.vim" ''
           let g:coc_node_path = "${nodejs-12_x}/bin/node"
-          let g:coc_user_config = {
-          \   "rust-analyzer.serverPath": "${rust-analyzer}/bin/rust-analyzer",
-          \ }
+          let g:coc_user_config = json_decode('${builtins.toJSON cocConfig}')
         '';
 
         buildPhase = ''
@@ -70,6 +87,7 @@ let
     }
 
     # fzf base plugin (not :Files etc. but :FZF itself)
+    # TODO: bundle the binary?
     { name = "fzf"; path = "${fzf}/share/vim-plugins/fzf"; }
 
     # coc
@@ -77,9 +95,11 @@ let
     (npm "coc-actions")
     (npm "coc-explorer")
     (npm "coc-git")
-    (npm "coc-json")
 
     # coc language stuff
+    (npm "coc-json")
+    (npm "coc-rust-analyzer")
+    # TODO: configure the following
     (npm "coc-angular")
     (npm "coc-clangd") # or ccls?
     (npm "coc-cmake")
@@ -88,7 +108,6 @@ let
     (npm "coc-java")
     (npm "coc-jedi") # alternatives exist
     (npm "coc-phpls")
-    (npm "coc-rust-analyzer")
     (npm "coc-solargraph")
     (npm "coc-tsserver")
     (npm "coc-vimlsp")
@@ -97,6 +116,9 @@ let
 
     # ui
     (github "junegunn/fzf.vim" {})
+    (github "liuchengxu/vim-which-key" {
+      patches = [ ./which-key-quote.patch ];
+    })
 
     # syntax
     (github "cespare/vim-toml" {})

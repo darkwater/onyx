@@ -54,11 +54,13 @@ set iskeyword=@,48-57,_,192-255
 set laststatus=2
 set listchars=extends:+,nbsp:%,precedes:+,tab:┃·,trail:░
 set mouse=a
+set nrformats=bin,hex,octal,alpha
 set numberwidth=6
 set pastetoggle=<F11>
-set pumblend=12
+set pumblend=8
 set switchbuf=useopen
 set textwidth=80
+set tildeop
 set timeoutlen=800
 set ttimeoutlen=5
 set updatetime=400
@@ -66,7 +68,7 @@ set viewoptions=cursor
 " set wildchar=<Tab>
 " set wildmode=longest
 set wildoptions=pum,tagfile
-set winblend=12
+set winblend=8
 set winminwidth=8
 set winwidth=80
 

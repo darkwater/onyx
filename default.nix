@@ -34,11 +34,12 @@
   };
 
   modules = {
-    # :r!find ./modules -mindepth 2 -type d
+    # :r!find ./modules -mindepth 2 -maxdepth 2 -type d
     imports = [
-      ./modules/services/pjstore
       ./modules/services/starbound
+      ./modules/services/pjstore
       ./modules/configs/shell
+      ./modules/configs/nvim
     ];
   };
 

@@ -320,7 +320,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("NonText",       s:purple,     "",           "none")
     call <SID>X("EndOfBuffer",   s:shade01,    "",           "none")
     call <SID>X("Whitespace",    s:selection,  "",           "none")
-    call <SID>X("SpecialKey",    s:selection,  "",           "none")
+    call <SID>X("SpecialKey",    s:brightcyan, s:line,       "none")
     call <SID>X("Search",        s:accent,     s:black,      "none")
     call <SID>X("VertSplit",     "",           s:shade02,    "none")
     call <SID>X("Title",         s:comment,    "",           "")

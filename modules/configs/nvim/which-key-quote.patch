@@ -1,0 +1,31 @@
+diff --git a/autoload/which_key.vim b/autoload/which_key.vim
+index d0b5edf..2bbac9a 100644
+--- a/autoload/which_key.vim
++++ b/autoload/which_key.vim
+@@ -165,8 +165,10 @@ endfunction
+ 
+ function! s:has_children(input) abort
+   " TODO: escape properly, E114: Missing quote: "^\"
+-  if a:input ==# '\'
+-    let group = map(keys(s:runtime), 'v:val =~# "^\'.a:input.'"')
++  if a:input ==# '"'
++    let group = map(keys(s:runtime), 'v:val =~# "^\""')
++  elseif a:input ==# '\'
++    let group = map(keys(s:runtime), 'v:val =~# "^\\"')
+   else
+     let group = map(keys(s:runtime), 'v:val =~# "^'.a:input.'"')
+   endif
+diff --git a/autoload/which_key/window.vim b/autoload/which_key/window.vim
+index 89a3745..bd04e13 100644
+--- a/autoload/which_key/window.vim
++++ b/autoload/which_key/window.vim
+@@ -131,6 +131,9 @@ function! s:show_floating_win(rows, layout) abort
+     silent let s:floating_winid = nvim_open_win(s:bufnr, v:true, opts)
+     call s:hide_cursor()
+     call setbufvar(s:bufnr, '&ft', 'which_key')
++    call setbufvar(s:bufnr, '&lcs', 'tab:^I')
++    call setbufvar(s:bufnr, '&list', 1)
++    call setbufvar(s:bufnr, '&ts', 2)
+     call setwinvar(s:floating_winid, '&winhl', 'Normal:WhichKeyFloating')
+   else
+     call nvim_win_set_config(s:floating_winid, opts)

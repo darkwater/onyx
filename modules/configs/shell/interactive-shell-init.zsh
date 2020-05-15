@@ -8,6 +8,22 @@ setopt notify
 setopt prompt_subst
 unsetopt beep
 
+if groups | grep -q '\<wheel\>'; then
+    booted="$(readlink /run/booted-system/{kernel,kernel-modules})"
+    built="$(readlink /nix/var/nix/profiles/system/{kernel,kernel-modules})"
+    if [[ "$booted" != "$built" ]]; then
+        echo "Kernel upgraded; restart required"
+
+        from="$(file $(readlink /run/booted-system/kernel) | grep -oE 'version ([0-9.]+)')"
+        to="$(file $(readlink /nix/var/nix/profiles/system/kernel) | grep -oE 'version ([0-9.]+)')"
+        if [[ "$from" = "$to" ]]; then
+            echo "$from (modules changed)"
+        else
+            echo "$from -> $to"
+        fi
+    fi
+fi
+
 zstyle ":completion:*" auto-description "specify: %d"
 zstyle ":completion:*" completer _expand _complete _correct _approximate
 zstyle ":completion:*" format $'\e[38;5;247m => %d'
@@ -55,18 +71,5 @@ source __FZF__/share/fzf/key-bindings.zsh
 bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget
 
-if groups | grep -q '\<wheel\>'; then
-    booted="$(readlink /run/booted-system/{kernel,kernel-modules})"
-    built="$(readlink /nix/var/nix/profiles/system/{kernel,kernel-modules})"
-    if [[ "$booted" != "$built" ]]; then
-        echo "Kernel upgraded; restart required"
-
-        from="$(file $(readlink /run/booted-system/kernel) | grep -oE 'version ([0-9.]+)')"
-        to="$(file $(readlink /nix/var/nix/profiles/system/kernel) | grep -oE 'version ([0-9.]+)')"
-        if [[ "$from" = "$to" ]]; then
-            echo "$from (modules changed)"
-        else
-            echo "$from -> $to"
-        fi
-    fi
-fi
+function nsn() { nix-shell --run "nvim $@" }
+function nss() { nix-shell --run "zsh $@" }

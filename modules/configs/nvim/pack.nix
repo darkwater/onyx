@@ -1,54 +1,13 @@
-{ lib, stdenv, linkFarm, writeShellScript, coreutils, fzf, yarn, nodejs-12_x,
-  neovim, writeText, callPackage, rnix-lsp, nodePackages }:
+{ stdenv, linkFarm, writeShellScript, coreutils, fzf, nodejs-12_x, writeText,
+  callPackage, rnix-lsp, nodePackages }:
 
 let
-  unstable = import (builtins.fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
-
-  rust-analyzer-pkgs = builtins.fetchurl {
-    url = "https://raw.githubusercontent.com/NixOS/nixpkgs/3ea54e69727b0195f25a2be909ae821223621a64/"
-        + "pkgs/development/tools/rust/rust-analyzer/generic.nix";
-    sha256 = "1ji6z6g0pzddh68yznbm2qk37g8sw2v60qsbhv1135sldbwf0y8z";
-  };
-
-  rust-analyzer = callPackage rust-analyzer-pkgs rec {
-    inherit (unstable) rustPlatform;
-    rev = "2020-05-04";
-    version = "unstable-${rev}";
-    sha256 = "09q35wcs3ffkzbpx45z07xzmsiwkyjsjnn2d3697vv3iv4lg8i02";
-    cargoSha256 = "1ncn54q8maf8890pk141901vrsijd7z4bkkchzl4sl3xd5h0a08c";
-    doCheck = false;
-  };
-
-  mkEntryFromDrv = drv: { name = drv.name; path = drv; };
-
-  github = path: { ref ? "HEAD", patches ? [] }: let
-    name = builtins.baseNameOf path;
-    generate-docs = "${neovim}/bin/nvim"
-      + " --headless --noplugin --clean"
-      + " -c 'helptags doc/' -c 'q'";
-  in mkEntryFromDrv (stdenv.mkDerivation {
-    inherit name patches;
-    src = builtins.fetchGit {
-      inherit name ref;
-      url = "https://github.com/${path}";
-    };
-    phases = [ "unpackPhase" "patchPhase" "buildPhase" "installPhase" ];
-    buildPhase = ''[[ -d doc/ ]] && ${generate-docs} || true'';
-    installPhase = ''cp -ax . $out'';
-  });
-
-  npm-plugins = (import ./npm-plugins {});
-
-  # to add npm plugins, first add them to npm-plugins/npm-plugins.json
-  # run `node2nix -i npm-plugins.json` in npm-plugins/ after changes
-  npm = name: {
-    inherit name;
-    path = "${npm-plugins.${name}}/lib/node_modules/${name}";
-  };
+  langservers = callPackage ./langservers.nix {};
+  plugin-sources = callPackage ./plugin-sources.nix {};
 
   cocConfig = {
     "npm.binPath" = "${nodejs-12_x}/bin/npm";
-    "rust-analyzer.serverPath" = "${rust-analyzer}/bin/rust-analyzer";
+    "rust-analyzer.serverPath" = "${langservers.rust-analyzer}/bin/rust-analyzer";
     languageserver = {
       rnix = {
         command = "${rnix-lsp}/bin/rnix-lsp";
@@ -64,7 +23,7 @@ let
     };
   };
 
-  plugins = [
+  plugins = with plugin-sources; [
     {
       # must be loaded before most plugins
       name = "00_onyx";
@@ -106,7 +65,7 @@ let
     (npm "coc-css")
     (npm "coc-html")
     (npm "coc-java")
-    (npm "coc-jedi") # alternatives exist
+    # (npm "coc-jedi") # alternatives exist
     (npm "coc-phpls")
     (npm "coc-solargraph")
     (npm "coc-tsserver")

@@ -66,6 +66,7 @@ bindkey -s "^[6" "^U!!0-6^I "
 bindkey -s "^[7" "^U!!0-7^I "
 bindkey -s "^[8" "^U!!0-8^I "
 bindkey -s "^[9" "^U!!0-9^I "
+bindkey -s "^[0" "^U!!0^I "
 
 source __FZF__/share/fzf/key-bindings.zsh
 bindkey "^T" transpose-chars

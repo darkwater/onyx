@@ -37,13 +37,16 @@ in {
         highlighters = [ "main" "brackets" "pattern" ];
       };
 
-      shellAliases = {
+      shellAliases = rec {
         dd    = "dd status=progress";
         g     = "git";
         grep  = "grep --color=auto";
         ll    = "exa -aallgF --group-directories-first";
         llr   = "exa -algFsnew";
         llt   = "exa -lgFL2 --tree";
+        sll   = "sudo ${ll}";
+        sllr  = "sudo ${llr}";
+        sllt  = "sudo ${llt}";
         scu   = "systemctl --user";
         ssc   = "sudo systemctl";
         s     = "ssh";

@@ -68,6 +68,14 @@ bindkey -s "^[8" "^U!!0-8^I "
 bindkey -s "^[9" "^U!!0-9^I "
 bindkey -s "^[0" "^U!!0^I "
 
+# like ^W but for path segments
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+}
+zle -N backward-kill-dir
+bindkey '^[w' backward-kill-dir
+
 source __FZF__/share/fzf/key-bindings.zsh
 bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget

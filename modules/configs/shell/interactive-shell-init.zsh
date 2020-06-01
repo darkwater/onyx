@@ -70,7 +70,7 @@ bindkey -s "^[0" "^U!!0^I "
 
 # like ^W but for path segments
 backward-kill-dir () {
-    local WORDCHARS=${WORDCHARS/\/}
+    local WORDCHARS="\\ ${WORDCHARS/\/}"
     zle backward-kill-word
 }
 zle -N backward-kill-dir

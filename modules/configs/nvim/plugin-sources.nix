@@ -15,9 +15,19 @@ in {
       inherit name ref;
       url = "https://github.com/${repo}";
     };
-    phases = [ "unpackPhase" "patchPhase" "buildPhase" "installPhase" ];
+    buildInputs = with pkgs; [ python3 perl bash ruby ];
+    phases = [
+      "unpackPhase" "patchPhase" "buildPhase" "installPhase"
+    ];
     buildPhase = ''[[ -d doc/ ]] && ${generate-docs} || true'';
-    installPhase = ''cp -ax . $out'';
+    installPhase = ''
+      cp -ax . $out
+      patchShebangs $out
+      if grep -R '^#!' $out | grep -v '#!/nix/store' >&2; then
+        echo -e "\e[1;31merror\e[0m: shebangs found leading outside nix store!" >&2
+        exit 1
+      fi
+    '';
   });
 
   # to add npm plugins, first add them to npm-plugins/npm-plugins.json

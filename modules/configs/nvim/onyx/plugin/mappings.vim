@@ -254,6 +254,8 @@ call s:map_key("gd", "lsp-goto-definition", "<silent>", ":<C-u>call CocAction('j
 call s:map_key("gR", "lsp-references",      "<silent>", ":<C-u>call CocAction('jumpReferences')<CR>")
 call s:map_key("gr", "lsp-rename",          "<silent>", ":<C-u>call CocAction('rename')<CR>")
 
-call s:map_key("\<C-space>", "open-terminal", "<silent>", ":<C-u>FloatermToggle<CR>")
+" let g:which_key_map["^␣"] = ["\<C-Space>", "open-terminal"]
+" which-key can't really do ctrl-space
+nnoremap <C-Space> :<C-u>FloatermToggle<CR>
 inoremap <C-Space> <C-o>:FloatermToggle<CR>
 tnoremap <C-Space> <C-\><C-n>:FloatermToggle<CR>

@@ -253,3 +253,7 @@ call s:map_key("ga", "lsp-action",          "<silent>", ":<C-u>CocCommand action
 call s:map_key("gd", "lsp-goto-definition", "<silent>", ":<C-u>call CocAction('jumpDefinition')<CR>")
 call s:map_key("gR", "lsp-references",      "<silent>", ":<C-u>call CocAction('jumpReferences')<CR>")
 call s:map_key("gr", "lsp-rename",          "<silent>", ":<C-u>call CocAction('rename')<CR>")
+
+call s:map_key("\<C-space>", "open-terminal", "<silent>", ":<C-u>FloatermToggle<CR>")
+inoremap <C-Space> <C-o>:FloatermToggle<CR>
+tnoremap <C-Space> <C-\><C-n>:FloatermToggle<CR>

@@ -76,6 +76,7 @@ let
     # ui
     (github "junegunn/fzf.vim" {})
     (github "yuki-ycino/fzf-preview.vim" {})
+    (github "voldikss/vim-floaterm" {})
     (github "liuchengxu/vim-which-key" {
       patches = [ ./which-key-quote.patch ];
     })

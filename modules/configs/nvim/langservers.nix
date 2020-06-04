@@ -11,10 +11,10 @@ let
 in {
   rust-analyzer = callPackage rust-analyzer-pkgs rec {
     inherit (unstable) rustPlatform;
-    rev = "2020-05-11";
+    rev = "2020-06-01";
     version = "unstable-${rev}";
-    sha256 = "07sm3kqqva2jw41hb3smv3h3czf8f5m3rsrmb633psb1rgbsvmii";
-    cargoSha256 = "1x1nkaf10lfa9xhkvk2rsq7865d9waxw0i4bg5kwq8kz7n9bqm90";
+    sha256 = "0chm47mrd4hybhvzn4cndq2ck0mj948mm181p1i1j1w0ms7zk1fg";
+    cargoSha256 = "0yaz50f7hirlcs8bxc5dh170lch9l1gscwayan71k3pz23wkvlzs";
     doCheck = false;
   };
 }

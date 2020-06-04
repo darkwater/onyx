@@ -208,9 +208,9 @@ let g:which_key_map['"'] = {
 nnoremap Y y$
 let g:which_key_map.Y = ["y$", "yank-to-eol"]
 
-" inject surround descriptions
+" special keys
 let g:which_key_map.y.s = s:motion_submenu("ys", "surround")
-"let g:which_key_map.c.s = s:motion_submenu("cs", "change-surrounding")
+let g:which_key_map.q[":"] = ["q:", "ex-history"]
 
 " which-key settings
 let g:which_key_fallback_to_native_key = 1

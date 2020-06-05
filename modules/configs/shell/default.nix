@@ -18,6 +18,7 @@ in {
     programs.zsh = {
       enable = true;
       enableCompletion = true;
+      histSize = 100000;
 
       interactiveShellInit =
         builtins.replaceStrings [ "__FZF__" ] [ (toString pkgs.fzf) ] (

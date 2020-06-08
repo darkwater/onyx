@@ -49,8 +49,8 @@ function onyx_zsh_prompt() {
             else
                 case "$(timeout 0.02 git status --porcelain || echo timeout)" in
                     *timeout) echo -n "%{\e[38;5;240m%}";;
-                    "")       echo -n "%{$fg_bold[yellow]%}";;
-                    *)        echo -n "%{$fg_bold[green]%}";;
+                    "")       echo -n "%{$fg_bold[green]%}";;
+                    *)        echo -n "%{$fg_bold[yellow]%}";;
                 esac
             fi
             echo -n " [${ref#refs/heads/}]"

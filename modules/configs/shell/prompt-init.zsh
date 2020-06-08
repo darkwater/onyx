@@ -39,19 +39,19 @@ function onyx_zsh_prompt() {
         local ref="$(timeout 0.01 git symbolic-ref HEAD 2>/dev/null)"
         local attached=true
         if [[ -z "$ref" ]]; then
-            ref="$(timeout 0.01 git describe --always HEAD 2>/dev/null)"
+            ref="$(timeout 0.01 git describe --always HEAD 2>/dev/null || echo '<unknown>')"
             attached=false
         fi
 
         if [[ -n "$ref" ]]; then
             if [[ "$attached" = false ]]; then
                 echo -n "%{$fg_bold[magenta]%}"
-            elif [[ "$(timeout 0.05 git status --porcelain 2>&1)" != "" ]]; then
-                echo -n "%{$fg_bold[yellow]%}"
-            elif [[ $? = 124 ]]; then # git status timed out
-                # default text color
             else
-                echo -n "%{$fg_bold[green]%}"
+                case "$(timeout 0.02 git status --porcelain || echo timeout)" in
+                    *timeout) echo -n "%{\e[38;5;240m%}";;
+                    "")       echo -n "%{$fg_bold[yellow]%}";;
+                    *)        echo -n "%{$fg_bold[green]%}";;
+                esac
             fi
             echo -n " [${ref#refs/heads/}]"
         fi

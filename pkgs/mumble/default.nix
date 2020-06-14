@@ -1,5 +1,5 @@
 { stdenv, fetchurl, fetchFromGitHub, fetchpatch, pkgconfig, qt5
-, avahi-compat, boost, libopus, libsndfile, protobuf, speex, libcap
+, avahi, boost, libopus, libsndfile, protobuf, speex, libcap
 , alsaLib, python
 , rnnoise
 , jackSupport ? false, libjack2 ? null
@@ -20,12 +20,13 @@ let
     pname = overrides.type;
     version = source.version;
 
-    patches = (source.patches or []);
+    patches = (source.patches or [])
+      ++ [ ./more-dbus-methods.patch ];
 
     nativeBuildInputs = [ pkgconfig python qt5.qmake ]
       ++ (overrides.nativeBuildInputs or [ ]);
 
-    buildInputs = [ boost protobuf avahi-compat ]
+    buildInputs = [ boost protobuf avahi ]
       ++ (overrides.buildInputs or [ ]);
 
     qmakeFlags = [
@@ -127,14 +128,14 @@ let
   } source;
 
   source = rec {
-    version = "1.3.0";
+    version = "1.3.1";
 
     # Needs submodules
     src = fetchFromGitHub {
-      owner = "darkwater";
+      owner = "mumble-voip";
       repo = "mumble";
-      rev = "53e126675085f3fe9ff962af2ee8a2a0e56d8421";
-      sha256 = "0q4g99j87bj74ylsmii59m7pn193dw5qmxv35ls4590lcijznyqr";
+      rev = version;
+      sha256 = "1xsla9g7xbq6xniwcsjik5hbjh0xahv44qh4z9hjn7p70b8vgnwc";
       fetchSubmodules = true;
     };
   };

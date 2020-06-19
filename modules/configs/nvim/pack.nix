@@ -59,15 +59,15 @@ let
     (npm "coc-json")
     (npm "coc-rust-analyzer")
     # TODO: configure the following
-    (npm "coc-angular")
-    (npm "coc-clangd") # or ccls?
-    (npm "coc-cmake")
-    (npm "coc-css")
-    (npm "coc-html")
-    (npm "coc-java")
+    # (npm "coc-angular")
+    # (npm "coc-clangd") # or ccls?
+    # (npm "coc-cmake")
+    # (npm "coc-css")
+    # (npm "coc-html")
+    # (npm "coc-java")
     # (npm "coc-jedi") # alternatives exist
-    (npm "coc-phpls")
-    (npm "coc-solargraph")
+    # (npm "coc-phpls")
+    # (npm "coc-solargraph")
     (npm "coc-tsserver")
     (npm "coc-vimlsp")
     (npm "coc-xml")

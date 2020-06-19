@@ -372,7 +372,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("CocHighlightText",  s:shade07,      s:shade025, "bold,underline")
     call <SID>X("CocHighlightRead",  s:shade07,      s:shade025, "bold")
     call <SID>X("CocHighlightWrite", s:shade07,      s:shade025, "bold")
-    call <SID>X("CocFloating",       s:foreground,   s:shade10,  "italic")
+    call <SID>X("CocFloating",       s:foreground,   s:darkblue,  "italic")
     call <SID>X("CocErrorFloat",     s:brightred,    "",         "italic")
     call <SID>X("CocErrorSign",      s:brightred,    "",         "bold")
     call <SID>X("CocWarningFloat",   s:brightyellow, "",         "italic")

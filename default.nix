@@ -1,4 +1,4 @@
-{ nonredistKey ? "" }:
+{}:
 
 {
   overlay = self: super: {
@@ -15,7 +15,6 @@
     }).mumble;
     pjstore                   = super.callPackage ./pkgs/pjstore {};
     polybar                   = super.callPackage ./pkgs/polybar {};
-    starbound                 = super.callPackage ./pkgs/starbound { inherit nonredistKey; };
 
     nodePackages = (super.nodePackages or {}) // import ./pkgs/nodePackages {};
 
@@ -42,7 +41,6 @@
   modules = {
     # :r!find ./modules -mindepth 2 -maxdepth 2 -type d
     imports = [
-      ./modules/services/starbound
       ./modules/services/pjstore
       ./modules/configs/shell
       ./modules/configs/nvim

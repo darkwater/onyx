@@ -7,7 +7,7 @@
     factorio-headless         = super.callPackage ./pkgs/factorio {};
     minecraft-server-snapshot = super.callPackage ./pkgs/minecraft {};
     mumble                    = (super.callPackages ./pkgs/mumble {
-      avahi = self.avahi.override {
+      avahi = super.avahi.override {
         withLibdnssdCompat = true;
       };
       jackSupport = true;

@@ -1,1 +1,1 @@
-(import ./default.nix {}).overlay {} (import <nixpkgs> {})
+(import ./default.nix {}).overlay {} (import <nixpkgs> { allowUnfree = true; })

@@ -5,7 +5,7 @@ rustPlatform.buildRustPackage rec {
   version = "0.1.0";
 
   src = builtins.fetchGit {
-    url = https://github.com/flovangh/cargo-node;
+    url = "https://github.com/flovangh/cargo-node";
     rev = "fff95338120067e16064df7c6009cdd993f5fc93";
   };
 

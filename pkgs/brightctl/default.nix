@@ -5,7 +5,7 @@ rustPlatform.buildRustPackage rec {
   version = "0.1.0";
 
   src = builtins.fetchGit {
-    url = https://github.com/darkwater/brightctl;
+    url = "https://github.com/darkwater/brightctl";
     rev = "89298ab8c313689ca92bd9beae8856576f16a7c3";
   };
 

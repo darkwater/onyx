@@ -4,7 +4,7 @@ colors
 
 # wraping a single character in brackets to not match its own cmdline
 onyx_zsh_prompt_in_ssh="$(pstree -p $$ | grep -q '[s]shd:' && echo true || echo false)"
-onyx_zsh_prompt_in_sudo="$([[ -n $SUDO_UID ]] && echo true || echo false)"
+onyx_zsh_prompt_in_sudo="$(pstree -p $$ | grep -q '[s]udo:' && echo true || echo false)"
 onyx_zsh_prompt_in_nix_shell="$([[ -n $IN_NIX_SHELL ]] && echo true || echo false)"
 onyx_zsh_prompt_in_nix_shell_name="$name"
 

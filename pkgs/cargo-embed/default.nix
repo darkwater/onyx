@@ -6,9 +6,10 @@ rustPlatform.buildRustPackage {
 
   src = builtins.fetchGit {
     url = "https://github.com/probe-rs/cargo-embed";
+    rev = "8520b9484a0177797ea9ef4e97f8ed4b1be5d2d3";
   };
 
   buildInputs = [ pkg-config libusb1 rustfmt ];
 
-  cargoSha256 = "1mkk7w6dlmw49kpq5109mghmrgfj7vpkbxc9f6jpcksrq01abwzm";
+  cargoSha256 = "0qh7spp8imp5gmrsfak657bxhd89q8dgwlxgxw4x2dkc5kbpq7n8";
 }

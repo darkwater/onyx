@@ -37,7 +37,7 @@ rustPlatform.buildRustPackage {
     description = "An experimental modular compiler frontend for the Rust language";
     homepage = "https://github.com/rust-analyzer/rust-analyzer";
     license = with licenses; [ mit asl20 ];
-    maintainers = with maintainers; [ oxalica ];
+    maintainers = with maintainers; []; # oxalica (not in stable nixpkgs yet)
     platforms = platforms.all;
   };
 }

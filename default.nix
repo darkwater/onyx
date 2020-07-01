@@ -25,7 +25,7 @@
     }).mumble;
 
     nodePackages = super.nodePackages // import ./pkgs/nodePackages { pkgs = self; };
-    vimPlugins   = super.vimPlugins // self.callPackage ./pkgs/vimPlugins { inherit nodePackages; };
+    vimPlugins   = super.vimPlugins // self.callPackage ./pkgs/vimPlugins {};
 
     inherit (self.callPackage ./lib/extra-builders.nix {}) writeRubyScriptBin;
   };
@@ -35,6 +35,13 @@
       ./modules/configs/nvim
       ./modules/configs/shell
       ./modules/services/pjstore
+    ];
+  };
+
+  home-modules = {
+    imports = [
+      ./modules/configs/nvim/home.nix
+      # ./modules/configs/shell/home.nix
     ];
   };
 

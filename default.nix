@@ -1,34 +1,40 @@
 {}:
 
 {
-  overlay = self: super: {
-    brightctl                 = super.callPackage ./pkgs/brightctl {};
-    cargo-embed               = super.callPackage ./pkgs/cargo-embed {};
-    cargo-node                = super.callPackage ./pkgs/cargo-node {};
-    factorio-headless         = super.callPackage ./pkgs/factorio {};
-    minecraft-server-snapshot = super.callPackage ./pkgs/minecraft {};
-    mumble                    = (super.callPackages ./pkgs/mumble {
-      avahi = super.avahi.override {
+  # we use unstable for nvim plugins and rust-analyzer
+  # see https://hydra.nixos.org/job/nixpkgs/trunk/unstable/all for which commits succeed
+  unstable = import (builtins.fetchTarball https://github.com/nixos/nixpkgs/archive/c323751a71e.tar.gz) {};
+
+  overlay = self: super: rec {
+    brightctl                 = self.callPackage ./pkgs/brightctl {};
+    cargo-embed               = self.callPackage ./pkgs/cargo-embed {};
+    cargo-node                = self.callPackage ./pkgs/cargo-node {};
+    factorio-headless         = self.callPackage ./pkgs/factorio {};
+    minecraft-server-snapshot = self.callPackage ./pkgs/minecraft {};
+    onyx-nvim-pack            = self.callPackage ./pkgs/onyx-nvim-pack {};
+    pjstore                   = self.callPackage ./pkgs/pjstore {};
+    polybar                   = self.callPackage ./pkgs/polybar {};
+    rust-analyzer-unwrapped   = self.callPackage ./pkgs/rust-analyzer {};
+
+    mumble = (self.callPackages ./pkgs/mumble {
+      avahi = self.avahi.override {
         withLibdnssdCompat = true;
       };
       jackSupport = true;
       pulseSupport = true;
     }).mumble;
-    pjstore                   = super.callPackage ./pkgs/pjstore {};
-    polybar                   = super.callPackage ./pkgs/polybar {};
 
-    nodePackages = (super.nodePackages or {}) // import ./pkgs/nodePackages {};
+    nodePackages = super.nodePackages // import ./pkgs/nodePackages { pkgs = self; };
+    vimPlugins   = super.vimPlugins // self.callPackage ./pkgs/vimPlugins { inherit nodePackages; };
 
-    inherit (super.callPackage ./lib/extra-builders.nix {})
-      writeRubyScriptBin;
+    inherit (self.callPackage ./lib/extra-builders.nix {}) writeRubyScriptBin;
   };
 
   modules = {
-    # :r!find ./modules -mindepth 2 -maxdepth 2 -type d
     imports = [
-      ./modules/services/pjstore
-      ./modules/configs/shell
       ./modules/configs/nvim
+      ./modules/configs/shell
+      ./modules/services/pjstore
     ];
   };
 

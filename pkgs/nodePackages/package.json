@@ -1,21 +1,17 @@
 [
+    "wasm2js",
+
     "coc-actions",
     "coc-explorer",
-    "coc-git",
-    "coc-json",
 
     "coc-angular",
     "coc-clangd",
     "coc-cmake",
-    "coc-css",
-    "coc-html",
-    "coc-java",
     "coc-jedi",
     "coc-phpls",
     "coc-rust-analyzer",
-    "coc-solargraph",
-    "coc-tsserver",
     "coc-vimlsp",
     "coc-xml",
-    "coc-yaml"
+
+    "bash-language-server"
 ]

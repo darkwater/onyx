@@ -24,8 +24,8 @@
       pulseSupport = true;
     }).mumble;
 
-    nodePackages = super.nodePackages // import ./pkgs/nodePackages { pkgs = self; };
-    vimPlugins   = super.vimPlugins // self.callPackage ./pkgs/vimPlugins {};
+    nodePackages = (super.nodePackages or {}) // import ./pkgs/nodePackages { pkgs = self; };
+    vimPlugins   = (super.vimPlugins or {}) // self.callPackage ./pkgs/vimPlugins {};
 
     inherit (self.callPackage ./lib/extra-builders.nix {}) writeRubyScriptBin;
   };

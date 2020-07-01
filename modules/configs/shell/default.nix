@@ -20,10 +20,10 @@ in {
       enableCompletion = true;
       histSize = 100000;
 
-      interactiveShellInit =
-        builtins.replaceStrings [ "__FZF__" ] [ (toString pkgs.fzf) ] (
-          builtins.readFile ./interactive-shell-init.zsh
-        );
+      interactiveShellInit = pkgs.substituteAll {
+        src = ./interactive-shell-init.zsh;
+        inherit (pkgs) fzf;
+      };
 
       promptInit =
         builtins.readFile ./prompt-init.zsh;

@@ -9,8 +9,6 @@
     brightctl                 = self.callPackage ./pkgs/brightctl {};
     cargo-embed               = self.callPackage ./pkgs/cargo-embed {};
     cargo-node                = self.callPackage ./pkgs/cargo-node {};
-    factorio-headless         = self.callPackage ./pkgs/factorio {};
-    minecraft-server-snapshot = self.callPackage ./pkgs/minecraft {};
     onyx-nvim-pack            = self.callPackage ./pkgs/onyx-nvim-pack {};
     pjstore                   = self.callPackage ./pkgs/pjstore {};
     polybar                   = self.callPackage ./pkgs/polybar {};

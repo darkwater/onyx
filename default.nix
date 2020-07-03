@@ -38,6 +38,7 @@
 
   home-modules = {
     imports = [
+      ./modules/configs/git/home.nix
       ./modules/configs/nvim/home.nix
       # ./modules/configs/shell/home.nix
     ];

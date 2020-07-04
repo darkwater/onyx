@@ -13,6 +13,7 @@
     pjstore                   = self.callPackage ./pkgs/pjstore {};
     polybar                   = self.callPackage ./pkgs/polybar {};
     rust-analyzer-unwrapped   = self.callPackage ./pkgs/rust-analyzer {};
+    unvpk                     = self.callPackage ./pkgs/unvpk {};
 
     mumble = (self.callPackages ./pkgs/mumble {
       avahi = self.avahi.override {

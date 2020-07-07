@@ -20,10 +20,10 @@ in {
       enableCompletion = true;
       histSize = 100000;
 
-      interactiveShellInit = pkgs.substituteAll {
+      interactiveShellInit = builtins.readFile (pkgs.substituteAll {
         src = ./interactive-shell-init.zsh;
         inherit (pkgs) fzf;
-      };
+      });
 
       promptInit =
         builtins.readFile ./prompt-init.zsh;

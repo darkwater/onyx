@@ -65,6 +65,7 @@ in {
     coc-yaml
     fzf-vim
     vim-commentary
+    vim-easy-align
     vim-nix
     vim-repeat
     vim-surround

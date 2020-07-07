@@ -46,6 +46,7 @@ let
     "i3config-vim"
     "ron-vim"
     "vim-commentary"
+    "vim-easy-align"
     "vim-floaterm"
     "vim-nix"
     "vim-repeat"

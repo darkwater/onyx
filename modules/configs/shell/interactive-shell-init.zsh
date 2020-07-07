@@ -76,7 +76,7 @@ backward-kill-dir () {
 zle -N backward-kill-dir
 bindkey '^[w' backward-kill-dir
 
-source @FZF@/share/fzf/key-bindings.zsh
+source @fzf@/share/fzf/key-bindings.zsh
 bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget
 

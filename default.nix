@@ -9,6 +9,7 @@
     brightctl                 = self.callPackage ./pkgs/brightctl {};
     cargo-embed               = self.callPackage ./pkgs/cargo-embed {};
     cargo-node                = self.callPackage ./pkgs/cargo-node {};
+    crc16                     = self.callPackage ./pkgs/crc16 {};
     onyx-nvim-pack            = self.callPackage ./pkgs/onyx-nvim-pack {};
     pjstore                   = self.callPackage ./pkgs/pjstore {};
     polybar                   = self.callPackage ./pkgs/polybar {};

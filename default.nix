@@ -1,7 +1,7 @@
 {}:
 
 {
-  # we use unstable for nvim plugins and rust-analyzer
+  # we use unstable for nvim plugins
   # see https://hydra.nixos.org/job/nixpkgs/trunk/unstable/all for which commits succeed
   unstable = import (builtins.fetchTarball https://github.com/nixos/nixpkgs/archive/c323751a71e.tar.gz) {};
 
@@ -13,7 +13,6 @@
     onyx-nvim-pack            = self.callPackage ./pkgs/onyx-nvim-pack {};
     pjstore                   = self.callPackage ./pkgs/pjstore {};
     polybar                   = self.callPackage ./pkgs/polybar {};
-    rust-analyzer-unwrapped   = self.callPackage ./pkgs/rust-analyzer {};
     unvpk                     = self.callPackage ./pkgs/unvpk {};
 
     mumble = (self.callPackages ./pkgs/mumble {

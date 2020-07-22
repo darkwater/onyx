@@ -60,7 +60,7 @@ let
 
   cocConfig = {
     "npm.binPath" = "${nodejs-12_x}/bin/npm";
-    "rust-analyzer.serverPath" = "${rust-analyzer-unwrapped}/bin/rust-analyzer";
+    "rust-analyzer.serverPath" = "${rust-analyzer}/bin/rust-analyzer";
     languageserver = {
       rnix = {
         command = "${rnix-lsp}/bin/rnix-lsp";

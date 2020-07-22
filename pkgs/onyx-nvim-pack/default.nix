@@ -1,7 +1,10 @@
 { stdenv, lib, linkFarm, writeShellScript, coreutils, fzf, nodejs-12_x, writeText, callPackage,
-  rnix-lsp, nodePackages, rust-analyzer-unwrapped, runCommand, vimPlugins, }:
+  rnix-lsp, nodePackages, runCommand, vimPlugins, }:
 
 let
+  inherit ((import ../../. {}).unstable)
+    rust-analyzer;
+
   plugins = [
     {
       # must be loaded before most plugins

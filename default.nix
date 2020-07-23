@@ -3,7 +3,9 @@
 {
   # we use unstable for nvim plugins
   # see https://hydra.nixos.org/job/nixpkgs/trunk/unstable/all for which commits succeed
-  unstable = import (builtins.fetchTarball https://github.com/nixos/nixpkgs/archive/b8c367a7bd0.tar.gz) {};
+  unstable = import (builtins.fetchTarball https://github.com/nixos/nixpkgs/archive/b8c367a7bd0.tar.gz) {
+    config.allowUnfree = true;
+  };
 
   overlay = self: super: rec {
     brightctl                 = self.callPackage ./pkgs/brightctl {};

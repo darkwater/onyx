@@ -13,6 +13,7 @@
     cargo-node                = self.callPackage ./pkgs/cargo-node {};
     crc16                     = self.callPackage ./pkgs/crc16 {};
     onyx-nvim-pack            = self.callPackage ./pkgs/onyx-nvim-pack {};
+    openocd-rtt               = self.callPackage ./pkgs/openocd-rtt {};
     pjstore                   = self.callPackage ./pkgs/pjstore {};
     polybar                   = self.callPackage ./pkgs/polybar {};
     unvpk                     = self.callPackage ./pkgs/unvpk {};

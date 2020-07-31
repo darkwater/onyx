@@ -7,9 +7,10 @@ stdenv.mkDerivation rec {
 
   src = fetchgit {
     leaveDotGit = true;
+    fetchSubmodules = true;
     url = "https://git.code.sf.net/p/openocd/code";
     rev = "07df04b3b1eca3b920a9b4b411883d9d44fd06e5";
-    sha256 = "11pcjlz2rrbgy25vzpf03hc4cp82k25y1icnh9mkw4rkghvr68s2";
+    sha256 = "0r24p6qi5rjcxaysrmlz7w837lsyyc11qw24x4a79vd5hlwgr4dv";
   };
 
   patches = [
@@ -20,7 +21,7 @@ stdenv.mkDerivation rec {
   buildInputs = [ libftdi1 libusb1 hidapi ];
 
   preConfigure = ''
-    ./bootstrap
+    ./bootstrap nosubmodule
   '';
 
   configureFlags = [

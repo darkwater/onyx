@@ -1,9 +1,8 @@
 {}:
 
 {
-  # we use unstable for nvim plugins
-  # see https://hydra.nixos.org/job/nixpkgs/trunk/unstable/all for which commits succeed
-  unstable = import (builtins.fetchTarball https://github.com/nixos/nixpkgs/archive/b8c367a7bd0.tar.gz) {
+  # it's probably a good idea to use the same revision of unstable everywhere
+  unstable = import (builtins.fetchTarball "https://github.com/nixos/nixpkgs/archive/b8c367a7bd0.tar.gz") {
     config.allowUnfree = true;
   };
 

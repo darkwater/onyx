@@ -51,6 +51,7 @@ let
     "vim-commentary"
     "vim-easy-align"
     "vim-floaterm"
+    "vim-fugitive"
     "vim-nix"
     "vim-repeat"
     "vim-surround"

@@ -4,22 +4,22 @@
 
 let
   sources = {
-    "@angular/language-server-0.1000.4" = {
+    "@angular/language-server-0.1000.7" = {
       name = "_at_angular_slash_language-server";
       packageName = "@angular/language-server";
-      version = "0.1000.4";
+      version = "0.1000.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@angular/language-server/-/language-server-0.1000.4.tgz";
-        sha512 = "UGwS7+M04U6qSSrq/q9EzeRyRZXtbdAkEqgbb2rrdACa1QCvUDA6y7ONAmM7FdAWtRmRMjJwFHz6LnTXhgk5kQ==";
+        url = "https://registry.npmjs.org/@angular/language-server/-/language-server-0.1000.7.tgz";
+        sha512 = "ubltzdwh+AH+9DQkBPjzXL89yMth2qfCDD6dCjXERYOzP1mYQqBciBu1QvBC4AmG9/HuckFn3io7pWtj7rNjtg==";
       };
     };
-    "@angular/language-service-10.0.4" = {
+    "@angular/language-service-10.0.7" = {
       name = "_at_angular_slash_language-service";
       packageName = "@angular/language-service";
-      version = "10.0.4";
+      version = "10.0.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@angular/language-service/-/language-service-10.0.4.tgz";
-        sha512 = "m5dWL1Lg9M4kDA/kjpdyKsrx9arbIebrgsSzr/QG7cPon6SQMRs9ECZBM+3GalkQghrPO1mLgnrUwFBUH2QNPw==";
+        url = "https://registry.npmjs.org/@angular/language-service/-/language-service-10.0.7.tgz";
+        sha512 = "iD1It0GjQyn+1KKVh0IMTtrRw/HI0cXq69KYju2LXckngzSK0GXg+yvPP4sizwSBhJW2xeepV8qGkpGo9M+Wyw==";
       };
     };
     "@bmewburn/js-beautify-1.10.4" = {
@@ -229,22 +229,22 @@ let
         sha512 = "5tXH6Bx/kNGd3MgffdmP4dy2Z+G4eaXw0SE81Tq3BNadtnMR5/ySMzX4SLEzHJzSmPNn4HIdpQsBvXMUykr58w==";
       };
     };
-    "@types/node-13.13.14" = {
+    "@types/node-13.13.15" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "13.13.14";
+      version = "13.13.15";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-13.13.14.tgz";
-        sha512 = "Az3QsOt1U/K1pbCQ0TXGELTuTkPLOiFIQf3ILzbOyo0FqgV9SxRnxbxM5QlAveERZMHpZY+7u3Jz2tKyl+yg6g==";
+        url = "https://registry.npmjs.org/@types/node/-/node-13.13.15.tgz";
+        sha512 = "kwbcs0jySLxzLsa2nWUAGOd/s21WU1jebrEdtzhsj1D4Yps1EOuyI1Qcu+FD56dL7NRNIJtDDjcqIG22NwkgLw==";
       };
     };
-    "abab-2.0.3" = {
+    "abab-2.0.4" = {
       name = "abab";
       packageName = "abab";
-      version = "2.0.3";
+      version = "2.0.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/abab/-/abab-2.0.3.tgz";
-        sha512 = "tsFzPpcttalNjFBCFMqsKYQcWxxen1pgJR56by//QwvJc4/OUS3kPOOttx2tSIfjsylB0pYu7f5D3K1RCxUnUg==";
+        url = "https://registry.npmjs.org/abab/-/abab-2.0.4.tgz";
+        sha512 = "Eu9ELJWCz/c1e9gTiCY+FceWxcqzjYEbqMgtndnuSqZSUCOL73TWNK2mHfIj4Cw2E/ongOp+JISVNCmovt2KYQ==";
       };
     };
     "abbrev-1.1.1" = {
@@ -328,13 +328,13 @@ let
         sha512 = "4K0cK3L1hsqk9xIb2z9vs/XU+PGJZ9PNpJRDS9YLzmNdX6jmVPfamLvTJr0aDAusnHyCHO6MjzlkAsgtqp9teA==";
       };
     };
-    "applicationinsights-1.8.2" = {
+    "applicationinsights-1.8.5" = {
       name = "applicationinsights";
       packageName = "applicationinsights";
-      version = "1.8.2";
+      version = "1.8.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/applicationinsights/-/applicationinsights-1.8.2.tgz";
-        sha512 = "m0G9oBBnKG39mzM++heTjMPbl09Fx3mInOKbmTchsVxMhNeCZ8BSfBS/HwS4CcL7MXhmH4Td1QYVGWo/he+sHw==";
+        url = "https://registry.npmjs.org/applicationinsights/-/applicationinsights-1.8.5.tgz";
+        sha512 = "pv0qdk9phD20e3+ftCyJzfRxCVpqHxBf77SrdJWFSbBC7S9fdzPpAZyb6j4onfeKCEEAxKEajNCRNDF1pH5SJA==";
       };
     };
     "array-equal-1.0.0" = {
@@ -697,13 +697,13 @@ let
         sha512 = "6eb9YRrimz8oTr5+JDzGmSYnXy5V7YnK5y/hd8AUDK1MssHjQKm9LlD6NSrHx4vMDF3+e/spI2hmWTviElgWZA==";
       };
     };
-    "diagnostic-channel-publishers-0.4.0" = {
+    "diagnostic-channel-publishers-0.4.1" = {
       name = "diagnostic-channel-publishers";
       packageName = "diagnostic-channel-publishers";
-      version = "0.4.0";
+      version = "0.4.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/diagnostic-channel-publishers/-/diagnostic-channel-publishers-0.4.0.tgz";
-        sha512 = "f6LtD+qukpsjKfckvb0LbYdnCTiiDY3s9ahEH7fInvwq/n6FtoB+HqCB0wR+emZmA/+vwzK0XRe2k1c4gEPmyg==";
+        url = "https://registry.npmjs.org/diagnostic-channel-publishers/-/diagnostic-channel-publishers-0.4.1.tgz";
+        sha512 = "NpZ7IOVUfea/kAx4+ub4NIYZyRCSymjXM5BZxnThs3ul9gAKqjm7J8QDDQW3Ecuo2XxjNLoWLeKmrPUWKNZaYw==";
       };
     };
     "diff-3.5.0" = {
@@ -1084,13 +1084,13 @@ let
         sha1 = "a94c2224ebcac04782a0d9035521f24735b7ec92";
       };
     };
-    "har-validator-5.1.3" = {
+    "har-validator-5.1.5" = {
       name = "har-validator";
       packageName = "har-validator";
-      version = "5.1.3";
+      version = "5.1.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/har-validator/-/har-validator-5.1.3.tgz";
-        sha512 = "sNvOCzEQNr/qrvJgc3UG/kD4QtlHycrzwS+6mfTrrSq97BvaYcPZZI1ZSqGSPR73Cxn4LKTD4PttRwfU7jWq5g==";
+        url = "https://registry.npmjs.org/har-validator/-/har-validator-5.1.5.tgz";
+        sha512 = "nmT2T0lljbxdQZfspsno9hgrG3Uir6Ks5afism62poxqBM6sDnMEuPmzTq8XN0OEwqKLLdh1jQI3qyE66Nzb3w==";
       };
     };
     "has-flag-3.0.0" = {
@@ -1255,13 +1255,13 @@ let
         sha512 = "EnhDnR+e+oYud8xaNIgxjXHn3hkckcRh7DShECNfTu8zaXLm7qn1wTCOwyA3MFog+x1gUAc43iWMcEUQ//Qwyw==";
       };
     };
-    "is-docker-2.0.0" = {
+    "is-docker-2.1.1" = {
       name = "is-docker";
       packageName = "is-docker";
-      version = "2.0.0";
+      version = "2.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/is-docker/-/is-docker-2.0.0.tgz";
-        sha512 = "pJEdRugimx4fBMra5z2/5iRdZ63OhYV0vr0Dwm5+xtW4D1FvRkB8hamMIhnWfyJeDdyr/aa7BDyNbtG38VxgoQ==";
+        url = "https://registry.npmjs.org/is-docker/-/is-docker-2.1.1.tgz";
+        sha512 = "ZOoqiXfEwtGknTiuDEy8pN2CfE3TxMHprvNer1mXiqwkOT77Rw3YVrUQ52EqAOU3QAWDQ+bQdx7HJzrv7LS2Hw==";
       };
     };
     "is-extglob-2.1.1" = {
@@ -2299,13 +2299,13 @@ let
         sha512 = "vJNj6IlN7IJPdMavlQa1KoFB3Ihn06q1AiN3ZFI/HfzPNzbKZWPPuiU+XkpNOfGU5k15m4r80nxNPlM7wcc0wg==";
       };
     };
-    "vscode-css-languageservice-4.3.0" = {
+    "vscode-css-languageservice-4.3.1" = {
       name = "vscode-css-languageservice";
       packageName = "vscode-css-languageservice";
-      version = "4.3.0";
+      version = "4.3.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-4.3.0.tgz";
-        sha512 = "BkQAMz4oVHjr0oOAz5PdeE72txlLQK7NIwzmclfr+b6fj6I8POwB+VoXvrZLTbWt9hWRgfvgiQRkh5JwrjPJ5A==";
+        url = "https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-4.3.1.tgz";
+        sha512 = "Vdz2cyoTP2tLWikhFdouK8dAQ3gVhLPxsFkIscM30Quh6rd/YejTeZEYC/W+b0iKumHYebDeo1GUFbf0ptySRw==";
       };
     };
     "vscode-html-languageservice-3.0.4-next.15" = {
@@ -2626,10 +2626,10 @@ in
   coc-explorer = nodeEnv.buildNodePackage {
     name = "coc-explorer";
     packageName = "coc-explorer";
-    version = "0.7.19";
+    version = "0.7.26";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.7.19.tgz";
-      sha512 = "G2HUCcxzUs4tu89Nist6rOvozgjrp/Ubf7N8YlDfVAiyJ7tHI94HH43IFoZ17bVOmjwkQ5m0VYUcBe9d/Gqi7w==";
+      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.7.26.tgz";
+      sha512 = "pTNU+GCq5KrsdAnwjbIDJQyF1DtIenuMVPupLgpQkIz1PBRbygMDji4UPryn3kY3xEeyQM3KHLGIHZRHXqOsFg==";
     };
     dependencies = [
       sources."@sindresorhus/df-2.1.0"
@@ -2659,7 +2659,7 @@ in
       sources."indent-string-4.0.0"
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
-      sources."is-docker-2.0.0"
+      sources."is-docker-2.1.1"
       sources."is-path-inside-3.0.2"
       sources."is-wsl-2.2.0"
       sources."isexe-2.0.0"
@@ -2719,14 +2719,14 @@ in
   coc-angular = nodeEnv.buildNodePackage {
     name = "coc-angular";
     packageName = "coc-angular";
-    version = "0.1000.4";
+    version = "0.1000.7";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-angular/-/coc-angular-0.1000.4.tgz";
-      sha512 = "PhEiYQLvodA+SGAeo/vDLd3I39BjqpQKfBlZ3bkSynhoOBUDB2TFrEk/v+VSZ/4Nc7zJdAILNljJTniSsgohkA==";
+      url = "https://registry.npmjs.org/coc-angular/-/coc-angular-0.1000.7.tgz";
+      sha512 = "ywqk+bWLMHUFVJ4JLoCCmZpWkWdkVL2pgcnbef0XlF4udIj0i47YfL8zNHDaUWwZ8QFqPv+RM3xKr6eWc5WM0A==";
     };
     dependencies = [
-      sources."@angular/language-server-0.1000.4"
-      sources."@angular/language-service-10.0.4"
+      sources."@angular/language-server-0.1000.7"
+      sources."@angular/language-service-10.0.7"
       sources."typescript-3.9.7"
       sources."vscode-jsonrpc-5.0.1"
       sources."vscode-languageserver-6.1.1"
@@ -2746,10 +2746,10 @@ in
   coc-clangd = nodeEnv.buildNodePackage {
     name = "coc-clangd";
     packageName = "coc-clangd";
-    version = "0.4.11";
+    version = "0.4.13";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-clangd/-/coc-clangd-0.4.11.tgz";
-      sha512 = "qcYSqEosAVAQpB1bKHmE6lglN+8Oi1IXKmmxltJBQTRCHv6Kf/JcV8mq3Z0ChIFWdu+rQ2wJaKu4Y8O6zttIJQ==";
+      url = "https://registry.npmjs.org/coc-clangd/-/coc-clangd-0.4.13.tgz";
+      sha512 = "RiB7jNkjZgf0vvWPr4dzUjFLRgG9VHD95iYU9BP515YLnLeJ3d1IvoJdBpvG0Moq+yE3zN+BGtkzqpdLd+C61g==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -2764,15 +2764,15 @@ in
   coc-cmake = nodeEnv.buildNodePackage {
     name = "coc-cmake";
     packageName = "coc-cmake";
-    version = "0.0.1";
+    version = "0.0.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-cmake/-/coc-cmake-0.0.1.tgz";
-      sha512 = "wNkkJ3rFzzUDoJU6T0+u036OusqbaudkEwpiRoI/B2mlNnrjHsFEuGXbX9NRDMUlVfTS5V2Ko1kKks88L8h8gw==";
+      url = "https://registry.npmjs.org/coc-cmake/-/coc-cmake-0.0.2.tgz";
+      sha512 = "Yy58ra9dpLekzHrox2JAekK/kXsNVNlVls0kQzJuz13SoTTWK974gT+PJjlr5bNFuR1VYs2IlF7QEk8WlG6StQ==";
     };
     buildInputs = globalBuildInputs;
     meta = {
       description = "coc.nvim extension for cmake language";
-      homepage = "https://github/voldikss/coc-cmake#readme";
+      homepage = "https://github.com/voldikss/coc-cmake#readme";
       license = "MIT";
     };
     production = true;
@@ -2782,10 +2782,10 @@ in
   coc-jedi = nodeEnv.buildNodePackage {
     name = "coc-jedi";
     packageName = "coc-jedi";
-    version = "0.14.0";
+    version = "0.14.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-jedi/-/coc-jedi-0.14.0.tgz";
-      sha512 = "wSo9nyYVJOOWvmcvSJhXCwgw6vFzb1VaZmf8UyUi7PWqRczosTo8IeNEqzRvtmQ+JTGa1oLgshDVHbLeJObE2w==";
+      url = "https://registry.npmjs.org/coc-jedi/-/coc-jedi-0.14.1.tgz";
+      sha512 = "8S44bQpJE6lRZe7DRO/HDyWjdEk7+WdWoQ3LZND29spuWF7FBOY/rSzmAKMjYZDVAOzdihkQMZvgheZ3UdcbBA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -2799,10 +2799,10 @@ in
   coc-phpls = nodeEnv.buildNodePackage {
     name = "coc-phpls";
     packageName = "coc-phpls";
-    version = "2.1.9";
+    version = "2.1.10";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-phpls/-/coc-phpls-2.1.9.tgz";
-      sha512 = "l96ryBLDPd90F70Uh99ko+1swc/o5O/ls1LSGiG8R3uUHyokDxsD3HuEk4u1Jmf/FRvciKwS946PTHGYJk8QtA==";
+      url = "https://registry.npmjs.org/coc-phpls/-/coc-phpls-2.1.10.tgz";
+      sha512 = "wM33HzEyZdsZmhBXhIIBffuJ1iFAd/lNLf7awzeX4+Sd/T8ovIJcS39jii70Y0RET/OGJeqrUKIGZgr5fetNYw==";
     };
     dependencies = [
       sources."@bmewburn/js-beautify-1.10.4"
@@ -2825,11 +2825,11 @@ in
       sources."@protobufjs/utf8-1.1.0"
       sources."@tootallnate/once-1.1.2"
       sources."@types/long-4.0.1"
-      sources."@types/node-13.13.14"
+      sources."@types/node-13.13.15"
       sources."abbrev-1.1.1"
       sources."agent-base-6.0.1"
       sources."ajv-6.12.3"
-      sources."applicationinsights-1.8.2"
+      sources."applicationinsights-1.8.5"
       sources."asn1-0.2.4"
       sources."assert-plus-1.0.0"
       sources."async-hook-jl-1.7.6"
@@ -2868,7 +2868,7 @@ in
           sources."semver-5.7.1"
         ];
       })
-      sources."diagnostic-channel-publishers-0.4.0"
+      sources."diagnostic-channel-publishers-0.4.1"
       sources."diff-3.5.0"
       (sources."dom-serializer-0.2.2" // {
         dependencies = [
@@ -2908,7 +2908,7 @@ in
       sources."graceful-fs-4.2.4"
       sources."growl-1.10.5"
       sources."har-schema-2.0.0"
-      sources."har-validator-5.1.3"
+      sources."har-validator-5.1.5"
       sources."has-flag-3.0.0"
       sources."he-1.2.0"
       sources."html-to-text-5.1.1"
@@ -3004,7 +3004,7 @@ in
           sources."semver-5.7.1"
         ];
       })
-      (sources."vscode-css-languageservice-4.3.0" // {
+      (sources."vscode-css-languageservice-4.3.1" // {
         dependencies = [
           sources."vscode-languageserver-types-3.16.0-next.2"
         ];
@@ -3049,10 +3049,10 @@ in
   coc-rust-analyzer = nodeEnv.buildNodePackage {
     name = "coc-rust-analyzer";
     packageName = "coc-rust-analyzer";
-    version = "0.7.13";
+    version = "0.7.14";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.7.13.tgz";
-      sha512 = "bt3lTGwEKy5wkBBeHu715hIZUsCaCdKk53qmnIWFXBym6I7SOSdlGDVni/M0be+3ereup9CkTDZVvEoMq1eksg==";
+      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.7.14.tgz";
+      sha512 = "nTS7mcGTbo+5bLdhod4GOVTODb/wDdnKgVNLpU75q//kwQuf0psUPp3t/XFcYXxzbskMwAcaEXyC27cGek7+Cw==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -3067,10 +3067,10 @@ in
   coc-vimlsp = nodeEnv.buildNodePackage {
     name = "coc-vimlsp";
     packageName = "coc-vimlsp";
-    version = "0.9.1";
+    version = "0.10.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-vimlsp/-/coc-vimlsp-0.9.1.tgz";
-      sha512 = "sITDXNWTKYJ+V4aH0Yix9mcEbapiYVVD128Qlt5dmYvTL0+4TaJeDDTv8bQx1ALvRAWJx7KH264203v7MDkktQ==";
+      url = "https://registry.npmjs.org/coc-vimlsp/-/coc-vimlsp-0.10.1.tgz";
+      sha512 = "aULk12RYDFJnVvK0m++E0SxMICwEQorv5ogRwpeUKyNQJs4CcPdEYcjanHk631nzp3CQK7doM63fcj8SYJGg/Q==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -3109,7 +3109,7 @@ in
       sha512 = "IS1Ix7qyRq7GTMXqhHUF44yY89i/1Ucn5KFLimEfDpwU1f3GvbV9VnDpqpG6kedJsl2LigEthSnoVlzaOwgt0g==";
     };
     dependencies = [
-      sources."abab-2.0.3"
+      sources."abab-2.0.4"
       sources."acorn-5.7.4"
       (sources."acorn-globals-4.3.4" // {
         dependencies = [
@@ -3161,7 +3161,7 @@ in
       sources."getpass-0.1.7"
       sources."glob-7.1.6"
       sources."har-schema-2.0.0"
-      sources."har-validator-5.1.3"
+      sources."har-validator-5.1.5"
       sources."html-encoding-sniffer-1.0.2"
       sources."http-signature-1.2.0"
       sources."iconv-lite-0.4.24"

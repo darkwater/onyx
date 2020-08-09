@@ -33,6 +33,38 @@ in {
           fi
       '')
 
+      (pkgs.writeShellScriptBin "git-l" ''
+        LOG_HASH="%C(always,yellow)%h%C(always,reset)"
+        LOG_RELATIVE_TIME="%C(always,magenta)%ar##ago%C(always,reset)"
+        LOG_AUTHOR="%C(always,blue)%an%C(always,reset)"
+        LOG_SUBJECT="%s"
+        LOG_REFS="%C(always,red)%d%C(always,reset)"
+        LOG_FORMAT="}$LOG_HASH}$LOG_RELATIVE_TIME}%G?##gpgsig  $LOG_AUTHOR}$LOG_REFS $LOG_SUBJECT"
+
+        pretty_git_format() {
+          sed -Ee '
+            s/ago##ago//
+            s/(, [[:digit:]]+ mo)nths?/\1/
+            s/([G])##gpgsig/\x1b[32m\1\x1b[0m/
+            s/([UXYRE])##gpgsig/\x1b[33m\1\x1b[0m/
+            s/([A-Z])##gpgsig/\x1b[31m\1\x1b[0m/
+          ' |
+          column -s '}' -t
+        }
+
+        git_page_maybe() {
+          # Page only if we're asked to.
+          if [ -n "$GIT_NO_PAGER" ]; then
+            cat
+          else
+            # Page only if needed.
+            less --quit-if-one-screen --no-init --RAW-CONTROL-CHARS --chop-long-lines
+          fi
+        }
+
+        git log --graph --pretty="tformat:${LOG_FORMAT}" --no-show-signature "$@" | pretty_git_format 
+      '')
+
       (pkgs.writeShellScriptBin "git-wip" ''
         if [[ $# = 0 ]]; then
           echo "usage:"
@@ -82,13 +114,16 @@ in {
       signing.key = lib.mkDefault "";
 
       aliases = {
+        r = "!GIT_NO_PAGER=1 git l -30";
+        ra = "!git r --all";
+        la = "!git l --all";
         st = "status";
         ci = "commit --verbose";
         ca = "commit --verbose --all";
         co = "checkout";
         di = "diff";
         dc = "diff --cached";
-        ds = "diff --stat=160,120";
+        ds = "diff --stat=80";
         dt = "difftool";
         aa = "add --all";
         ai = "add --interactive";

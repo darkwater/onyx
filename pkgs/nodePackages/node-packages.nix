@@ -319,13 +319,13 @@ let
         sha512 = "quoaXsZ9/BLNae5yiNoUz+Nhkwz83GhWwtYFglcjEQB2NDHCIpApbqXxIFnm4Pq/Nvhrsq5sYJFyohrrxnTGAA==";
       };
     };
-    "ajv-6.12.3" = {
+    "ajv-6.12.4" = {
       name = "ajv";
       packageName = "ajv";
-      version = "6.12.3";
+      version = "6.12.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ajv/-/ajv-6.12.3.tgz";
-        sha512 = "4K0cK3L1hsqk9xIb2z9vs/XU+PGJZ9PNpJRDS9YLzmNdX6jmVPfamLvTJr0aDAusnHyCHO6MjzlkAsgtqp9teA==";
+        url = "https://registry.npmjs.org/ajv/-/ajv-6.12.4.tgz";
+        sha512 = "eienB2c9qVQs2KWexhkrdMLVDoIQCz5KSeLxwg9Lzk4DOfBtIK9PQwwufcsn1jjGuf9WZmqPMbGxOzfcuphJCQ==";
       };
     };
     "applicationinsights-1.8.5" = {
@@ -436,13 +436,13 @@ let
         sha1 = "b46e890934a9591f2d2f6f86d7e6a9f1b3fe76a8";
       };
     };
-    "aws4-1.10.0" = {
+    "aws4-1.10.1" = {
       name = "aws4";
       packageName = "aws4";
-      version = "1.10.0";
+      version = "1.10.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/aws4/-/aws4-1.10.0.tgz";
-        sha512 = "3YDiu347mtVtjpyV3u5kVqQLP242c06zwDOgpeRnybmXlYYsLbtTrUBUm8i8srONt+FWobl5aibnU1030PeeuA==";
+        url = "https://registry.npmjs.org/aws4/-/aws4-1.10.1.tgz";
+        sha512 = "zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==";
       };
     };
     "balanced-match-1.0.0" = {
@@ -1417,13 +1417,13 @@ let
         sha1 = "3b09924edf9f083c0490fdd4c0bc4421e04764ee";
       };
     };
-    "lodash-4.17.19" = {
+    "lodash-4.17.20" = {
       name = "lodash";
       packageName = "lodash";
-      version = "4.17.19";
+      version = "4.17.20";
       src = fetchurl {
-        url = "https://registry.npmjs.org/lodash/-/lodash-4.17.19.tgz";
-        sha512 = "JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==";
+        url = "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz";
+        sha512 = "PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==";
       };
     };
     "lodash.sortby-4.7.0" = {
@@ -2626,10 +2626,10 @@ in
   coc-explorer = nodeEnv.buildNodePackage {
     name = "coc-explorer";
     packageName = "coc-explorer";
-    version = "0.7.26";
+    version = "0.7.27";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.7.26.tgz";
-      sha512 = "pTNU+GCq5KrsdAnwjbIDJQyF1DtIenuMVPupLgpQkIz1PBRbygMDji4UPryn3kY3xEeyQM3KHLGIHZRHXqOsFg==";
+      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.7.27.tgz";
+      sha512 = "dxMMfKyhJOxVohGpTlwjudb62LzO+jwXg8ddi7+c/tM/6eW0NuwiyxVuVUDdRaThmx/Z8GGA2kJV/skpcRip+g==";
     };
     dependencies = [
       sources."@sindresorhus/df-2.1.0"
@@ -2828,7 +2828,7 @@ in
       sources."@types/node-13.13.15"
       sources."abbrev-1.1.1"
       sources."agent-base-6.0.1"
-      sources."ajv-6.12.3"
+      sources."ajv-6.12.4"
       sources."applicationinsights-1.8.5"
       sources."asn1-0.2.4"
       sources."assert-plus-1.0.0"
@@ -2841,7 +2841,7 @@ in
       sources."asynckit-0.4.0"
       sources."at-least-node-1.0.0"
       sources."aws-sign2-0.7.0"
-      sources."aws4-1.10.0"
+      sources."aws4-1.10.1"
       sources."balanced-match-1.0.0"
       sources."bcrypt-pbkdf-1.0.2"
       sources."brace-expansion-1.1.11"
@@ -2931,7 +2931,7 @@ in
       sources."json-stringify-safe-5.0.1"
       sources."jsonfile-6.0.1"
       sources."jsprim-1.4.1"
-      sources."lodash-4.17.19"
+      sources."lodash-4.17.20"
       sources."long-4.0.0"
       (sources."lru-cache-5.1.1" // {
         dependencies = [
@@ -3085,10 +3085,10 @@ in
   coc-xml = nodeEnv.buildNodePackage {
     name = "coc-xml";
     packageName = "coc-xml";
-    version = "1.11.1";
+    version = "1.12.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-xml/-/coc-xml-1.11.1.tgz";
-      sha512 = "AIPDp1OdKyVEBElmD5HLztrGe1L2YTqaEbNX0444EDtBX959R/RyV9Nve3FHMQfIcAkKsOcRC4TPIzGrKLgZ5Q==";
+      url = "https://registry.npmjs.org/coc-xml/-/coc-xml-1.12.0.tgz";
+      sha512 = "3kfH061bfnIWU5laNpVD507Sq+z8Y9JPv6Cp1/pMDLAECFpDC8S8FW8f6McAdhOtbVM/C93QLXex9T6Iu0E0WA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -3117,14 +3117,14 @@ in
         ];
       })
       sources."acorn-walk-6.2.0"
-      sources."ajv-6.12.3"
+      sources."ajv-6.12.4"
       sources."array-equal-1.0.0"
       sources."asn1-0.2.4"
       sources."assert-plus-1.0.0"
       sources."async-limiter-1.0.1"
       sources."asynckit-0.4.0"
       sources."aws-sign2-0.7.0"
-      sources."aws4-1.10.0"
+      sources."aws4-1.10.1"
       sources."balanced-match-1.0.0"
       sources."bcrypt-pbkdf-1.0.2"
       sources."brace-expansion-1.1.11"
@@ -3177,7 +3177,7 @@ in
       sources."jsprim-1.4.1"
       sources."left-pad-1.3.0"
       sources."levn-0.3.0"
-      sources."lodash-4.17.19"
+      sources."lodash-4.17.20"
       sources."lodash.sortby-4.7.0"
       sources."mime-db-1.44.0"
       sources."mime-types-2.1.27"

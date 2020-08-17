@@ -14,4 +14,6 @@ in
     vimPlugins = pkgs.lib.getAttrs
       (builtins.attrNames emptyOverlay.vimPlugins)
       overlaid.vimPlugins;
+
+    pjstore-test = import tests/pjstore.nix;
   }

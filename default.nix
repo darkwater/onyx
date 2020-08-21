@@ -11,6 +11,7 @@
     cargo-embed               = self.callPackage ./pkgs/cargo-embed {};
     cargo-node                = self.callPackage ./pkgs/cargo-node {};
     crc16                     = self.callPackage ./pkgs/crc16 {};
+    itm-tools                 = self.callPackage ./pkgs/itm-tools {};
     onyx-nvim-pack            = self.callPackage ./pkgs/onyx-nvim-pack {};
     pjstore                   = self.callPackage ./pkgs/pjstore {};
     polybar                   = self.callPackage ./pkgs/polybar {};

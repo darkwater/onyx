@@ -17,6 +17,11 @@
     polybar                   = self.callPackage ./pkgs/polybar {};
     unvpk                     = self.callPackage ./pkgs/unvpk {};
 
+    dolphin-master = self.callPackage ./pkgs/dolphin-master {
+      qtbase = self.qt5.qtbase;
+      wrapQtAppsHook = self.qt5.wrapQtAppsHook;
+    };
+
     mumble = (self.callPackages ./pkgs/mumble {
       avahi = self.avahi.override {
         withLibdnssdCompat = true;

@@ -328,13 +328,13 @@ let
         sha512 = "eienB2c9qVQs2KWexhkrdMLVDoIQCz5KSeLxwg9Lzk4DOfBtIK9PQwwufcsn1jjGuf9WZmqPMbGxOzfcuphJCQ==";
       };
     };
-    "applicationinsights-1.8.5" = {
+    "applicationinsights-1.8.6" = {
       name = "applicationinsights";
       packageName = "applicationinsights";
-      version = "1.8.5";
+      version = "1.8.6";
       src = fetchurl {
-        url = "https://registry.npmjs.org/applicationinsights/-/applicationinsights-1.8.5.tgz";
-        sha512 = "pv0qdk9phD20e3+ftCyJzfRxCVpqHxBf77SrdJWFSbBC7S9fdzPpAZyb6j4onfeKCEEAxKEajNCRNDF1pH5SJA==";
+        url = "https://registry.npmjs.org/applicationinsights/-/applicationinsights-1.8.6.tgz";
+        sha512 = "vsUDTjTbbIP8Lc7h8S1LVxPdbKbYVj+MkqhamO5zVcI6VVMdTtjb0xyJ5aUivacoq9cqctZWSdm13o2ZDKk13Q==";
       };
     };
     "array-equal-1.0.0" = {
@@ -2829,7 +2829,7 @@ in
       sources."abbrev-1.1.1"
       sources."agent-base-6.0.1"
       sources."ajv-6.12.4"
-      sources."applicationinsights-1.8.5"
+      sources."applicationinsights-1.8.6"
       sources."asn1-0.2.4"
       sources."assert-plus-1.0.0"
       sources."async-hook-jl-1.7.6"

@@ -62,7 +62,7 @@ in {
           fi
         }
 
-        git log --graph --pretty="tformat:$LOG_FORMAT" --no-show-signature "$@" | pretty_git_format 
+        git log --graph --pretty="tformat:$LOG_FORMAT" --no-show-signature "$@" | pretty_git_format | git_page_maybe
       '')
 
       (pkgs.writeShellScriptBin "git-wip" ''

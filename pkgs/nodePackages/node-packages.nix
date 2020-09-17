@@ -229,22 +229,22 @@ let
         sha512 = "5tXH6Bx/kNGd3MgffdmP4dy2Z+G4eaXw0SE81Tq3BNadtnMR5/ySMzX4SLEzHJzSmPNn4HIdpQsBvXMUykr58w==";
       };
     };
-    "@types/node-13.13.17" = {
+    "@types/node-13.13.21" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "13.13.17";
+      version = "13.13.21";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-13.13.17.tgz";
-        sha512 = "rGZftvdDpsYtG/rOlDOwny1f6Aq4FHJdGSVfPg5vC2DaR9Rt4W2OpsOF5GTU2bSqZmwTkfnsvJhhzpMWYxxlEA==";
+        url = "https://registry.npmjs.org/@types/node/-/node-13.13.21.tgz";
+        sha512 = "tlFWakSzBITITJSxHV4hg4KvrhR/7h3xbJdSFbYJBVzKubrASbnnIFuSgolUh7qKGo/ZeJPKUfbZ0WS6Jp14DQ==";
       };
     };
-    "abab-2.0.4" = {
+    "abab-2.0.5" = {
       name = "abab";
       packageName = "abab";
-      version = "2.0.4";
+      version = "2.0.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/abab/-/abab-2.0.4.tgz";
-        sha512 = "Eu9ELJWCz/c1e9gTiCY+FceWxcqzjYEbqMgtndnuSqZSUCOL73TWNK2mHfIj4Cw2E/ongOp+JISVNCmovt2KYQ==";
+        url = "https://registry.npmjs.org/abab/-/abab-2.0.5.tgz";
+        sha512 = "9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==";
       };
     };
     "abbrev-1.1.1" = {
@@ -319,22 +319,22 @@ let
         sha512 = "4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==";
       };
     };
-    "ajv-6.12.4" = {
+    "ajv-6.12.5" = {
       name = "ajv";
       packageName = "ajv";
-      version = "6.12.4";
+      version = "6.12.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ajv/-/ajv-6.12.4.tgz";
-        sha512 = "eienB2c9qVQs2KWexhkrdMLVDoIQCz5KSeLxwg9Lzk4DOfBtIK9PQwwufcsn1jjGuf9WZmqPMbGxOzfcuphJCQ==";
+        url = "https://registry.npmjs.org/ajv/-/ajv-6.12.5.tgz";
+        sha512 = "lRF8RORchjpKG50/WFf8xmg7sgCLFiYNNnqdKflk63whMQcWR5ngGjiSXkL9bjxy6B2npOK2HSMN49jEBMSkag==";
       };
     };
-    "applicationinsights-1.8.6" = {
+    "applicationinsights-1.8.7" = {
       name = "applicationinsights";
       packageName = "applicationinsights";
-      version = "1.8.6";
+      version = "1.8.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/applicationinsights/-/applicationinsights-1.8.6.tgz";
-        sha512 = "vsUDTjTbbIP8Lc7h8S1LVxPdbKbYVj+MkqhamO5zVcI6VVMdTtjb0xyJ5aUivacoq9cqctZWSdm13o2ZDKk13Q==";
+        url = "https://registry.npmjs.org/applicationinsights/-/applicationinsights-1.8.7.tgz";
+        sha512 = "+HENzPBdSjnWL9mc+9o+j9pEaVNI4WsH5RNvfmRLfwQYvbJumcBi4S5bUzclug5KCcFP0S4bYJOmm9MV3kv2GA==";
       };
     };
     "array-equal-1.0.0" = {
@@ -742,13 +742,13 @@ let
         sha512 = "BSKB+TSpMpFI/HOxCNr1O8aMOTZ8hT3pM3GQ0w/mWRmkhEDSFJkkyzz4XQsBV44BChwGkrDfMyjVD0eA2aFV3w==";
       };
     };
-    "domelementtype-2.0.1" = {
+    "domelementtype-2.0.2" = {
       name = "domelementtype";
       packageName = "domelementtype";
-      version = "2.0.1";
+      version = "2.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/domelementtype/-/domelementtype-2.0.1.tgz";
-        sha512 = "5HOHUDsYZWV8FGWN0Njbr/Rn7f/eWSQi1v7+HsUVwXgn8nWWlL64zKDkS0n8ZmQ3mlWOMuXOnR+7Nx/5tMO5AQ==";
+        url = "https://registry.npmjs.org/domelementtype/-/domelementtype-2.0.2.tgz";
+        sha512 = "wFwTwCVebUrMgGeAwRL/NhZtHAUyT9n9yg4IMDwf10+6iCMxSkVq9MGCVEH+QZWo1nNidy8kNvwmv4zWHDTqvA==";
       };
     };
     "domexception-1.0.1" = {
@@ -2299,13 +2299,13 @@ let
         sha512 = "vJNj6IlN7IJPdMavlQa1KoFB3Ihn06q1AiN3ZFI/HfzPNzbKZWPPuiU+XkpNOfGU5k15m4r80nxNPlM7wcc0wg==";
       };
     };
-    "vscode-css-languageservice-4.3.3" = {
+    "vscode-css-languageservice-4.3.4" = {
       name = "vscode-css-languageservice";
       packageName = "vscode-css-languageservice";
-      version = "4.3.3";
+      version = "4.3.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-4.3.3.tgz";
-        sha512 = "b2b+0oHvPmBHygDtOXX3xBvpQCa6eIQSvXnGDNSDmIC1894ZTJ2yX10vjplOO/PvV7mwhyvGPwHyY4X2HGxtKw==";
+        url = "https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-4.3.4.tgz";
+        sha512 = "/0HCaxiSL0Rmm3sJ+iyZekljKEYKo1UHSzX4UFOo5VDLgRhKomJf7g1p8glcbCHXB/70IcH8IhKnwlTznf8RPQ==";
       };
     };
     "vscode-html-languageservice-3.0.4-next.15" = {
@@ -2414,6 +2414,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/vscode-nls/-/vscode-nls-4.1.2.tgz";
         sha512 = "7bOHxPsfyuCqmP+hZXscLhiHwe7CSuFE4hyhbs22xPIhQ4jv99FcR4eBzfYYVLP356HNFpdvz63FFb/xw6T4Iw==";
+      };
+    };
+    "vscode-nls-5.0.0" = {
+      name = "vscode-nls";
+      packageName = "vscode-nls";
+      version = "5.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/vscode-nls/-/vscode-nls-5.0.0.tgz";
+        sha512 = "u0Lw+IYlgbEJFF6/qAqG2d1jQmJl0eyAGJHoAJqr2HT4M2BNuQYSEiSE75f52pXHSJm8AlTjnLLbBFPrdz2hpA==";
       };
     };
     "vscode-test-0.4.3" = {
@@ -2626,10 +2635,10 @@ in
   coc-explorer = nodeEnv.buildNodePackage {
     name = "coc-explorer";
     packageName = "coc-explorer";
-    version = "0.7.31";
+    version = "0.8.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.7.31.tgz";
-      sha512 = "ulyZPqdaLzdaTgtAQkBQbuWNq3A+wIuOZRqT+yCTjhu1sByYZxc5QqfAdWCQNDX2A2RAWhfFF14Vb0xnKaGk8g==";
+      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.8.1.tgz";
+      sha512 = "QUv1F7LvwcdVL6cS9aTRvwdfizuxETyOGMhAiEVw73Rfero9sJMkKq1/U3p5P721M48Zqo0BjRL9KNgds7Q3hg==";
     };
     dependencies = [
       sources."@sindresorhus/df-2.1.0"
@@ -2825,11 +2834,11 @@ in
       sources."@protobufjs/utf8-1.1.0"
       sources."@tootallnate/once-1.1.2"
       sources."@types/long-4.0.1"
-      sources."@types/node-13.13.17"
+      sources."@types/node-13.13.21"
       sources."abbrev-1.1.1"
       sources."agent-base-6.0.1"
-      sources."ajv-6.12.4"
-      sources."applicationinsights-1.8.6"
+      sources."ajv-6.12.5"
+      sources."applicationinsights-1.8.7"
       sources."asn1-0.2.4"
       sources."assert-plus-1.0.0"
       sources."async-hook-jl-1.7.6"
@@ -2872,7 +2881,7 @@ in
       sources."diff-3.5.0"
       (sources."dom-serializer-0.2.2" // {
         dependencies = [
-          sources."domelementtype-2.0.1"
+          sources."domelementtype-2.0.2"
           sources."entities-2.0.3"
         ];
       })
@@ -3004,9 +3013,10 @@ in
           sources."semver-5.7.1"
         ];
       })
-      (sources."vscode-css-languageservice-4.3.3" // {
+      (sources."vscode-css-languageservice-4.3.4" // {
         dependencies = [
           sources."vscode-languageserver-types-3.16.0-next.2"
+          sources."vscode-nls-5.0.0"
         ];
       })
       sources."vscode-html-languageservice-3.0.4-next.15"
@@ -3049,10 +3059,10 @@ in
   coc-rust-analyzer = nodeEnv.buildNodePackage {
     name = "coc-rust-analyzer";
     packageName = "coc-rust-analyzer";
-    version = "0.7.16";
+    version = "0.8.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.7.16.tgz";
-      sha512 = "nYF/RznvKMwVXrW5z4k6Wrw13T6ogdF4TraAMp0P4upAHKhJkkA2aWwzCPiyq9wdadsp9/njWvmMTt5klfAI+g==";
+      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.8.0.tgz";
+      sha512 = "kX/mSezjGZKy1hM3l+qrqLt4sQfS1GvtzwQQ1iqS4s+1YAwViRFLx/E1RFJRElQZ4WPvvRiu+d0OeiGbKQaMAg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -3109,7 +3119,7 @@ in
       sha512 = "t80ktUFL9DPaTO7yydoNYXIDKINweWbFvvUXesltmWj7UaIyepIVRAWUp4+62udJtor1VxVFEAXnsVDA640flw==";
     };
     dependencies = [
-      sources."abab-2.0.4"
+      sources."abab-2.0.5"
       sources."acorn-5.7.4"
       (sources."acorn-globals-4.3.4" // {
         dependencies = [
@@ -3117,7 +3127,7 @@ in
         ];
       })
       sources."acorn-walk-6.2.0"
-      sources."ajv-6.12.4"
+      sources."ajv-6.12.5"
       sources."array-equal-1.0.0"
       sources."asn1-0.2.4"
       sources."assert-plus-1.0.0"

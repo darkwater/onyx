@@ -38,8 +38,8 @@ let
   '') nodePackages;
 in {
   fzf-preview = github "fzf-preview" "yuki-ycino/fzf-preview.vim" "86d15898d1823442b6ea7108d11ee88524defd88";
-  vim-floaterm = github "vim-floaterm" "voldikss/vim-floaterm" "9de0fdeba46ec03d645f8ad093978961f405b81d";
-  vim-which-key = github "vim-which-key" "liuchengxu/vim-which-key" "c940b147c3098278f9c14b85eef9cfdbf82a7f09";
+  vim-floaterm = github "vim-floaterm" "voldikss/vim-floaterm" "dfaecd8d3fede970a1e4c38e2287e0fa5a264253";
+  vim-which-key = github "vim-which-key" "liuchengxu/vim-which-key" "2109edb1706b26dab64a1851bd934571d5b48dc1";
 
   # syntax plugins
   i3config-vim = github "i3config-vim" "mboughaba/i3config.vim" "c3fe1a901392ee11721e08d2a0d2886a7f8b8e83";

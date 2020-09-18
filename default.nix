@@ -62,5 +62,8 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBCCdJXwqPLO9BS5nGICQSWMlFy4+u96GbfAqXWxMjSw mro95@mro95-laptop"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB6ZuQBDelB5IZWfWqwBYAaEIrICMGfnd8UEzHyDHNNW mro95@mro95-desktop"
     ];
+    jelle = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOKJHZOF7r5GBo6n2L9CzymDPeOInfTpRJUZ/a/VZ4fX jelle@thee"
+    ];
   };
 }

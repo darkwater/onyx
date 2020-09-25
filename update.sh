@@ -17,9 +17,9 @@ cd "$(dirname "$0")"
 
 # pkgs.vimPlugins
 {
-    sed -ne 's/^.*github "\(.*\)" "\(.*\)" "\(.*\)";$/\1 \2 \3/p' pkgs/vimPlugins/default.nix |
-        while read name repo currentrev; do
-            head="$(git ls-remote "https://github.com/$repo" HEAD | cut -d$'\t' -f1)"
+    sed -ne 's/^.*github "\(.*\)" "\(.*\)" "\(.*\)";\( # branch: \(.*\)\)\?$/\1 \2 \3 \5/p' pkgs/vimPlugins/default.nix |
+        while read name repo currentrev branch; do
+            head="$(git ls-remote "https://github.com/$repo" refs/heads/${branch:-master} | cut -d$'\t' -f1)"
             sed -i -e "s/$currentrev/$head/" pkgs/vimPlugins/default.nix
         done
 }

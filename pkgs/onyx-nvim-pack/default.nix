@@ -1,9 +1,9 @@
-{ stdenv, lib, linkFarm, writeShellScript, coreutils, fzf, writeText, callPackage,
+{ stdenv, lib, linkFarm, writeShellScript, coreutils, writeText, callPackage,
   rnix-lsp, nodePackages, runCommand, vimPlugins, }:
 
 let
   inherit ((import ../../. {}).unstable)
-    rust-analyzer;
+    rust-analyzer fzf;
 
   plugins = [
     {

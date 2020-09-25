@@ -20,7 +20,7 @@ in stdenv.mkDerivation {
 
     (writeShellScriptBin "onvim" ''
       result="$(${build}/bin/build onyx-nvim-pack --no-out-link)"
-      exec ${neovim}/bin/nvim --cmd "set packpath=$result/share/nvim/site" "$@"
+      exec ${neovim.override { withNodeJs = true; }}/bin/nvim --cmd "set packpath=$result/share/nvim/site" "$@"
     '')
   ];
 

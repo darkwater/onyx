@@ -9,7 +9,8 @@ in {
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      neovim onyx-nvim-pack
+      (neovim.override { withNodeJs = true; })
+      onyx-nvim-pack
     ];
 
     environment.pathsToLink = [ "/share/nvim/site/pack" ];

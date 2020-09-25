@@ -1,4 +1,4 @@
-{ stdenv, lib, linkFarm, writeShellScript, coreutils, fzf, nodejs-12_x, writeText, callPackage,
+{ stdenv, lib, linkFarm, writeShellScript, coreutils, fzf, writeText, callPackage,
   rnix-lsp, nodePackages, runCommand, vimPlugins, }:
 
 let
@@ -17,7 +17,6 @@ let
 
         # TODO: bundle npm somehow so :CocInstall etc. work
         generatedVim = writeText "generated.vim" ''
-          let g:coc_node_path = "${nodejs-12_x}/bin/node"
           let g:coc_user_config = json_decode('${builtins.toJSON cocConfig}')
         '';
 
@@ -60,7 +59,6 @@ let
   ] vimPlugins)));
 
   cocConfig = {
-    "npm.binPath" = "${nodejs-12_x}/bin/npm";
     "rust-analyzer.serverPath" = "${rust-analyzer}/bin/rust-analyzer";
     languageserver = {
       rnix = {

@@ -661,13 +661,13 @@ let
         sha512 = "OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==";
       };
     };
-    "debug-4.2.0" = {
+    "debug-4.3.0" = {
       name = "debug";
       packageName = "debug";
-      version = "4.2.0";
+      version = "4.3.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/debug/-/debug-4.2.0.tgz";
-        sha512 = "IX2ncY78vDTjZMFUdmsvIRFY2Cf4FnD0wRs+nQwJU8Lu99/tPFdb0VybiiMTPe3I6rQmwsqQqRBvxU+bZ/I8sg==";
+        url = "https://registry.npmjs.org/debug/-/debug-4.3.0.tgz";
+        sha512 = "jjO6JD2rKfiZQnBoRzhRTbXjHLGLfH+UtGkWLc/UXAh/rzZMyjbgn0NcfFpqT8nd1kTtFnDiJcrIFkq4UKeJVg==";
       };
     };
     "deep-is-0.1.3" = {
@@ -2617,10 +2617,10 @@ in
   coc-actions = nodeEnv.buildNodePackage {
     name = "coc-actions";
     packageName = "coc-actions";
-    version = "1.4.1";
+    version = "1.4.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-actions/-/coc-actions-1.4.1.tgz";
-      sha512 = "pLuhRhe7erD5vIBOX9ir7NAXHx7PNKl+ZYqlyoinEapSHnoLRD8mX/k87Q/hy7v7LczYq+WYjU/I4Ad1V77GEA==";
+      url = "https://registry.npmjs.org/coc-actions/-/coc-actions-1.4.2.tgz";
+      sha512 = "cdqgfUGdWR/VVmFe4XVQQppoHZ2pDQ/GYCGtcu8Td8vFkatbbEcm/D8l03cze/bn5CBlwg3p0foeX+S5j5gGBQ==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -2635,10 +2635,10 @@ in
   coc-explorer = nodeEnv.buildNodePackage {
     name = "coc-explorer";
     packageName = "coc-explorer";
-    version = "0.8.1";
+    version = "0.8.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.8.1.tgz";
-      sha512 = "QUv1F7LvwcdVL6cS9aTRvwdfizuxETyOGMhAiEVw73Rfero9sJMkKq1/U3p5P721M48Zqo0BjRL9KNgds7Q3hg==";
+      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.8.2.tgz";
+      sha512 = "oiXd9Wl/Ay4bfSWkMRxJY8SIn49FjyFnBU/dofextJRwmIJFICEATmDcsfroTY9lln08QtO1ZIBQK6R2vSGLxg==";
     };
     dependencies = [
       sources."@sindresorhus/df-2.1.0"
@@ -2791,10 +2791,10 @@ in
   coc-jedi = nodeEnv.buildNodePackage {
     name = "coc-jedi";
     packageName = "coc-jedi";
-    version = "0.14.2";
+    version = "0.14.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-jedi/-/coc-jedi-0.14.2.tgz";
-      sha512 = "GPGTeJQnTzVy/mznI/YMNEqNxt13emtHiIRvP7JFf90EfGQjxxrK2tadqGWhzbi0L2hF1bsgE/Ae+ARKF9/ZPA==";
+      url = "https://registry.npmjs.org/coc-jedi/-/coc-jedi-0.14.3.tgz";
+      sha512 = "C3DIZpCPgVdVskTux3XSvHQAf9kZLmRZBHcgwk9s0Knc4t5F9TB+xGAGdPJ9wHBpkiYljo6dQ2c4PqV7dd/i3A==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -2870,7 +2870,7 @@ in
       sources."continuation-local-storage-3.2.1"
       sources."core-util-is-1.0.2"
       sources."dashdash-1.14.1"
-      sources."debug-4.2.0"
+      sources."debug-4.3.0"
       sources."delayed-stream-1.0.0"
       (sources."diagnostic-channel-0.3.1" // {
         dependencies = [
@@ -3059,10 +3059,10 @@ in
   coc-rust-analyzer = nodeEnv.buildNodePackage {
     name = "coc-rust-analyzer";
     packageName = "coc-rust-analyzer";
-    version = "0.8.0";
+    version = "0.8.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.8.0.tgz";
-      sha512 = "kX/mSezjGZKy1hM3l+qrqLt4sQfS1GvtzwQQ1iqS4s+1YAwViRFLx/E1RFJRElQZ4WPvvRiu+d0OeiGbKQaMAg==";
+      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.8.2.tgz";
+      sha512 = "eTRAjbX2HgnqR+iu+xE41osKxlodln4aLSki2+sRc2dulIvCtB0y9E7u3auX6Y8au6IKfnjmn/GLNAWIz4oPQw==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -3095,10 +3095,10 @@ in
   coc-xml = nodeEnv.buildNodePackage {
     name = "coc-xml";
     packageName = "coc-xml";
-    version = "1.12.2";
+    version = "1.12.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-xml/-/coc-xml-1.12.2.tgz";
-      sha512 = "WpJ0rXJKfgok79lMKoJNRlar11/CyMUXqd/fBofpwLXbxMCL+WVUOehAz0bKlXGIb8KhFXj3HLqRpBlC70ZoSg==";
+      url = "https://registry.npmjs.org/coc-xml/-/coc-xml-1.12.3.tgz";
+      sha512 = "wlRuL0k48PVRapNqNwgIsAaWx+eLZJku6XeE0rGNkmmw2jxiOHvexhbctdSi+6FHvJXCFxXpMAegWn7ldYflng==";
     };
     buildInputs = globalBuildInputs;
     meta = {

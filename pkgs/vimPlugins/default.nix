@@ -37,9 +37,9 @@ let
     ln -s ${package}/lib/node_modules/* $out/share/vim-plugins/${name}
   '') nodePackages;
 in {
-  fzf-preview = github "fzf-preview" "yuki-ycino/fzf-preview.vim" "705180de669516851aaed597b9b045516e7e31d1"; # branch: release
+  fzf-preview = github "fzf-preview" "yuki-ycino/fzf-preview.vim" "96b5969b182e4d3a48524ed39f81f81200905b16"; # branch: release
   vim-floaterm = github "vim-floaterm" "voldikss/vim-floaterm" "dfaecd8d3fede970a1e4c38e2287e0fa5a264253";
-  vim-which-key = github "vim-which-key" "liuchengxu/vim-which-key" "89644adb8cc75ea96b4ab8e8218f22f1cc0deb23";
+  vim-which-key = github "vim-which-key" "liuchengxu/vim-which-key" "641df563764d68454ab752a6815d783c452274be";
 
   # syntax plugins
   i3config-vim = github "i3config-vim" "mboughaba/i3config.vim" "c3fe1a901392ee11721e08d2a0d2886a7f8b8e83";

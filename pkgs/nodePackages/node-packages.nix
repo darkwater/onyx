@@ -1669,13 +1669,13 @@ let
         sha1 = "583b1aa775961d4b113ac17d9c50baef9dd76bd1";
       };
     };
-    "open-7.2.1" = {
+    "open-7.3.0" = {
       name = "open";
       packageName = "open";
-      version = "7.2.1";
+      version = "7.3.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/open/-/open-7.2.1.tgz";
-        sha512 = "xbYCJib4spUdmcs0g/2mK1nKo/jO2T7INClWd/beL7PFkXRWgr8B23ssDHX/USPn2M2IjDR5UdpYs6I67SnTSA==";
+        url = "https://registry.npmjs.org/open/-/open-7.3.0.tgz";
+        sha512 = "mgLwQIx2F/ye9SmbrUkurZCnkoXyXyu9EbHtJZrICjVAJfyMArdHp3KkixGdZx1ZHFPNIwl0DDM1dFFqXbTLZw==";
       };
     };
     "optionator-0.8.3" = {
@@ -2686,7 +2686,7 @@ in
       sources."npm-run-path-1.0.0"
       sources."object-assign-4.1.1"
       sources."once-1.4.0"
-      sources."open-7.2.1"
+      sources."open-7.3.0"
       sources."os-homedir-1.0.2"
       sources."p-map-3.0.0"
       sources."p-try-2.2.0"
@@ -3095,10 +3095,10 @@ in
   coc-xml = nodeEnv.buildNodePackage {
     name = "coc-xml";
     packageName = "coc-xml";
-    version = "1.12.3";
+    version = "1.13.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-xml/-/coc-xml-1.12.3.tgz";
-      sha512 = "wlRuL0k48PVRapNqNwgIsAaWx+eLZJku6XeE0rGNkmmw2jxiOHvexhbctdSi+6FHvJXCFxXpMAegWn7ldYflng==";
+      url = "https://registry.npmjs.org/coc-xml/-/coc-xml-1.13.2.tgz";
+      sha512 = "UJa+Twdi1dqft9KaGwWagYIyc0xkqNMg60o/xheVkTomOBfNaffVssRFRIIguanNTirM/b4LMHotAs+0GPbMow==";
     };
     buildInputs = globalBuildInputs;
     meta = {

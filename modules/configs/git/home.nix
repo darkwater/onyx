@@ -39,7 +39,7 @@ in {
         LOG_AUTHOR="%C(always,blue)%an%C(always,reset)"
         LOG_SUBJECT="%s"
         LOG_REFS="%C(always,red)%d%C(always,reset)"
-        LOG_FORMAT="}$LOG_HASH}$LOG_RELATIVE_TIME}%G?##gpgsig  $LOG_AUTHOR}$LOG_REFS $LOG_SUBJECT"
+        LOG_FORMAT="}$LOG_HASH}$LOG_RELATIVE_TIME}%G?##gpgsig  $LOG_AUTHOR}$LOG_SUBJECT $LOG_REFS"
 
         pretty_git_format() {
           sed -Ee '

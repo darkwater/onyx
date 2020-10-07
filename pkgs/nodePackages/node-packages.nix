@@ -229,13 +229,13 @@ let
         sha512 = "5tXH6Bx/kNGd3MgffdmP4dy2Z+G4eaXw0SE81Tq3BNadtnMR5/ySMzX4SLEzHJzSmPNn4HIdpQsBvXMUykr58w==";
       };
     };
-    "@types/node-13.13.21" = {
+    "@types/node-13.13.23" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "13.13.21";
+      version = "13.13.23";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-13.13.21.tgz";
-        sha512 = "tlFWakSzBITITJSxHV4hg4KvrhR/7h3xbJdSFbYJBVzKubrASbnnIFuSgolUh7qKGo/ZeJPKUfbZ0WS6Jp14DQ==";
+        url = "https://registry.npmjs.org/@types/node/-/node-13.13.23.tgz";
+        sha512 = "L31WmMJYKb15PDqFWutn8HNwrNK6CE6bkWgSB0dO1XpNoHrszVKV1Clcnfgd6c/oG54TVF8XQEvY2gQrW8K6Mw==";
       };
     };
     "abab-2.0.5" = {
@@ -265,13 +265,13 @@ let
         sha512 = "1D++VG7BhrtvQpNbBzovKNc1FLGGEE/oGe7b9xJm/RFHMBeUaUGpluV9RLjZa47YFdPcDAenEYuq9pQPcMdLJg==";
       };
     };
-    "acorn-6.4.1" = {
+    "acorn-6.4.2" = {
       name = "acorn";
       packageName = "acorn";
-      version = "6.4.1";
+      version = "6.4.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/acorn/-/acorn-6.4.1.tgz";
-        sha512 = "ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==";
+        url = "https://registry.npmjs.org/acorn/-/acorn-6.4.2.tgz";
+        sha512 = "XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==";
       };
     };
     "acorn-globals-4.3.4" = {
@@ -2173,13 +2173,13 @@ let
         sha512 = "4i56lCmz2RG6WZN018hf4L75L5HboaFuKkHx3wDG/ihevI99e0OgFyl8w6G4ioqBm62V4EJqCy5xw3vQSNXU8A==";
       };
     };
-    "tslib-1.13.0" = {
+    "tslib-1.14.0" = {
       name = "tslib";
       packageName = "tslib";
-      version = "1.13.0";
+      version = "1.14.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/tslib/-/tslib-1.13.0.tgz";
-        sha512 = "i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==";
+        url = "https://registry.npmjs.org/tslib/-/tslib-1.14.0.tgz";
+        sha512 = "+Zw5lu0D9tvBMjGP8LpvMb0u2WW2QV3y+D8mO6J+cNzCYIN4sVy43Bf9vl92nqFahutN0I8zHa7cc4vihIshnw==";
       };
     };
     "tunnel-agent-0.6.0" = {
@@ -2834,7 +2834,7 @@ in
       sources."@protobufjs/utf8-1.1.0"
       sources."@tootallnate/once-1.1.2"
       sources."@types/long-4.0.1"
-      sources."@types/node-13.13.21"
+      sources."@types/node-13.13.23"
       sources."abbrev-1.1.1"
       sources."agent-base-6.0.1"
       sources."ajv-6.12.5"
@@ -2999,7 +2999,7 @@ in
       sources."supports-color-5.4.0"
       sources."to-regex-range-5.0.1"
       sources."tough-cookie-2.5.0"
-      sources."tslib-1.13.0"
+      sources."tslib-1.14.0"
       sources."tunnel-agent-0.6.0"
       sources."tweetnacl-0.14.5"
       sources."typescript-3.9.7"
@@ -3059,10 +3059,10 @@ in
   coc-rust-analyzer = nodeEnv.buildNodePackage {
     name = "coc-rust-analyzer";
     packageName = "coc-rust-analyzer";
-    version = "0.8.2";
+    version = "0.9.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.8.2.tgz";
-      sha512 = "eTRAjbX2HgnqR+iu+xE41osKxlodln4aLSki2+sRc2dulIvCtB0y9E7u3auX6Y8au6IKfnjmn/GLNAWIz4oPQw==";
+      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.9.0.tgz";
+      sha512 = "//DKmHGTR4u7tPoFBU+8apTuaXidWIJf+squdnVb/DX6J1fO9BSI6M6TBTlfY6IC1V1FOa6bUE6GNcQDyH1hYQ==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -3123,7 +3123,7 @@ in
       sources."acorn-5.7.4"
       (sources."acorn-globals-4.3.4" // {
         dependencies = [
-          sources."acorn-6.4.1"
+          sources."acorn-6.4.2"
         ];
       })
       sources."acorn-walk-6.2.0"

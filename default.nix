@@ -33,6 +33,10 @@
     nodePackages = (super.nodePackages or {}) // import ./pkgs/nodePackages { pkgs = self; };
     vimPlugins   = (super.vimPlugins or {}) // self.callPackage ./pkgs/vimPlugins {};
 
+    onyx-shells = {
+      rust = self.callPackage ./shells/rust {};
+    };
+
     inherit (self.callPackage ./lib/extra-builders.nix {}) writeRubyScriptBin;
   };
 

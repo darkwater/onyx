@@ -41,6 +41,8 @@ in {
   vim-floaterm = github "vim-floaterm" "voldikss/vim-floaterm" "f2506e480c1d6bf91c94465b01aab228dca9262f";
   vim-which-key = github "vim-which-key" "liuchengxu/vim-which-key" "30c0810b012a7acdccc6b72f0e99c0388986844f";
 
+  vim-godot = github "vim-godot" "habamax/vim-godot" "287628de74fd8534b59cdbb30823e8ea4d5f7ff0";
+
   # syntax plugins
   i3config-vim = github "i3config-vim" "mboughaba/i3config.vim" "c3fe1a901392ee11721e08d2a0d2886a7f8b8e83";
   ron-vim = github "ron-vim" "ron-rs/ron.vim" "04004b3395d219f95a533c4badd5ba831b7b7c07";

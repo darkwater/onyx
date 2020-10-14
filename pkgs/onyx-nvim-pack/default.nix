@@ -51,6 +51,7 @@ let
     "vim-easy-align"
     "vim-floaterm"
     "vim-fugitive"
+    "vim-godot"
     "vim-nix"
     "vim-repeat"
     "vim-surround"
@@ -71,6 +72,11 @@ let
         args = [ "start" ];
         filetypes = [ "sh" ];
         ignoredRootPaths = [ "~" ];
+      };
+      godot = {
+        host = "127.0.0.1";
+        port = 6008;
+        filetypes = [ "gdscript" ];
       };
     };
   };

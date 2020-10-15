@@ -83,8 +83,8 @@ mkShell (args // {
   ];
 
   shellHook = (args.shellHook or "") + ''
-    ${builtins.readFile ./rust-stlink-hook.sh}
     ${lib.optionalString embedded ''
+      ${builtins.readFile ./rust-stlink-hook.sh}
       echo "commands:"
       echo "  openocd-tmux - start a tmux session with openocd and a shell"
     ''}

@@ -229,13 +229,13 @@ let
         sha512 = "5tXH6Bx/kNGd3MgffdmP4dy2Z+G4eaXw0SE81Tq3BNadtnMR5/ySMzX4SLEzHJzSmPNn4HIdpQsBvXMUykr58w==";
       };
     };
-    "@types/node-13.13.25" = {
+    "@types/node-13.13.28" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "13.13.25";
+      version = "13.13.28";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-13.13.25.tgz";
-        sha512 = "6ZMK4xRcF2XrPdKmPYQxZkdHKV18xKgUFVvhIgw2iwaaO6weleLPHLBGPZmLhjo+m1N+MZXRAoBEBCCVqgO2zQ==";
+        url = "https://registry.npmjs.org/@types/node/-/node-13.13.28.tgz";
+        sha512 = "EM/qFeRH8ZCD+TlsaIPULyyFm9vOhFIvgskY2JmHbEsWsOPgN+rtjSXrcHGgJpob4Nu17VfO95FKewr0XY7iOQ==";
       };
     };
     "abab-2.0.5" = {
@@ -814,13 +814,13 @@ let
         sha512 = "f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==";
       };
     };
-    "entities-2.0.3" = {
+    "entities-2.1.0" = {
       name = "entities";
       packageName = "entities";
-      version = "2.0.3";
+      version = "2.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/entities/-/entities-2.0.3.tgz";
-        sha512 = "MyoZ0jgnLvB2X3Lg5HqpFmn1kybDiIfEQmKzTb5apr51Rb+T3KdmMiqa70T+bhGnyv7bQ6WMj2QMHpGMmlrUYQ==";
+        url = "https://registry.npmjs.org/entities/-/entities-2.1.0.tgz";
+        sha512 = "hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w==";
       };
     };
     "es6-promise-4.2.8" = {
@@ -2635,10 +2635,10 @@ in
   coc-explorer = nodeEnv.buildNodePackage {
     name = "coc-explorer";
     packageName = "coc-explorer";
-    version = "0.8.2";
+    version = "0.8.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.8.2.tgz";
-      sha512 = "oiXd9Wl/Ay4bfSWkMRxJY8SIn49FjyFnBU/dofextJRwmIJFICEATmDcsfroTY9lln08QtO1ZIBQK6R2vSGLxg==";
+      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.8.3.tgz";
+      sha512 = "AQ5orWlUf9Qn7Gg76JC1DTremDLrzy10ZmjYGb/XMylJb1K6AA/nNbqgGv4xQzZPNhR9r2Kb4mJES7s6JUulxw==";
     };
     dependencies = [
       sources."@sindresorhus/df-2.1.0"
@@ -2791,10 +2791,10 @@ in
   coc-jedi = nodeEnv.buildNodePackage {
     name = "coc-jedi";
     packageName = "coc-jedi";
-    version = "0.14.3";
+    version = "0.15.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-jedi/-/coc-jedi-0.14.3.tgz";
-      sha512 = "C3DIZpCPgVdVskTux3XSvHQAf9kZLmRZBHcgwk9s0Knc4t5F9TB+xGAGdPJ9wHBpkiYljo6dQ2c4PqV7dd/i3A==";
+      url = "https://registry.npmjs.org/coc-jedi/-/coc-jedi-0.15.1.tgz";
+      sha512 = "1Gu68FbVjd+5zVYAkD+9a07Itl8/U6HpXx2YrsIQrNjxJpn729TO2Ge5GJeIMGAVlsQDZ6X/jIsZIeLN1u4LHg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -2834,7 +2834,7 @@ in
       sources."@protobufjs/utf8-1.1.0"
       sources."@tootallnate/once-1.1.2"
       sources."@types/long-4.0.1"
-      sources."@types/node-13.13.25"
+      sources."@types/node-13.13.28"
       sources."abbrev-1.1.1"
       sources."agent-base-6.0.1"
       sources."ajv-6.12.6"
@@ -2882,7 +2882,7 @@ in
       (sources."dom-serializer-0.2.2" // {
         dependencies = [
           sources."domelementtype-2.0.2"
-          sources."entities-2.0.3"
+          sources."entities-2.1.0"
         ];
       })
       sources."domelementtype-1.3.1"
@@ -3059,10 +3059,10 @@ in
   coc-rust-analyzer = nodeEnv.buildNodePackage {
     name = "coc-rust-analyzer";
     packageName = "coc-rust-analyzer";
-    version = "0.9.0";
+    version = "0.11.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.9.0.tgz";
-      sha512 = "//DKmHGTR4u7tPoFBU+8apTuaXidWIJf+squdnVb/DX6J1fO9BSI6M6TBTlfY6IC1V1FOa6bUE6GNcQDyH1hYQ==";
+      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.11.1.tgz";
+      sha512 = "nr7ilVhJr12FH44Q7urXkm1Wkul57Ik1dR7gD0g5S45rDfvy7M3aLY0KM6gbiz0scO5JJQt+doCnY1RJvyvt3A==";
     };
     buildInputs = globalBuildInputs;
     meta = {

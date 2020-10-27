@@ -229,13 +229,13 @@ let
         sha512 = "5tXH6Bx/kNGd3MgffdmP4dy2Z+G4eaXw0SE81Tq3BNadtnMR5/ySMzX4SLEzHJzSmPNn4HIdpQsBvXMUykr58w==";
       };
     };
-    "@types/node-13.13.28" = {
+    "@types/node-13.13.29" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "13.13.28";
+      version = "13.13.29";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-13.13.28.tgz";
-        sha512 = "EM/qFeRH8ZCD+TlsaIPULyyFm9vOhFIvgskY2JmHbEsWsOPgN+rtjSXrcHGgJpob4Nu17VfO95FKewr0XY7iOQ==";
+        url = "https://registry.npmjs.org/@types/node/-/node-13.13.29.tgz";
+        sha512 = "WPGpyEDx4/F4Rx1p1Zar8m+JsMxpSY/wNFPlyNXWV+UzJwkYt3LQg2be/qJgpsLdVJsfxTR5ipY6rv2579jStQ==";
       };
     };
     "abab-2.0.5" = {
@@ -301,13 +301,13 @@ let
         sha512 = "salcGninV0nPrwpGNn4VTXBb1SOuXQBiqbrNXoeizJsHrsL6ERFM2Ne3JUSBWRE6aeNJI2ROP/WEEIDUiDe3cg==";
       };
     };
-    "agent-base-6.0.1" = {
+    "agent-base-6.0.2" = {
       name = "agent-base";
       packageName = "agent-base";
-      version = "6.0.1";
+      version = "6.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/agent-base/-/agent-base-6.0.1.tgz";
-        sha512 = "01q25QQDwLSsyfhrKbn8yuur+JNw0H+0Y4JiGIKd3z9aYk/w/2kxD/Upc+t2ZBBSUNff50VjPsSW2YxM8QYKVg==";
+        url = "https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz";
+        sha512 = "RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==";
       };
     };
     "aggregate-error-3.1.0" = {
@@ -1966,13 +1966,13 @@ let
         sha512 = "U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==";
       };
     };
-    "run-parallel-1.1.9" = {
+    "run-parallel-1.1.10" = {
       name = "run-parallel";
       packageName = "run-parallel";
-      version = "1.1.9";
+      version = "1.1.10";
       src = fetchurl {
-        url = "https://registry.npmjs.org/run-parallel/-/run-parallel-1.1.9.tgz";
-        sha512 = "DEqnSRTDw/Tc3FXf49zedI638Z9onwUotBMiUFKmrO2sdFKIbXamXGQ3Axd4qgphxKB4kw/qP1w5kTxnfU1B9Q==";
+        url = "https://registry.npmjs.org/run-parallel/-/run-parallel-1.1.10.tgz";
+        sha512 = "zb/1OuZ6flOlH6tQyMPUrE3x3Ulxjlo9WIVXR4yVYi4H9UXQaeIsPbLn2R3O3vQCnDKkAl2qHiuocKKX4Tz/Sw==";
       };
     };
     "safe-buffer-5.2.1" = {
@@ -2635,10 +2635,10 @@ in
   coc-explorer = nodeEnv.buildNodePackage {
     name = "coc-explorer";
     packageName = "coc-explorer";
-    version = "0.8.3";
+    version = "0.8.5";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.8.3.tgz";
-      sha512 = "AQ5orWlUf9Qn7Gg76JC1DTremDLrzy10ZmjYGb/XMylJb1K6AA/nNbqgGv4xQzZPNhR9r2Kb4mJES7s6JUulxw==";
+      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.8.5.tgz";
+      sha512 = "6ZuBYthHWUnWVzc3xmqJYnh4SkEs24DvHW31m45+40xE8I+Qpol38VY9laJhzHJioDhBdqKQluyu8QtM0L4qow==";
     };
     dependencies = [
       sources."@sindresorhus/df-2.1.0"
@@ -2834,9 +2834,9 @@ in
       sources."@protobufjs/utf8-1.1.0"
       sources."@tootallnate/once-1.1.2"
       sources."@types/long-4.0.1"
-      sources."@types/node-13.13.28"
+      sources."@types/node-13.13.29"
       sources."abbrev-1.1.1"
-      sources."agent-base-6.0.1"
+      sources."agent-base-6.0.2"
       sources."ajv-6.12.6"
       sources."applicationinsights-1.8.7"
       sources."asn1-0.2.4"
@@ -2985,7 +2985,7 @@ in
       sources."readable-stream-3.6.0"
       sources."request-2.88.2"
       sources."reusify-1.0.4"
-      sources."run-parallel-1.1.9"
+      sources."run-parallel-1.1.10"
       sources."safe-buffer-5.2.1"
       sources."safer-buffer-2.1.2"
       sources."semver-7.3.2"
@@ -3059,10 +3059,10 @@ in
   coc-rust-analyzer = nodeEnv.buildNodePackage {
     name = "coc-rust-analyzer";
     packageName = "coc-rust-analyzer";
-    version = "0.11.1";
+    version = "0.13.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.11.1.tgz";
-      sha512 = "nr7ilVhJr12FH44Q7urXkm1Wkul57Ik1dR7gD0g5S45rDfvy7M3aLY0KM6gbiz0scO5JJQt+doCnY1RJvyvt3A==";
+      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.13.0.tgz";
+      sha512 = "0pECUsBzCZ5ZeIcdYmyXg+dJxFQ8BKocKUSPFf1cdghgk/4WNojEvMmHqRFij4pbfCNCQ9lbNln1QdW7T0S6Hg==";
     };
     buildInputs = globalBuildInputs;
     meta = {

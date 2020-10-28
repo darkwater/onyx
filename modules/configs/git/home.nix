@@ -36,20 +36,33 @@ in {
       (pkgs.writeShellScriptBin "git-l" ''
         LOG_HASH="%C(always,yellow)%h%C(always,reset)"
         LOG_RELATIVE_TIME="%C(always,magenta)%ar##ago%C(always,reset)"
-        LOG_AUTHOR="%C(always,blue)%an%C(always,reset)"
+        LOG_AUTHOR="%C(always,bold black)<%an>%C(always,reset)"
         LOG_SUBJECT="%s"
-        LOG_REFS="%C(always,red)%d%C(always,reset)"
-        LOG_FORMAT="}$LOG_HASH}$LOG_RELATIVE_TIME}%G?##gpgsig  $LOG_AUTHOR}$LOG_SUBJECT $LOG_REFS"
+        LOG_REFS="%C(always,bold red)%d%C(always,reset)"
+        tab=$'\t'
+        LOG_FORMAT="$tab$LOG_HASH$tab$LOG_RELATIVE_TIME$tab%G?##gpgsig  subject##$LOG_SUBJECT $LOG_REFS $LOG_AUTHOR"
+
+        COLUMNS=$(tput cols)
 
         pretty_git_format() {
           sed -Ee '
-            s/ago##ago//
-            s/(, [[:digit:]]+ mo)nths?/\1/
+            s/ years?, ?([[:digit:] ]{2}) months? ago##ago/y \1mo/
+            s/ seconds? ago##ago/s /
+            s/ minutes? ago##ago/mt/
+            s/ hours? ago##ago/h /
+            s/ days? ago##ago/d /
+            s/ weeks? ago##ago/wk/
+            s/ months? ago##ago/mo/
+            s/ years? ago##ago/y     /
+            s/ ago##ago//
+
             s/([G])##gpgsig/\x1b[32m\1\x1b[0m/
             s/([UXYRE])##gpgsig/\x1b[33m\1\x1b[0m/
             s/([A-Z])##gpgsig/\x1b[31m\1\x1b[0m/
+
+            s/subject##([^ ]+: )*/\x1b[34m\1\x1b[0m/
           ' |
-          column -s '}' -t
+          column -s $'\t' -t -R 3
         }
 
         git_page_maybe() {

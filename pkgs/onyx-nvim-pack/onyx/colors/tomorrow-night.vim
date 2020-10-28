@@ -295,22 +295,26 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 
     " Neovim terminal
-    let g:terminal_color_0  = s:termblack
-    let g:terminal_color_1  = s:termred
-    let g:terminal_color_2  = s:termgreen
-    let g:terminal_color_3  = s:termyellow
-    let g:terminal_color_4  = s:termblue
-    let g:terminal_color_5  = s:termmagenta
-    let g:terminal_color_6  = s:termcyan
-    let g:terminal_color_7  = s:termwhite
-    let g:terminal_color_8  = s:termboldblack
-    let g:terminal_color_9  = s:termboldred
-    let g:terminal_color_10 = s:termboldgreen
-    let g:terminal_color_11 = s:termboldyellow
-    let g:terminal_color_12 = s:termboldblue
-    let g:terminal_color_13 = s:termboldmagenta
-    let g:terminal_color_14 = s:termboldcyan
-    let g:terminal_color_15 = s:termboldwhite
+    if has("nvim-0.5.0") && &termguicolors && nvim_list_uis()[0]["ext_termcolors"]
+        " colors appear to be forwarded to the terminal, as they should
+    else
+        let g:terminal_color_0  = s:termboldblack
+        let g:terminal_color_1  = s:termred
+        let g:terminal_color_2  = s:termgreen
+        let g:terminal_color_3  = s:termyellow
+        let g:terminal_color_4  = s:termblue
+        let g:terminal_color_5  = s:termmagenta
+        let g:terminal_color_6  = s:termcyan
+        let g:terminal_color_7  = s:termwhite
+        let g:terminal_color_8  = s:termboldblack
+        let g:terminal_color_9  = s:termboldred
+        let g:terminal_color_10 = s:termboldgreen
+        let g:terminal_color_11 = s:termboldyellow
+        let g:terminal_color_12 = s:termboldblue
+        let g:terminal_color_13 = s:termboldmagenta
+        let g:terminal_color_14 = s:termboldcyan
+        let g:terminal_color_15 = s:termboldwhite
+    endif
 
 
     " Vim

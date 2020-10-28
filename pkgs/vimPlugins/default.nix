@@ -66,6 +66,8 @@ in {
     coc-tsserver
     coc-yaml
     fzf-vim
+    vim-airline
+    vim-airline-themes
     vim-commentary
     vim-easy-align
     vim-nix

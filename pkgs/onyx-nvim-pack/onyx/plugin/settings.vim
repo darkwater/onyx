@@ -74,6 +74,7 @@ set winwidth=80
 
 nohlsearch
 colors tomorrow-night
+let g:airline_theme='base16_tomorrow'
 syntax on
 filetype plugin indent on
 

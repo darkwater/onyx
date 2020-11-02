@@ -9,6 +9,6 @@ in {
 
   config = lib.mkIf cfg.enable {
     home.packages = [ (pkgs.neovim.override { withNodeJs = true; }) ];
-    home.file.".local/share/nvim/site/pack/onyx".source = pkgs.onyx-nvim-pack;
+    home.file.".local/share/nvim/site/pack/onyx".source = "${pkgs.onyx-nvim-pack}/share/nvim/site/pack/onyx";
   };
 }

@@ -66,6 +66,7 @@ in {
     coc-tsserver
     coc-yaml
     fzf-vim
+    rust-vim
     vim-airline
     vim-airline-themes
     vim-commentary

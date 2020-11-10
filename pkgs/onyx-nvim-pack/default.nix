@@ -47,6 +47,7 @@ let
     "fzf-vim"
     "i3config-vim"
     "ron-vim"
+    "rust-vim"
     "vim-airline"
     "vim-airline-themes"
     "vim-commentary"

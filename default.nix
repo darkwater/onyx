@@ -2,7 +2,7 @@
 
 {
   # it's probably a good idea to use the same revision of unstable everywhere
-  unstable = import (builtins.fetchTarball "https://github.com/nixos/nixpkgs/archive/791b40e320a.tar.gz") {
+  unstable = import (builtins.fetchTarball "https://github.com/nixos/nixpkgs/archive/30d7b934129.tar.gz") {
     config.allowUnfree = true;
   };
 

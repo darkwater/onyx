@@ -229,13 +229,13 @@ let
         sha512 = "5tXH6Bx/kNGd3MgffdmP4dy2Z+G4eaXw0SE81Tq3BNadtnMR5/ySMzX4SLEzHJzSmPNn4HIdpQsBvXMUykr58w==";
       };
     };
-    "@types/node-13.13.29" = {
+    "@types/node-13.13.31" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "13.13.29";
+      version = "13.13.31";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-13.13.29.tgz";
-        sha512 = "WPGpyEDx4/F4Rx1p1Zar8m+JsMxpSY/wNFPlyNXWV+UzJwkYt3LQg2be/qJgpsLdVJsfxTR5ipY6rv2579jStQ==";
+        url = "https://registry.npmjs.org/@types/node/-/node-13.13.31.tgz";
+        sha512 = "gBk54XbcRj8EKTi7Syo4JU4purbRJaZpkvMVs7+t+b9JaOtwsGo7vCbXdVJN3gH/wu/GyZGD8lAKo0qpQuNjOw==";
       };
     };
     "abab-2.0.5" = {
@@ -328,13 +328,13 @@ let
         sha512 = "j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==";
       };
     };
-    "applicationinsights-1.8.7" = {
+    "applicationinsights-1.8.8" = {
       name = "applicationinsights";
       packageName = "applicationinsights";
-      version = "1.8.7";
+      version = "1.8.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/applicationinsights/-/applicationinsights-1.8.7.tgz";
-        sha512 = "+HENzPBdSjnWL9mc+9o+j9pEaVNI4WsH5RNvfmRLfwQYvbJumcBi4S5bUzclug5KCcFP0S4bYJOmm9MV3kv2GA==";
+        url = "https://registry.npmjs.org/applicationinsights/-/applicationinsights-1.8.8.tgz";
+        sha512 = "B43D4t/taGP5quGviVSdFWqarhIlzyGSi5mfngjbXpR2Ed3VrikJGIr1i5UtGzvwWqEbfIF6i298GvjFaB8RFA==";
       };
     };
     "array-equal-1.0.0" = {
@@ -436,13 +436,13 @@ let
         sha1 = "b46e890934a9591f2d2f6f86d7e6a9f1b3fe76a8";
       };
     };
-    "aws4-1.10.1" = {
+    "aws4-1.11.0" = {
       name = "aws4";
       packageName = "aws4";
-      version = "1.10.1";
+      version = "1.11.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/aws4/-/aws4-1.10.1.tgz";
-        sha512 = "zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==";
+        url = "https://registry.npmjs.org/aws4/-/aws4-1.11.0.tgz";
+        sha512 = "xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==";
       };
     };
     "balanced-match-1.0.0" = {
@@ -661,13 +661,13 @@ let
         sha512 = "OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==";
       };
     };
-    "debug-4.3.0" = {
+    "debug-4.3.1" = {
       name = "debug";
       packageName = "debug";
-      version = "4.3.0";
+      version = "4.3.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/debug/-/debug-4.3.0.tgz";
-        sha512 = "jjO6JD2rKfiZQnBoRzhRTbXjHLGLfH+UtGkWLc/UXAh/rzZMyjbgn0NcfFpqT8nd1kTtFnDiJcrIFkq4UKeJVg==";
+        url = "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz";
+        sha512 = "doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==";
       };
     };
     "deep-is-0.1.3" = {
@@ -697,13 +697,13 @@ let
         sha512 = "6eb9YRrimz8oTr5+JDzGmSYnXy5V7YnK5y/hd8AUDK1MssHjQKm9LlD6NSrHx4vMDF3+e/spI2hmWTviElgWZA==";
       };
     };
-    "diagnostic-channel-publishers-0.4.1" = {
+    "diagnostic-channel-publishers-0.4.2" = {
       name = "diagnostic-channel-publishers";
       packageName = "diagnostic-channel-publishers";
-      version = "0.4.1";
+      version = "0.4.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/diagnostic-channel-publishers/-/diagnostic-channel-publishers-0.4.1.tgz";
-        sha512 = "NpZ7IOVUfea/kAx4+ub4NIYZyRCSymjXM5BZxnThs3ul9gAKqjm7J8QDDQW3Ecuo2XxjNLoWLeKmrPUWKNZaYw==";
+        url = "https://registry.npmjs.org/diagnostic-channel-publishers/-/diagnostic-channel-publishers-0.4.2.tgz";
+        sha512 = "gbt5BVjwTV1wnng0Xi766DVrRxSeGECAX8Qrig7tKCDfXW2SbK7bKY6A3tgGjk5BB50aXgVXIsbtQiYIkt57Mg==";
       };
     };
     "diff-3.5.0" = {
@@ -949,13 +949,13 @@ let
         sha1 = "3d8a5c66883a16a30ca8643e851f19baa7797917";
       };
     };
-    "fastq-1.8.0" = {
+    "fastq-1.9.0" = {
       name = "fastq";
       packageName = "fastq";
-      version = "1.8.0";
+      version = "1.9.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fastq/-/fastq-1.8.0.tgz";
-        sha512 = "SMIZoZdLh/fgofivvIkmknUXyPnvxRE3DhtZ5Me3Mrsk5gyPL42F0xr51TdRXskBxHfMp+07bcYzfsYEsSQA9Q==";
+        url = "https://registry.npmjs.org/fastq/-/fastq-1.9.0.tgz";
+        sha512 = "i7FVWL8HhVY+CTkwFxkN2mk3h+787ixS5S63eb78diVRc1MCssarHq3W5cj0av7YDSwmaV928RNag+U1etRQ7w==";
       };
     };
     "fill-range-7.0.1" = {
@@ -1381,13 +1381,13 @@ let
         sha1 = "1296a2d58fd45f19a0f6ce01d65701e2c735b6eb";
       };
     };
-    "jsonfile-6.0.1" = {
+    "jsonfile-6.1.0" = {
       name = "jsonfile";
       packageName = "jsonfile";
-      version = "6.0.1";
+      version = "6.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/jsonfile/-/jsonfile-6.0.1.tgz";
-        sha512 = "jR2b5v7d2vIOust+w3wtFKZIfpC2pnRmFAhAC/BuweZFQR8qZzxH1OyrQ10HmdVYiXWkYUqPVsz91cG7EL2FBg==";
+        url = "https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz";
+        sha512 = "5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==";
       };
     };
     "jsprim-1.4.1" = {
@@ -2236,6 +2236,15 @@ let
         sha512 = "rb6X1W158d7pRQBg5gkR8uPaSfiids68LTJQYOtEUhoJUWBdaQHsuT/EUduxXYxcrt4r5PJ4fuHW1MHT6p0qug==";
       };
     };
+    "universalify-2.0.0" = {
+      name = "universalify";
+      packageName = "universalify";
+      version = "2.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/universalify/-/universalify-2.0.0.tgz";
+        sha512 = "hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==";
+      };
+    };
     "uri-js-4.4.0" = {
       name = "uri-js";
       packageName = "uri-js";
@@ -2635,10 +2644,10 @@ in
   coc-explorer = nodeEnv.buildNodePackage {
     name = "coc-explorer";
     packageName = "coc-explorer";
-    version = "0.8.5";
+    version = "0.11.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.8.5.tgz";
-      sha512 = "6ZuBYthHWUnWVzc3xmqJYnh4SkEs24DvHW31m45+40xE8I+Qpol38VY9laJhzHJioDhBdqKQluyu8QtM0L4qow==";
+      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.11.1.tgz";
+      sha512 = "LE/r4i3R0ecWsWpyUNyoz4ig2O8Dus90idmKLu+cf0IeZrs8NuGnD6EXUqwae5DaST83H185Ib4kDv+QhWbd2A==";
     };
     dependencies = [
       sources."@sindresorhus/df-2.1.0"
@@ -2755,10 +2764,10 @@ in
   coc-clangd = nodeEnv.buildNodePackage {
     name = "coc-clangd";
     packageName = "coc-clangd";
-    version = "0.4.14";
+    version = "0.5.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-clangd/-/coc-clangd-0.4.14.tgz";
-      sha512 = "kwsyPw93XjDtnj9bFKn78PtfP5I9tkmeXGFZSrsXdlAqDInWnjKA/X2JCr82U4OUOl67q6jy/LJ5JOGWBY6txw==";
+      url = "https://registry.npmjs.org/coc-clangd/-/coc-clangd-0.5.2.tgz";
+      sha512 = "1ZBaiBntvwV7rq/BNsdvRbQrCUZvXdyHPI9WI+ysa+Wfx7zOPLX7NtQbDBMROIbtTYlaYJLmMt/J4Qgl/zqmBw==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -2791,10 +2800,10 @@ in
   coc-jedi = nodeEnv.buildNodePackage {
     name = "coc-jedi";
     packageName = "coc-jedi";
-    version = "0.15.1";
+    version = "0.16.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-jedi/-/coc-jedi-0.15.1.tgz";
-      sha512 = "1Gu68FbVjd+5zVYAkD+9a07Itl8/U6HpXx2YrsIQrNjxJpn729TO2Ge5GJeIMGAVlsQDZ6X/jIsZIeLN1u4LHg==";
+      url = "https://registry.npmjs.org/coc-jedi/-/coc-jedi-0.16.0.tgz";
+      sha512 = "PfCYGmGy9PS+KcGo892Vnkbh9Yyyn/8GE+TJEM6hjqNdy/GlP9M9POHuRNv5dYa5sYxMg1+BUueyHfid7t+TzA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -2834,11 +2843,11 @@ in
       sources."@protobufjs/utf8-1.1.0"
       sources."@tootallnate/once-1.1.2"
       sources."@types/long-4.0.1"
-      sources."@types/node-13.13.29"
+      sources."@types/node-13.13.31"
       sources."abbrev-1.1.1"
       sources."agent-base-6.0.2"
       sources."ajv-6.12.6"
-      sources."applicationinsights-1.8.7"
+      sources."applicationinsights-1.8.8"
       sources."asn1-0.2.4"
       sources."assert-plus-1.0.0"
       sources."async-hook-jl-1.7.6"
@@ -2850,7 +2859,7 @@ in
       sources."asynckit-0.4.0"
       sources."at-least-node-1.0.0"
       sources."aws-sign2-0.7.0"
-      sources."aws4-1.10.1"
+      sources."aws4-1.11.0"
       sources."balanced-match-1.0.0"
       sources."bcrypt-pbkdf-1.0.2"
       sources."brace-expansion-1.1.11"
@@ -2870,14 +2879,14 @@ in
       sources."continuation-local-storage-3.2.1"
       sources."core-util-is-1.0.2"
       sources."dashdash-1.14.1"
-      sources."debug-4.3.0"
+      sources."debug-4.3.1"
       sources."delayed-stream-1.0.0"
       (sources."diagnostic-channel-0.3.1" // {
         dependencies = [
           sources."semver-5.7.1"
         ];
       })
-      sources."diagnostic-channel-publishers-0.4.1"
+      sources."diagnostic-channel-publishers-0.4.2"
       sources."diff-3.5.0"
       (sources."dom-serializer-0.2.2" // {
         dependencies = [
@@ -2905,7 +2914,7 @@ in
       sources."fast-deep-equal-3.1.3"
       sources."fast-glob-3.2.4"
       sources."fast-json-stable-stringify-2.1.0"
-      sources."fastq-1.8.0"
+      sources."fastq-1.9.0"
       sources."fill-range-7.0.1"
       sources."forever-agent-0.6.1"
       sources."form-data-2.3.3"
@@ -2938,7 +2947,11 @@ in
       sources."json-schema-0.2.3"
       sources."json-schema-traverse-0.4.1"
       sources."json-stringify-safe-5.0.1"
-      sources."jsonfile-6.0.1"
+      (sources."jsonfile-6.1.0" // {
+        dependencies = [
+          sources."universalify-2.0.0"
+        ];
+      })
       sources."jsprim-1.4.1"
       sources."lodash-4.17.20"
       sources."long-4.0.0"
@@ -3059,10 +3072,10 @@ in
   coc-rust-analyzer = nodeEnv.buildNodePackage {
     name = "coc-rust-analyzer";
     packageName = "coc-rust-analyzer";
-    version = "0.13.0";
+    version = "0.16.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.13.0.tgz";
-      sha512 = "0pECUsBzCZ5ZeIcdYmyXg+dJxFQ8BKocKUSPFf1cdghgk/4WNojEvMmHqRFij4pbfCNCQ9lbNln1QdW7T0S6Hg==";
+      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.16.0.tgz";
+      sha512 = "fZk7sIDnex4PCibUZX14cIkJZvMb4ibZtdLHvSF1dtQsRvxxifSPHsnUsLwvHMm/rxStFTD2q27B20ZXaFbpgg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -3095,10 +3108,10 @@ in
   coc-xml = nodeEnv.buildNodePackage {
     name = "coc-xml";
     packageName = "coc-xml";
-    version = "1.13.2";
+    version = "1.14.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-xml/-/coc-xml-1.13.2.tgz";
-      sha512 = "UJa+Twdi1dqft9KaGwWagYIyc0xkqNMg60o/xheVkTomOBfNaffVssRFRIIguanNTirM/b4LMHotAs+0GPbMow==";
+      url = "https://registry.npmjs.org/coc-xml/-/coc-xml-1.14.0.tgz";
+      sha512 = "Oci4xtM2YCMmqmXPe/upRSTJ2PepRxOIwYhEUYm/nGAvQxPkz1kc8nC4xy8k9xPkkz+FRygVF6GmSoqgIJyudA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -3134,7 +3147,7 @@ in
       sources."async-limiter-1.0.1"
       sources."asynckit-0.4.0"
       sources."aws-sign2-0.7.0"
-      sources."aws4-1.10.1"
+      sources."aws4-1.11.0"
       sources."balanced-match-1.0.0"
       sources."bcrypt-pbkdf-1.0.2"
       sources."brace-expansion-1.1.11"

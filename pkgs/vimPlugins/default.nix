@@ -38,7 +38,7 @@ let
   '') nodePackages;
 in {
   fzf-preview = github "fzf-preview" "yuki-ycino/fzf-preview.vim" "c56b1ae1648e1b5bf79c6a033621e82ba0cbaabc"; # branch: release
-  vim-floaterm = github "vim-floaterm" "voldikss/vim-floaterm" "be20785a72925df1ff19a54ce5259d006bc92598";
+  vim-floaterm = github "vim-floaterm" "voldikss/vim-floaterm" "d7880f46f9b339f935e9912bb3f41c9b346ae992";
   vim-which-key = github "vim-which-key" "liuchengxu/vim-which-key" "30c0810b012a7acdccc6b72f0e99c0388986844f";
 
   vim-godot = github "vim-godot" "habamax/vim-godot" "7697cc88a9ae3e5da923a1739f9753ec4c47617b";

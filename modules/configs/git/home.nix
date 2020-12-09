@@ -48,7 +48,7 @@ in {
           sed -Ee '
             s/ years?, ?([[:digit:] ]{2}) months? ago##ago/y \1mo/
             s/ seconds? ago##ago/s /
-            s/ minutes? ago##ago/mt/
+            s/ minutes? ago##ago/m /
             s/ hours? ago##ago/h /
             s/ days? ago##ago/d /
             s/ weeks? ago##ago/wk/

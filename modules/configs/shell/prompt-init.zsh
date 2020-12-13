@@ -55,6 +55,11 @@ function onyx_zsh_prompt() {
             fi
             echo -n " [${ref#refs/heads/}]"
         fi
+
+        local stash="$(git stash list | wc -l)"
+        if [[ "$stash" -gt 0 ]]; then
+            echo -n "%{$fg[red]%} (☰ $stash)"
+        fi
     fi
 
     echo # start third line

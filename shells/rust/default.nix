@@ -27,6 +27,7 @@ let
     # https://rust-lang.github.io/rustup-components-history/x86_64-unknown-linux-gnu.html
 
     "2020-09" = "2020-09-23";
+    "2020-12" = "2020-12-13";
   };
 
   nightlyDate = if specificNightly then nightly else nightlyDateMap.${nightly};

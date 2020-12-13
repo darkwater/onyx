@@ -21,7 +21,7 @@ let
     version = source.version;
 
     patches = (source.patches or [])
-      ++ [ ./more-dbus-methods.patch ];
+      ++ [ ./more-dbus-methods.patch ./fix-rnnoise-argument.patch ];
 
     nativeBuildInputs = [ pkgconfig python qt5.qmake ]
       ++ (overrides.nativeBuildInputs or [ ]);

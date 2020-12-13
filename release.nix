@@ -22,6 +22,8 @@ in
 
     pjstore-test = import tests/pjstore.nix;
 
+    onyx-shells = null;
+
     shell-rust-2020-09     = wrapShell (overlaid.onyx-shells.rust { nightly = "2020-09"; });
     shell-rust-2020-09-emb = wrapShell (overlaid.onyx-shells.rust { nightly = "2020-09"; embedded = true; });
   }

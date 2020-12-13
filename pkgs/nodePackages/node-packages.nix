@@ -229,13 +229,13 @@ let
         sha512 = "5tXH6Bx/kNGd3MgffdmP4dy2Z+G4eaXw0SE81Tq3BNadtnMR5/ySMzX4SLEzHJzSmPNn4HIdpQsBvXMUykr58w==";
       };
     };
-    "@types/node-13.13.34" = {
+    "@types/node-13.13.36" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "13.13.34";
+      version = "13.13.36";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-13.13.34.tgz";
-        sha512 = "g8D1HF2dMDKYSDl5+79izRwRgNPsSynmWMbj50mj7GZ0b7Lv4p8EmZjbo3h0h+6iLr6YmVz9VnF6XVZ3O6V1Ug==";
+        url = "https://registry.npmjs.org/@types/node/-/node-13.13.36.tgz";
+        sha512 = "ctzZJ+XsmHQwe3xp07gFUq4JxBaRSYzKHPgblR76//UanGST7vfFNF0+ty5eEbgTqsENopzoDK090xlha9dccQ==";
       };
     };
     "abab-2.0.5" = {
@@ -661,13 +661,13 @@ let
         sha512 = "OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==";
       };
     };
-    "debug-4.3.1" = {
+    "debug-4.3.2" = {
       name = "debug";
       packageName = "debug";
-      version = "4.3.1";
+      version = "4.3.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz";
-        sha512 = "doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==";
+        url = "https://registry.npmjs.org/debug/-/debug-4.3.2.tgz";
+        sha512 = "mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==";
       };
     };
     "deep-is-0.1.3" = {
@@ -1237,13 +1237,13 @@ let
         sha512 = "k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==";
       };
     };
-    "ini-1.3.5" = {
+    "ini-1.3.8" = {
       name = "ini";
       packageName = "ini";
-      version = "1.3.5";
+      version = "1.3.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ini/-/ini-1.3.5.tgz";
-        sha512 = "RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==";
+        url = "https://registry.npmjs.org/ini/-/ini-1.3.8.tgz";
+        sha512 = "JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==";
       };
     };
     "intelephense-1.5.2" = {
@@ -2644,10 +2644,10 @@ in
   coc-actions = nodeEnv.buildNodePackage {
     name = "coc-actions";
     packageName = "coc-actions";
-    version = "1.4.3";
+    version = "1.5.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-actions/-/coc-actions-1.4.3.tgz";
-      sha512 = "CClCEUTU9X8M6x/wi4u06WWm2OX8gEl/pF0YQWZPB/cnRzhLH4SbuzN/4LxFZmrssff8M1+xXul3CSehdSq1Wg==";
+      url = "https://registry.npmjs.org/coc-actions/-/coc-actions-1.5.0.tgz";
+      sha512 = "mw29sqJneoRev9wJvim4fErvZyTSieeCTAl7VdK7P9lpk32sYXtr5vLR1D27X07C3/mI/FZV+yrDTltaXNDZmA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -2662,10 +2662,10 @@ in
   coc-explorer = nodeEnv.buildNodePackage {
     name = "coc-explorer";
     packageName = "coc-explorer";
-    version = "0.11.4";
+    version = "0.12.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.11.4.tgz";
-      sha512 = "N8eg6lgEnPFKwKiFw1G0ukM0qrJt5WZ1KN2naaoZoBjeH30JsmvGIb/ENW1Wf8rVme4Ydj8n4tdlSxija7Pa+w==";
+      url = "https://registry.npmjs.org/coc-explorer/-/coc-explorer-0.12.1.tgz";
+      sha512 = "TtuboE4ASkc/L9B3MS4LYgZ045JEiTrtFdENTzgISKDDosPxdXqh7RE2Xajwf4gTkogRvU5mKPBoeMbtNw3zLw==";
     };
     dependencies = [
       sources."@sindresorhus/df-2.1.0"
@@ -2861,7 +2861,7 @@ in
       sources."@protobufjs/utf8-1.1.0"
       sources."@tootallnate/once-1.1.2"
       sources."@types/long-4.0.1"
-      sources."@types/node-13.13.34"
+      sources."@types/node-13.13.36"
       sources."abbrev-1.1.1"
       sources."agent-base-6.0.2"
       sources."ajv-6.12.6"
@@ -2897,7 +2897,7 @@ in
       sources."continuation-local-storage-3.2.1"
       sources."core-util-is-1.0.2"
       sources."dashdash-1.14.1"
-      sources."debug-4.3.1"
+      sources."debug-4.3.2"
       sources."delayed-stream-1.0.0"
       (sources."diagnostic-channel-0.3.1" // {
         dependencies = [
@@ -2954,7 +2954,7 @@ in
       sources."https-proxy-agent-5.0.0"
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
-      sources."ini-1.3.5"
+      sources."ini-1.3.8"
       sources."intelephense-1.5.2"
       sources."is-extglob-2.1.1"
       sources."is-glob-4.0.1"
@@ -3095,10 +3095,10 @@ in
   coc-rust-analyzer = nodeEnv.buildNodePackage {
     name = "coc-rust-analyzer";
     packageName = "coc-rust-analyzer";
-    version = "0.19.0";
+    version = "0.21.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.19.0.tgz";
-      sha512 = "HeoHspOK0pg9UGUV6jYX5IlJhWIslA34Yg99QqJU2xCJxE93YAlyhJ0S/TVtkQdCYpn6D7UiHjKDazUQKkDMOQ==";
+      url = "https://registry.npmjs.org/coc-rust-analyzer/-/coc-rust-analyzer-0.21.0.tgz";
+      sha512 = "LHHA8fqgZwi5+6tAWsJe3A5SMZsRmLJLgJnBiA0+iaZaJOBJrccq/GCbW3R6DBXCwk32iwnRMwdj+awCChJJnQ==";
     };
     buildInputs = globalBuildInputs;
     meta = {

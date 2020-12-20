@@ -7,6 +7,7 @@
   };
 
   overlay = self: super: rec {
+    autorandr2                = self.callPackage ./pkgs/autorandr2 {};
     brightctl                 = self.callPackage ./pkgs/brightctl {};
     cargo-embed               = self.callPackage ./pkgs/cargo-embed {};
     cargo-node                = self.callPackage ./pkgs/cargo-node {};

@@ -37,6 +37,9 @@ let
     ln -s ${package}/lib/node_modules/* $out/share/vim-plugins/${name}
   '') nodePackages;
 in {
+  # update.sh fetches the latest commits for these, optionally on the branch
+  # specified by the comment at the end of each line.
+
   fzf-preview = github "fzf-preview" "yuki-ycino/fzf-preview.vim" "420a3acfa9d4a4a8aa282c4f63e03fdccb409f99"; # branch: release
   vim-floaterm = github "vim-floaterm" "voldikss/vim-floaterm" "74d33de5d47923fdd6a3ffc6b71a2d364c5e0103";
   vim-which-key = github "vim-which-key" "liuchengxu/vim-which-key" "c5322b2f67bc627d467e527a530ff6695ccd3dbd";
@@ -46,6 +49,9 @@ in {
   # syntax plugins
   i3config-vim = github "i3config-vim" "mboughaba/i3config.vim" "c3fe1a901392ee11721e08d2a0d2886a7f8b8e83";
   ron-vim = github "ron-vim" "ron-rs/ron.vim" "04004b3395d219f95a533c4badd5ba831b7b7c07";
+
+  # unstable doesn't update fast enough smile
+  coc-nvim = github "coc-nvim" "neoclide/coc.nvim" "f805103eeb487b8d917b44977dca433f64c4fab6"; # branch: release
 
   inherit (node)
     coc-actions
@@ -62,7 +68,6 @@ in {
   inherit (unstable.vimPlugins)
     coc-git
     coc-json
-    coc-nvim
     coc-tsserver
     coc-yaml
     fzf-vim

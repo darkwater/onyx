@@ -11,5 +11,5 @@ rustPlatform.buildRustPackage {
 
   buildInputs = [ pkg-config libusb1 rustfmt ];
 
-  cargoSha256 = "0qh7spp8imp5gmrsfak657bxhd89q8dgwlxgxw4x2dkc5kbpq7n8";
+  cargoSha256 = "1cd3s8yah8i1z4z286i67prvb1m2857kcjfhfp76zsbm6r4id3y8";
 }

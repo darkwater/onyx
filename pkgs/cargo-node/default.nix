@@ -9,7 +9,7 @@ rustPlatform.buildRustPackage rec {
     rev = "fff95338120067e16064df7c6009cdd993f5fc93";
   };
 
-  cargoSha256 = "07ys5v89hzvmmvzf1qygrsa88j3r5n5mvz2akihxbj1zhi3w1br2";
+  cargoSha256 = "0pkr5m61f60hfzdqwdbr6xqrnm0g0c3a1gpgjrqk4zxfiypad8l4";
   # verifyCargoDeps = true;
 
   meta = with stdenv.lib; {

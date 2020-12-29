@@ -16,7 +16,7 @@ in rustPlatform.buildRustPackage {
     cp ${./Cargo.lock} $out/Cargo.lock
   '';
 
-  cargoSha256 = "1vfc65wsy6hvhwxcnz3yl6r6qn65h8d3wikn83divwfj0sv6dahy";
+  cargoSha256 = "0ij1bsa29gi3jzwylwck6radi5vw4v5sanmq3jp0am6ax8y68pxl";
 
   meta = with stdenv.lib; {
     description = "Tools for analyzing ITM traces.";

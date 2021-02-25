@@ -5,7 +5,7 @@ rustPlatform.buildRustPackage rec {
   version = "0.1.0";
 
   src = builtins.fetchGit {
-    url = "https://git.dark.red/darkwater/crc16";
+    url = "https://github.com/darkwater/crc16";
     rev = "a7249900646123c3a6b059d26fe170dc02543967";
   };
 
@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage rec {
 
   meta = with stdenv.lib; {
     description = "Calculate crc16 checksum from stdin";
-    homepage = https://git.dark.red/darkwater/crc16;
+    homepage = https://github.com/darkwater/crc16;
     platforms = platforms.all;
   };
 }

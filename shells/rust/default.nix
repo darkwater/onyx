@@ -35,7 +35,7 @@ let
   latestNightly = builtins.head (builtins.attrNames nightlyDateMap);
   latestNightlyVal = nightlyDateMap."${latestNightly}";
 
-  onyx = import (builtins.fetchTarball https://git.dark.red/darkwater/onyx/-/archive/master/onyx-master.tar.gz) {};
+  onyx = import (builtins.fetchTarball https://github.com/darkwater/onyx/archive/master.tar.gz) {};
   moz_overlay = import (builtins.fetchTarball https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz);
   overlaidPkgs = import <nixpkgs> { overlays = [ onyx.overlay moz_overlay ]; };
 

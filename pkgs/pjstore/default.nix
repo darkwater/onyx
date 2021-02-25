@@ -5,7 +5,7 @@ rustPlatform.buildRustPackage rec {
   version = "0.1.0";
 
   src = builtins.fetchGit {
-    url = "https://git.dark.red/darkwater/pjstore";
+    url = "https://github.com/darkwater/pjstore";
     rev = "86d270b4a177d492784a8d4d5e427eebcb45cde2";
   };
 
@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage rec {
 
   meta = with stdenv.lib; {
     description = "Store JSON objects in a SQLite database over HTTP";
-    homepage = https://git.dark.red/darkwater/pjstore;
+    homepage = https://github.com/darkwater/pjstore;
     platforms = platforms.all;
   };
 }

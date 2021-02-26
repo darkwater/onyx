@@ -61,7 +61,7 @@
     dark = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILv7pO+bnKImaSQPnvPRJzpJ+ditlPzmTccY5x9nxfpt dark@tetsuya"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMczdUseE7jrjikFSivN8YfK7aurDK/U0KxD71+q7Wjo dark@nagumo"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDMlR1hlRwZqXB1xQbaCywxmpI0y3Sj1qcpfdOWnQLJW dark@sekiban"
+      "ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAHbNgyd3ECJCfC62iTSApBzHUBhoexLzxJLlps3DJ8e91G6ZyyOLTkHz/vESfsuwdU5BzQk82TYcSHYmwspXu6EvAG5QuLW5gl3dv0s3+ZK0sU1RH/L+8oqbH1P84Nu6nRasCxe67O50rUKu5c0UYPF+G4kW7nT7KBg00H7nt+knVPYiA== dark@sekiban"
     ];
     mro95 = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBCCdJXwqPLO9BS5nGICQSWMlFy4+u96GbfAqXWxMjSw mro95@mro95-laptop"

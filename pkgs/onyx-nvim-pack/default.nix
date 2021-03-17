@@ -1,5 +1,5 @@
 { stdenv, lib, linkFarm, writeShellScript, coreutils, writeText, callPackage,
-  rnix-lsp, nodePackages, runCommand, vimPlugins, }:
+  rnix-lsp, nodePackages, runCommand, unstable }:
 
 let
   inherit ((import ../../. {}).unstable)
@@ -15,11 +15,6 @@ let
         phases = [ "unpackPhase" "buildPhase" "installPhase" ];
         installPhase = ''cp -ax . $out'';
 
-        # TODO: bundle npm somehow so :CocInstall etc. work
-        generatedVim = writeText "generated.vim" ''
-          let g:coc_user_config = json_decode('${builtins.toJSON cocConfig}')
-        '';
-
         buildPhase = ''
           ln -s $generatedVim plugin/generated.vim
         '';
@@ -33,20 +28,7 @@ let
     inherit name;
     path = "${drv}/share/vim-plugins/${name}";
   }) (lib.getAttrs [
-    "coc-actions"
-    "coc-explorer"
-    "coc-git"
-    "coc-json"
-    "coc-nvim"
-    "coc-rust-analyzer"
-    "coc-tsserver"
-    "coc-vimlsp"
-    "coc-xml"
-    "coc-yaml"
-    "fzf-preview"
-    "fzf-vim"
     "i3config-vim"
-    "ron-vim"
     "rust-vim"
     "vim-airline"
     "vim-airline-themes"
@@ -54,38 +36,11 @@ let
     "vim-easy-align"
     "vim-floaterm"
     "vim-fugitive"
-    "vim-godot"
     "vim-nix"
     "vim-repeat"
     "vim-surround"
     "vim-toml"
-    "vim-which-key"
-  ] vimPlugins)));
-
-  cocConfig = {
-    "rust-analyzer.serverPath" = "${rust-analyzer}/bin/rust-analyzer";
-    languageserver = {
-      rnix = {
-        command = "${rnix-lsp}/bin/rnix-lsp";
-        filetypes = [ "nix" ];
-        rootPatterns = [ "default.nix" ];
-      };
-      bash = {
-        command = "${nodePackages.bash-language-server}/bin/bash-language-server";
-        args = [ "start" ];
-        filetypes = [ "sh" ];
-        ignoredRootPaths = [ "~" ];
-      };
-      godot = {
-        host = "127.0.0.1";
-        port = 6008;
-        filetypes = [ "gdscript" ];
-      };
-    };
-  };
-
-  optionalPlugins = [
-  ];
+  ] unstable.vimPlugins)));
 in stdenv.mkDerivation {
   name = "onyx-nvim";
   version = "0.1.0";
@@ -93,13 +48,10 @@ in stdenv.mkDerivation {
   src = null;
 
   packStart = linkFarm "pack-start" plugins;
-  packOpt   = linkFarm "pack-opt" optionalPlugins;
-
   builder = writeShellScript "onyx-nvim-builder" ''
     PATH=${coreutils}/bin
 
     mkdir -p $out/share/nvim/site/pack/onyx/
     ln -s $packStart $out/share/nvim/site/pack/onyx/start
-    ln -s $packOpt $out/share/nvim/site/pack/onyx/opt
   '';
 }

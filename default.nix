@@ -1,6 +1,6 @@
 {}:
 
-{
+rec {
   # it's probably a good idea to use the same revision of unstable everywhere
   unstable = import (builtins.fetchTarball "https://github.com/nixos/nixpkgs/archive/ea3638a3fb2.tar.gz") {
     config.allowUnfree = true;
@@ -13,7 +13,7 @@
     cargo-node                = self.callPackage ./pkgs/cargo-node {};
     crc16                     = self.callPackage ./pkgs/crc16 {};
     itm-tools                 = self.callPackage ./pkgs/itm-tools {};
-    onyx-nvim-pack            = self.callPackage ./pkgs/onyx-nvim-pack {};
+    onyx-nvim-pack            = self.callPackage ./pkgs/onyx-nvim-pack { inherit unstable; };
     pjstore                   = self.callPackage ./pkgs/pjstore {};
     polybar                   = self.callPackage ./pkgs/polybar {};
     unvpk                     = self.callPackage ./pkgs/unvpk {};
@@ -32,7 +32,6 @@
     }).mumble;
 
     nodePackages = (super.nodePackages or {}) // import ./pkgs/nodePackages { pkgs = self; };
-    vimPlugins   = (super.vimPlugins or {}) // self.callPackage ./pkgs/vimPlugins {};
 
     onyx-shells = {
       rust = self.callPackage ./shells/rust {};

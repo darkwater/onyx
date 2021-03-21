@@ -16,10 +16,6 @@ in
       (attrNames emptyOverlay.nodePackages)
       overlaid.nodePackages;
 
-    vimPlugins = getAttrs
-      (attrNames emptyOverlay.vimPlugins)
-      overlaid.vimPlugins;
-
     pjstore-test = import tests/pjstore.nix;
 
     onyx-shells = null;

@@ -7,7 +7,7 @@
   };
 
   outputs = attrs @ { self, nixpkgs, ... }: {
-    defaultOverlay = final: prev: {
+    overlays.default = final: prev: {
       shino = attrs.shino;
       hermes = attrs.hermes;
     };
@@ -17,22 +17,27 @@
       hermes = attrs.hermes.defaultPackage.x86_64-linux;
     };
 
+    nixosModules.default = import modules/onyx.nix;
+
     nixosConfigurations.sinon = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = attrs;
       modules = [
-        ({...}: { networking.hostName = "sinon"; })
-        modules/sinon
-        modules/common.nix
+        modules/onyx.nix
 
-        modules/docker.nix
-        modules/fbk-red-ssl.nix
-        modules/mosquitto.nix
-        modules/shell.nix
-        modules/spotifyd.nix
-        modules/transmission.nix
-        modules/wireguard.nix
-      ] ;
+        nixos/sinon
+        nixos/common.nix
+        nixos/fbk-red-ssl.nix
+        nixos/wireguard.nix
+
+        ({ ... }: {
+          networking.hostName = "sinon";
+          onyx.shell.hostnameColor = {
+            fg = [ 196 252 227 ];
+            bg = [ 48 42 3 ];
+          };
+        })
+      ];
     };
   };
 }

@@ -3,13 +3,25 @@
 {
   imports = [
     ./hardware.nix
+    ./mosquitto.nix
+    ./spotifyd.nix
     ./sway.nix
+    ./transmission.nix
   ];
 
   environment.systemPackages = with pkgs; [
-    alacritty baobab espeak-ng feh ffmpeg-full firefox graphviz gtk2fontsel
-    gucharmap inotify-tools lm_sensors maim mpv mumble pulsemixer rofi ruby
-    slop socat sway wayland xclip xdotool xorg.xwininfo youtube-dl
+    alacritty
+    espeak-ng
+    feh
+    ffmpeg-full
+    firefox
+    maim
+    mpv
+    pulsemixer
+    sway
+    wayland
+    wtype
+    youtube-dl
 
     shino.defaultPackage.x86_64-linux
     hermes.defaultPackage.x86_64-linux
@@ -42,7 +54,7 @@
     enable = true;
 
     virtualHosts."ha.fbk.red" = {
-      listen = [ { addr = config.dark.vpn.address; port = 443; ssl = true; } ];
+      listen = [{ addr = config.dark.vpn.address; port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/" = {
@@ -52,7 +64,7 @@
     };
 
     virtualHosts."sinon.fbk.red" = {
-      listen = [ { addr = config.dark.vpn.address; port = 443; ssl = true; } ];
+      listen = [{ addr = config.dark.vpn.address; port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/s/".alias = "/data/s/";

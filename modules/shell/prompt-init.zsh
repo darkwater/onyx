@@ -1,15 +1,3 @@
-# color for prompt
-__hostname_color() {
-    case "$(hostname | cut -d. -f1)" in
-        tetsuya) echo -n "\e[1;38;2;159;204;225;48;2;27;27;38m"   ;;
-        nagumo)  echo -n "\e[1;38;2;206;16;21;48;2;36;28;22m"     ;;
-        fubuki)  echo -n "\e[1;38;2;250;250;250;48;2;81;114;142m" ;;
-        sinon)   echo -n "\e[1;38;2;196;252;227;48;2;48;42;3m"    ;;
-        atsushi) echo -n "\e[1;38;2;189;155;235;48;2;50;50;50m"   ;;
-        *)       echo -n "\e[1;38;2;200;200;200;48;2;50;50;50m"   ;;
-    esac
-}
-
 __set_window_title() {
     echo -n "\e]0;$*\a"
 }
@@ -43,15 +31,15 @@ __genps1() {
         echo -n "\e]133;A\a"
 
         # hostname color
-        echo -n "$(__hostname_color)"
+        echo -n "\e[1;38;2;@hostnameColorFg@;48;2;@hostnameColorBg@m"
 
     # end unprintable characters
     echo -n "%}"
 
     echo -n " %m $reset"
 
-    # username if not root
-    if [[ "$(whoami)" != "dark" ]]; then
+    # username if not default
+    if [[ "$(whoami)" != "@defaultUser@" ]]; then
         echo -n " ${bred}[%n]$reset"
     fi
 

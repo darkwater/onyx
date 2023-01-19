@@ -1,24 +1,34 @@
-{ pkgs, config, ... }:
+{ config, lib, pkgs, ... }:
 
+let
+  cfg = config.onyx.docker;
+in
 {
-  virtualisation.docker = {
-    enable = true;
-    autoPrune.enable = true;
-    daemon.settings = {
-      log-driver = "json-file";
-      log-opts = {
-        "max-size" = "10m";
-        "max-file" = "3";
-      };
-    };
+  options.onyx.docker = {
+    enable = lib.mkEnableOption "onyx docker";
   };
 
-  environment.systemPackages = with pkgs; [
-    docker-compose
-  ];
+  config = lib.mkIf cfg.enable {
+    virtualisation.docker = {
+      enable = true;
+      autoPrune.enable = true;
+      daemon.settings = {
+        log-driver = "json-file";
+        log-opts = {
+          "max-size" = "10m";
+          "max-file" = "3";
+        };
+      };
+    };
 
-  systemd.tmpfiles.rules = [
-    "d /srv/docker       0755 root root - "
-    "L /root/docker      -    -    -    - /srv/docker"
-  ];
+    environment.systemPackages = with pkgs; [
+      docker-compose
+      dive
+    ];
+
+    systemd.tmpfiles.rules = [
+      "d /srv/docker       0755 root root - "
+      "L /root/docker      -    -    -    - /srv/docker"
+    ];
+  };
 }

@@ -17,5 +17,11 @@
 
   swapDevices = [];
 
+  hardware.video.hidpi.enable = true;
   hardware.cpu.amd.updateMicrocode = true;
+  hardware.enableAllFirmware = true;
+
+  networking.interfaces.enp8s0.useDHCP = true;
+
+  nixpkgs.hostPlatform = "x86_64-linux";
 }

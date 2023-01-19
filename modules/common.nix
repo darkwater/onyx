@@ -20,7 +20,7 @@
     # cli
     acpi bat ed du-dust exa fd file fzf git gnupg htop imagemagick jq lsof
     neovim netcat-gnu pciutils pstree pv ripgrep rubyPackages_3_1.pry
-    solargraph sshfs unzip wget xxd
+    solargraph sshfs unzip usbutils wget xxd
 
     # tui
     htop screen tmux
@@ -30,8 +30,12 @@
   boot.cleanTmpDir = true;
 
   networking.domain = "";
-  networking.useDHCP = false;
   networking.firewall.enable = false;
+
+  networking.useDHCP = false;
+  networking.dhcpcd.extraConfig = ''
+    hostname ${config.networking.hostName}
+  '';
 
   nix = {
     settings.trusted-users = [ "root" "@wheel" ];

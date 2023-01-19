@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, shino, hermes, ... }:
 
 {
   imports = [
@@ -10,6 +10,9 @@
     alacritty baobab espeak-ng feh ffmpeg-full firefox graphviz gtk2fontsel
     gucharmap inotify-tools lm_sensors maim mpv mumble pulsemixer rofi ruby
     slop socat sway wayland xclip xdotool xorg.xwininfo youtube-dl
+
+    shino.defaultPackage.x86_64-linux
+    hermes.defaultPackage.x86_64-linux
   ];
 
   hardware.bluetooth.enable = true;
@@ -19,11 +22,21 @@
     };
   };
 
+  services.udev.extraRules = ''
+    SUBSYSTEM=="tty", ATTRS{idVendor}=="2548", ATTRS{idProduct}=="1002", OWNER="dark"
+    SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", OWNER="dark"
+  '';
+
   services.rdnssd.enable = true;
-  services.avahi.enable = true;
-  services.avahi.nssmdns = true;
-  services.avahi.publish.enable = true;
-  services.avahi.publish.userServices = true;
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    hostName = config.networking.hostName;
+    publish = {
+      enable = true;
+      userServices = true;
+    };
+  };
 
   services.nginx = {
     enable = true;

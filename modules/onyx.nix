@@ -8,6 +8,7 @@ in
     ./docker.nix
     ./hetzner.nix
     ./shell
+    ./proxies.nix
   ];
 
   options.onyx = {

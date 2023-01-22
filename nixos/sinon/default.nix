@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./backup.nix
     ./hardware.nix
     ./mosquitto.nix
     ./spotifyd.nix

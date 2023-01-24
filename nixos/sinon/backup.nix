@@ -18,7 +18,7 @@
       startAt = "daily";
       prune.keep = {
         daily = 7;
-        weelky = 4;
+        weekly = 4;
         monthly = 12;
       };
     };
@@ -34,7 +34,7 @@
       startAt = "daily";
       prune.keep = {
         daily = 7;
-        weelky = 4;
+        weekly = 4;
         monthly = 12;
       };
     };

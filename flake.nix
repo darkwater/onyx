@@ -53,7 +53,7 @@
               (lists.unique
                 (sort lessThan
                   (map
-                    (pkg: "  ${pkg.meta.name} - ${pkg.outPath}\n")
+                    (pkg: "  ${pkg.meta.name}\n")
                     nixosConfigurations."${host}".config.environment.systemPackages)));
 
           # services = host:

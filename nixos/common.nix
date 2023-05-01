@@ -9,6 +9,12 @@
     openssh.authorizedKeys.keys = import ../ssh-keys.nix;
   };
 
+  users.users.arena = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "docker" ];
+    openssh.authorizedKeys.keys = import ../ssh-keys.nix;
+  };
+
   users.users.root = {
     openssh.authorizedKeys.keys = import ../ssh-keys.nix;
   };

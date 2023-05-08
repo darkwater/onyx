@@ -2,6 +2,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
 
+    vscode-server.url = "github:nix-community/nixos-vscode-server";
+
     shino.url = "github:darkwater/shino";
     hermes.url = "github:darkwater/hermes";
   };
@@ -27,6 +29,8 @@
         system = "x86_64-linux";
         specialArgs = attrs;
         modules = [
+          attrs.vscode-server.nixosModule
+
           modules/onyx.nix
 
           nixos/sinon
@@ -40,6 +44,8 @@
               fg = [ 196 252 227 ];
               bg = [ 48 42 3 ];
             };
+
+            services.vscode-server.enable = true;
           })
         ];
       };

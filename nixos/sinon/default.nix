@@ -20,6 +20,7 @@
     mpv
     pulsemixer
     sway
+    tailscale
     wayland
     wtype
     youtube-dl
@@ -27,6 +28,8 @@
     shino.defaultPackage.x86_64-linux
     hermes.defaultPackage.x86_64-linux
   ];
+  
+  services.tailscale.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.settings = {

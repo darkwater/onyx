@@ -58,7 +58,7 @@
     enable = true;
 
     virtualHosts."ha.fbk.red" = {
-      listen = [{ port = 443; ssl = true; }];
+      listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/" = {
@@ -68,7 +68,7 @@
     };
 
     virtualHosts."sinon.fbk.red" = {
-      listen = [{ port = 443; ssl = true; }];
+      listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/s/".alias = "/data/s/";

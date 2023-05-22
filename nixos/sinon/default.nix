@@ -58,7 +58,7 @@
     enable = true;
 
     virtualHosts."ha.fbk.red" = {
-      listen = [{ addr = config.dark.vpn.address; port = 443; ssl = true; }];
+      listen = [{ port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/" = {
@@ -68,7 +68,7 @@
     };
 
     virtualHosts."sinon.fbk.red" = {
-      listen = [{ addr = config.dark.vpn.address; port = 443; ssl = true; }];
+      listen = [{ port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/s/".alias = "/data/s/";

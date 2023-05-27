@@ -30,6 +30,8 @@
   ];
   
   services.tailscale.enable = true;
+  
+  services.flatpak.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.settings = {

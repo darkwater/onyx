@@ -64,8 +64,8 @@ in {
 
     virtualHosts."torrents.fbk.red" = {
       listen = [
-        { addr = config.dark.vpn.address; port = 443; ssl = true; }
-        { addr = config.dark.vpn.address; port = 80; }
+        { addr = "0.0.0.0"; port = 443; ssl = true; }
+        { addr = "0.0.0.0"; port = 80; }
       ];
       useACMEHost = "_.fbk.red";
       forceSSL = true;

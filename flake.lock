@@ -170,7 +170,7 @@
       "inputs": {
         "hermes": "hermes",
         "nixpkgs": "nixpkgs_3",
-        "shino": "shino",
+        "shino": "shino"
       }
     },
     "shino": {
@@ -237,7 +237,7 @@
         "repo": "flake-utils",
         "type": "github"
       }
-    },
+    }
   },
   "root": "root",
   "version": 7

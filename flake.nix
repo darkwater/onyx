@@ -2,8 +2,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
 
-    vscode-server.url = "github:nix-community/nixos-vscode-server";
-
     shino.url = "github:darkwater/shino";
     hermes.url = "github:darkwater/hermes";
   };
@@ -25,12 +23,32 @@
 
       nixosModules.default = import modules/onyx.nix;
 
+      nixosConfigurations.fubuki = lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = attrs;
+        modules = [
+          modules/onyx.nix
+
+          nixos/fubuki
+          nixos/common.nix
+          nixos/fbk-red-ssl.nix
+          nixos/wireguard.nix
+
+          ({ ... }: {
+            onyx.hetzner.enable = true;
+            networking.hostName = "fubuki";
+            onyx.shell.hostnameColor = {
+              fg = [ 250 250 250 ];
+              bg = [ 81 114 142 ];
+            };
+          })
+        ];
+      };
+
       nixosConfigurations.sinon = lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = attrs;
         modules = [
-          attrs.vscode-server.nixosModule
-
           modules/onyx.nix
 
           nixos/sinon
@@ -44,8 +62,6 @@
               fg = [ 196 252 227 ];
               bg = [ 48 42 3 ];
             };
-
-            services.vscode-server.enable = true;
           })
         ];
       };

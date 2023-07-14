@@ -1,4 +1,4 @@
-{ config, lib, pkgs, shino, hermes, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
@@ -24,13 +24,10 @@
     wayland
     wtype
     youtube-dl
-
-    shino.defaultPackage.x86_64-linux
-    hermes.defaultPackage.x86_64-linux
   ];
-  
+
   services.tailscale.enable = true;
-  
+
   services.flatpak.enable = true;
 
   hardware.bluetooth.enable = true;

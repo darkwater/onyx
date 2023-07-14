@@ -7,6 +7,7 @@
     virtualHosts."dark.red" = {
       listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       forceSSL = true;
+      enableACME = true;
       locations."/".root = "/srv/http/dark.red/public/";
       locations."/s/" = {
         proxyPass = "https://sinon.fbk.red/s/legacy/8f9453";
@@ -17,6 +18,7 @@
     virtualHosts."s.dark.red" = {
       listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       forceSSL = true;
+      enableACME = true;
       locations."/" = {
         proxyPass = "https://sinon.fbk.red/s/";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
@@ -34,12 +36,14 @@
     virtualHosts."httpbin.dark.red" = {
       listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       forceSSL = true;
+      enableACME = true;
       locations."/".proxyPass = "http://localhost:6550";
     };
 
     virtualHosts."pass.fbk.red" = {
       listen = [{ addr = "172.24.0.1"; port = 443; ssl = true; }];
       onlySSL = true;
+      useACMEHost = "_.fbk.red";
       locations."/".proxyPass = "http://localhost:4800";
     };
   };

@@ -13,7 +13,7 @@
         recommendedProxySettings = true;
       };
       locations."/api/v1/streaming" = {
-        proxyPass = "http://localhost:3000";
+        proxyPass = "http://localhost:4000";
         proxyWebsockets = true;
         recommendedProxySettings = true;
       };
@@ -52,7 +52,6 @@
 
     virtualHosts."pass.fbk.red" = {
       listen = [{ addr = "172.24.0.1"; port = 443; ssl = true; }];
-      onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/".proxyPass = "http://localhost:4800";
     };

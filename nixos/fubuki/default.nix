@@ -16,7 +16,6 @@
     };
 
     virtualHosts."s.dark.red" = {
-      listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       forceSSL = true;
       enableACME = true;
       locations."/" = {
@@ -34,7 +33,6 @@
     };
 
     virtualHosts."httpbin.dark.red" = {
-      listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       forceSSL = true;
       enableACME = true;
       locations."/".proxyPass = "http://localhost:6550";

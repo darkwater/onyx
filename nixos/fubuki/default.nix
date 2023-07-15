@@ -5,6 +5,7 @@
     enable = true;
 
     virtualHosts."dark.red" = {
+      default = true;
       forceSSL = true;
       enableACME = true;
       locations."/" = {

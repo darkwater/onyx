@@ -5,13 +5,22 @@
     enable = true;
 
     virtualHosts."dark.red" = {
-      listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       forceSSL = true;
       enableACME = true;
-      locations."/".root = "/srv/http/dark.red/public/";
+      locations."/" = {
+        proxyPass = "http://localhost:3000";
+        proxyWebsockets = true;
+        recommendedProxySettings = true;
+      };
+      locations."/api/v1/streaming" = {
+        proxyPass = "http://localhost:3000";
+        proxyWebsockets = true;
+        recommendedProxySettings = true;
+      };
       locations."/s/" = {
         proxyPass = "https://sinon.fbk.red/s/legacy/8f9453";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
+        recommendedProxySettings = true;
       };
     };
 
@@ -21,14 +30,17 @@
       locations."/" = {
         proxyPass = "https://sinon.fbk.red/s/";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
+        recommendedProxySettings = true;
       };
       locations."/anime/" = {
         proxyPass = "https://sinon.fbk.red/anime/";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
+        recommendedProxySettings = true;
       };
       locations."/torrents/" = {
         proxyPass = "https://sinon.fbk.red/torrents/";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
+        recommendedProxySettings = true;
       };
     };
 

@@ -1,6 +1,13 @@
 { config, lib, pkgs, shino, hermes, ... }:
 
 {
+  services.murmur = {
+    enable = true;
+    registerName = "Fubuki";
+    welcometext = "welcome to snowcloud";
+    bandwidth = 320 * 1024;
+  };
+
   services.nginx = {
     enable = true;
 

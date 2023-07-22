@@ -49,7 +49,7 @@ in
     ];
 
     # == general system stuff ==
-    boot.cleanTmpDir = true;
+    boot.tmp.cleanOnBoot = true;
 
     networking.domain = "";
     networking.firewall.enable = false;

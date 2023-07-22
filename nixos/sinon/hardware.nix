@@ -17,7 +17,6 @@
 
   swapDevices = [];
 
-  hardware.video.hidpi.enable = true;
   hardware.cpu.amd.updateMicrocode = true;
   hardware.enableAllFirmware = true;
 

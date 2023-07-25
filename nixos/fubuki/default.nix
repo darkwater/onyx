@@ -53,7 +53,13 @@
       listen = [{ addr = "172.24.0.1"; port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
-      locations."/".proxyPass = "http://localhost:4800";
+      locations."/" = {
+        proxyPass = "http://localhost:4800";
+        extraConfig = ''
+          allow 172.24.0.0/24;
+          deny all;
+        '';
+      };
     };
   };
 }

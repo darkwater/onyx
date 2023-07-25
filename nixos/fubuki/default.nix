@@ -15,16 +15,7 @@
       default = true;
       forceSSL = true;
       enableACME = true;
-      locations."/" = {
-        proxyPass = "http://localhost:3000";
-        proxyWebsockets = true;
-        recommendedProxySettings = true;
-      };
-      locations."/api/v1/streaming" = {
-        proxyPass = "http://localhost:4000";
-        proxyWebsockets = true;
-        recommendedProxySettings = true;
-      };
+      locations."/".root = "/srv/http/dark.red/public/";
       locations."/s/" = {
         proxyPass = "https://sinon.fbk.red/s/legacy/8f9453";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";

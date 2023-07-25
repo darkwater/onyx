@@ -19,7 +19,7 @@
       locations."/s/" = {
         proxyPass = "https://sinon.fbk.red/s/legacy/8f9453";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
-        recommendedProxySettings = true;
+        recommendedProxySettings = false;
       };
     };
 
@@ -29,17 +29,17 @@
       locations."/" = {
         proxyPass = "https://sinon.fbk.red/s/";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
-        recommendedProxySettings = true;
+        recommendedProxySettings = false;
       };
       locations."/anime/" = {
         proxyPass = "https://sinon.fbk.red/anime/";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
-        recommendedProxySettings = true;
+        recommendedProxySettings = false;
       };
       locations."/torrents/" = {
         proxyPass = "https://sinon.fbk.red/torrents/";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
-        recommendedProxySettings = true;
+        recommendedProxySettings = false;
       };
     };
 

@@ -75,5 +75,15 @@
       locations."/anime/".alias = "/data/anime/";
       locations."/torrents/".alias = "/data/torrents/";
     };
+
+    virtualHosts."tetsu.fbk.red" = {
+      listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
+      onlySSL = true;
+      useACMEHost = "_.fbk.red";
+      locations."/" = {
+        proxyPass = "http://localhost:5352";
+        proxyWebsockets = true;
+      };
+    };
   };
 }

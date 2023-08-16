@@ -9,6 +9,6 @@
   ];
 
   arena = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINC0dEw++QGhX/4feJ+zXGIVQpZhTDweCsh/6lgxBAIF"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHbHEyItadFdWDxDZkyid9Q7V7Ml3Ii7JEwWZiiuDjPA deck@steamdeck"
   ];
 }

@@ -57,7 +57,6 @@
     enable = true;
 
     virtualHosts."ha.fbk.red" = {
-      listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/" = {
@@ -67,7 +66,6 @@
     };
 
     virtualHosts."sinon.fbk.red" = {
-      listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/s/".alias = "/data/s/";
@@ -77,12 +75,24 @@
     };
 
     virtualHosts."tetsu.fbk.red" = {
-      listen = [{ addr = "0.0.0.0"; port = 443; ssl = true; }];
       onlySSL = true;
       useACMEHost = "_.fbk.red";
       locations."/" = {
         proxyPass = "http://localhost:5352";
         proxyWebsockets = true;
+      };
+    };
+
+    virtualHosts."syncthing.sinon.fbk.red" = {
+      onlySSL = true;
+      useACMEHost = "_.sinon.fbk.red";
+      locations."/" = {
+        proxyPass = "http://localhost:8384";
+        proxyWebsockets = true;
+        extraConfig = ''
+          allow 172.24.0.0/24;
+          deny all;
+        '';
       };
     };
   };

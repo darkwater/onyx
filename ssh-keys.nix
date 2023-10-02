@@ -6,6 +6,8 @@
     "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNZDUXMyUhvA+aWIMbP1qCOG8fHw3tvybaKYi4HeDIN7v9RpJKtWCBnHiKEd1MHDUYl5i62db/BfS4eaQX8OdgY= termius@yukiboshi"
     "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJxJ5OKlGN9c9DN8bEleIzxErrNXxpAmHP5FLQ7csH6aVb0Ajr5ekk9TEFTD3Y1DvAXNDf5hGSVI1uapTjArFIQ= termius@yuugure"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHD/t6Ikwwaj4Oj5IdZX/pQlP7N6qMjoDt+Yghh6V4Ji darkwater@winbox"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID74Nk4s41TgaRqL/BBn44wtu666KME4edMVHmcdKESK deck@holo"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzaBU2sJeN8IYnxTt4UVtUMSszpR9qreLG7WUelezRe dark@tetsuya"
   ];
 
   arena = [

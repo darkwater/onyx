@@ -22,6 +22,7 @@ let
     yukiboshi = { ip = "172.24.0.10/24"; allowed = "172.24.0.10/32"; pubkey = "LA5PMGAQQ+bIWdzfldCqTZOnqUO+76iuaH3+crky53E="; };
     yuugure   = { ip = "172.24.0.11/24"; allowed = "172.24.0.11/32"; pubkey = "fSZksmk+IkOK51RgGMVpfja3CZM8GPOspd1DfOEOGhM="; };
     wslbox    = { ip = "172.24.0.12/24"; allowed = "172.24.0.12/32"; pubkey = "bbbYKmlmYupNUp7qtfPoIgkpg6Te50QfnEcaX8i5/mM="; };
+    holo      = { ip = "172.24.0.13/24"; allowed = "172.24.0.12/32"; pubkey = "2Skxe6ZoBydDwlQqvgW1GGIBMzsreJh7NL3NLd3O0Es="; };
   };
 
   peers = clients // servers;

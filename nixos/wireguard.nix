@@ -12,17 +12,17 @@ let
   };
 
   clients = {
-    tetsuya   = { ip = "172.24.0.2/24";  allowed = "172.24.0.2/32";  pubkey = "g/2jyEtxSuaHVX0XKzDF02CVpp1A0KT+lJDFNgrORA0="; };
+    tetsuya   = { ip = "172.24.0.2/24";  allowed = "172.24.0.2/32";  pubkey = "TEtsuGEWh0lV4EWn+lQoMQH3IW3I1jRj2DCJ7LrlgS8="; };
     nagumo    = { ip = "172.24.0.3/24";  allowed = "172.24.0.3/32";  pubkey = "k1NKYG+l9m7P99YTL8v7DQq3RZdvbr0NiH9/YKTb4Bo="; };
     sekiban   = { ip = "172.24.0.4/24";  allowed = "172.24.0.4/32";  pubkey = "SfFjkakUk1c6e/cRquxWmt8KB/4A2Cr7/iNsa8sr4GY="; };
     seiun     = { ip = "172.24.0.5/24";  allowed = "172.24.0.5/32";  pubkey = "mZYd6TlVO48O1osndhqTgoYNBfYeTmpHfoSJefvMwiQ="; };
-    sinon     = { ip = "172.24.0.6/24";  allowed = "172.24.0.6/32";  pubkey = "5G8Z3FAyvrFR94pR4xgeYVQr4u2lJR+Nl1hoqjLB1x8="; };
+    sinon     = { ip = "172.24.0.6/24";  allowed = "172.24.0.6/32";  pubkey = "SiNoNUxKSBLaZAiROCD2cycB8nCvdBjXSQVoQtFL4So="; };
     winbox    = { ip = "172.24.0.8/24";  allowed = "172.24.0.8/32";  pubkey = "gsyX8QoLLER63uaO3OwhVX5eh5HMfeNVr9Ecf0z6lW4="; };
-    atsushi   = { ip = "172.24.0.9/24";  allowed = "172.24.0.9/32";  pubkey = "4XolRIWE2552gsdlyhxCmIlulJQT8HVsEgRZslzuyk4="; };
-    yukiboshi = { ip = "172.24.0.10/24"; allowed = "172.24.0.10/32"; pubkey = "LA5PMGAQQ+bIWdzfldCqTZOnqUO+76iuaH3+crky53E="; };
-    yuugure   = { ip = "172.24.0.11/24"; allowed = "172.24.0.11/32"; pubkey = "fSZksmk+IkOK51RgGMVpfja3CZM8GPOspd1DfOEOGhM="; };
+    atsushi   = { ip = "172.24.0.9/24";  allowed = "172.24.0.9/32";  pubkey = "AtsuOp3tY+ThpXLkIKfzv/2Z/NE17rbzNvWUmB/VmCM="; };
+    yukiboshi = { ip = "172.24.0.10/24"; allowed = "172.24.0.10/32"; pubkey = "YUKI+YXmPhLKhsilEXsuUx1yUuWEmov4xjA6TWp56H0="; };
+    yuugure   = { ip = "172.24.0.11/24"; allowed = "172.24.0.11/32"; pubkey = "yuu+aCj3ZTdOUBlLtiDARV4IHomPstFjDFx1hu/tgk8="; };
     wslbox    = { ip = "172.24.0.12/24"; allowed = "172.24.0.12/32"; pubkey = "bbbYKmlmYupNUp7qtfPoIgkpg6Te50QfnEcaX8i5/mM="; };
-    holo      = { ip = "172.24.0.13/24"; allowed = "172.24.0.13/32"; pubkey = "2Skxe6ZoBydDwlQqvgW1GGIBMzsreJh7NL3NLd3O0Es="; };
+    holo      = { ip = "172.24.0.13/24"; allowed = "172.24.0.13/32"; pubkey = "holo++JxghcGJ2HZ4zuqJqo64RxP9D4IKBgxdDtt21U="; };
   };
 
   peers = clients // servers;

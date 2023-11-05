@@ -5,7 +5,7 @@
     ./backup.nix
     ./hardware.nix
     ./spotifyd.nix
-    ./sway.nix
+    ./gui.nix
     ./transmission.nix
   ];
 

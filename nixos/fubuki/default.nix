@@ -11,13 +11,24 @@
   services.nginx = {
     enable = true;
 
+    virtualHosts."novaember.com" = {
+      forceSSL = true;
+      enableACME = true;
+      locations."/".root = "/srv/http/novaember.com/public/";
+      locations."/s/" = {
+        proxyPass = "https://sinon.fbk.red/s/legacy/";
+        extraConfig = "proxy_set_header Host sinon.fbk.red;";
+        recommendedProxySettings = false;
+      };
+    };
+
     virtualHosts."dark.red" = {
       default = true;
       forceSSL = true;
       enableACME = true;
       locations."/".root = "/srv/http/dark.red/public/";
       locations."/s/" = {
-        proxyPass = "https://sinon.fbk.red/s/legacy/8f9453";
+        proxyPass = "https://sinon.fbk.red/s/legacy/8f9453/";
         extraConfig = "proxy_set_header Host sinon.fbk.red;";
         recommendedProxySettings = false;
       };

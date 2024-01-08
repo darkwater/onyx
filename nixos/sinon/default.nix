@@ -57,15 +57,6 @@
   services.nginx = {
     enable = true;
 
-    virtualHosts."actual.fbk.red" = {
-      onlySSL = true;
-      useACMEHost = "_.fbk.red";
-      locations."/" = {
-        proxyPass = "http://localhost:1357";
-        proxyWebsockets = true;
-      };
-    };
-
     virtualHosts."ha.fbk.red" = {
       onlySSL = true;
       useACMEHost = "_.fbk.red";
@@ -103,6 +94,15 @@
           allow 172.24.0.0/24;
           deny all;
         '';
+      };
+    };
+
+    virtualHosts."dynmap.fbk.red" = {
+      onlySSL = true;
+      useACMEHost = "_.fbk.red";
+      locations."/" = {
+        proxyPass = "http://localhost:3667";
+        proxyWebsockets = true;
       };
     };
   };

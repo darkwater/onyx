@@ -72,5 +72,14 @@
         '';
       };
     };
+
+    virtualHosts."dynmap.dark.red" = {
+      forceSSL = true;
+      enableACME = true;
+      locations."/" = {
+        proxyPass = "http://dynmap.fbk.red:3667";
+        proxyWebsockets = true;
+      };
+    };
   };
 }

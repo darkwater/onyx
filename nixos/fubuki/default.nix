@@ -77,7 +77,16 @@
       forceSSL = true;
       enableACME = true;
       locations."/" = {
-        proxyPass = "http://dynmap.fbk.red:3667";
+        proxyPass = "http://dynmap.fbk.red";
+        proxyWebsockets = true;
+      };
+    };
+
+    virtualHosts."bluemap.dark.red" = {
+      forceSSL = true;
+      enableACME = true;
+      locations."/" = {
+        proxyPass = "http://bluemap.fbk.red";
         proxyWebsockets = true;
       };
     };

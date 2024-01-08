@@ -105,5 +105,14 @@
         proxyWebsockets = true;
       };
     };
+
+    virtualHosts."bluemap.fbk.red" = {
+      onlySSL = true;
+      useACMEHost = "_.fbk.red";
+      locations."/" = {
+        proxyPass = "http://localhost:8100";
+        proxyWebsockets = true;
+      };
+    };
   };
 }

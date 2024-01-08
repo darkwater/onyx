@@ -77,7 +77,7 @@
       forceSSL = true;
       enableACME = true;
       locations."/" = {
-        proxyPass = "http://dynmap.fbk.red";
+        proxyPass = "http://sinon.fbk.red:3667";
         proxyWebsockets = true;
       };
     };
@@ -86,7 +86,7 @@
       forceSSL = true;
       enableACME = true;
       locations."/" = {
-        proxyPass = "http://bluemap.fbk.red";
+        proxyPass = "http://sinon.fbk.red:8100";
         proxyWebsockets = true;
       };
     };

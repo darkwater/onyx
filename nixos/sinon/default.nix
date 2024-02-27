@@ -4,6 +4,7 @@
   imports = [
     ./backup.nix
     ./hardware.nix
+    ./samba.nix
     ./spotifyd.nix
     ./gui.nix
     ./transmission.nix

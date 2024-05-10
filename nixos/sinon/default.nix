@@ -93,6 +93,21 @@
         proxyWebsockets = true;
         extraConfig = ''
           allow 172.24.0.0/24;
+          allow 192.168.0.0/24;
+          deny all;
+        '';
+      };
+    };
+
+    virtualHosts."grafana.fbk.red" = {
+      onlySSL = true;
+      useACMEHost = "_.fbk.red";
+      locations."/" = {
+        proxyPass = "http://localhost:3000";
+        proxyWebsockets = true;
+        extraConfig = ''
+          allow 172.24.0.0/24;
+          allow 192.168.0.0/24;
           deny all;
         '';
       };

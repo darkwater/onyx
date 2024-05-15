@@ -36,12 +36,15 @@
 
     virtualHosts."fbk.red" = {
       listen = [{ addr = "172.24.0.1"; port = 443; ssl = true; }];
-      default = true;
-      forceSSL = true;
-      enableACME = true;
+      onlySSL = true;
+      useACMEHost = "_.fbk.red";
       locations."/" = {
         proxyPass = "http://localhost:5916";
         recommendedProxySettings = false;
+        extraConfig = ''
+          allow 172.24.0.0/24;
+          deny all;
+        '';
       };
     };
 

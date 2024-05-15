@@ -67,7 +67,7 @@ in {
         { addr = "0.0.0.0"; port = 443; ssl = true; }
         { addr = "0.0.0.0"; port = 80; }
       ];
-      useACMEHost = "_.fbk.red";
+      useACMEHost = "fbk.red";
       forceSSL = true;
       locations."/".proxyPass = "http://${rpcAddress}:${toString rpcPort}";
     };

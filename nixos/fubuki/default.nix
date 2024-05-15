@@ -37,7 +37,7 @@
     virtualHosts."fbk.red" = {
       listen = [{ addr = "172.24.0.1"; port = 443; ssl = true; }];
       onlySSL = true;
-      useACMEHost = "_.fbk.red";
+      useACMEHost = "fbk.red";
       locations."/" = {
         proxyPass = "http://localhost:5916";
         recommendedProxySettings = false;
@@ -77,7 +77,7 @@
     virtualHosts."pass.fbk.red" = {
       listen = [{ addr = "172.24.0.1"; port = 443; ssl = true; }];
       onlySSL = true;
-      useACMEHost = "_.fbk.red";
+      useACMEHost = "fbk.red";
       locations."/" = {
         proxyPass = "http://localhost:4800";
         extraConfig = ''

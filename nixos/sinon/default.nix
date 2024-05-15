@@ -60,7 +60,7 @@
 
     virtualHosts."ha.fbk.red" = {
       onlySSL = true;
-      useACMEHost = "_.fbk.red";
+      useACMEHost = "fbk.red";
       locations."/" = {
         proxyPass = "http://localhost:8123";
         proxyWebsockets = true;
@@ -69,7 +69,7 @@
 
     virtualHosts."sinon.fbk.red" = {
       onlySSL = true;
-      useACMEHost = "_.fbk.red";
+      useACMEHost = "fbk.red";
       locations."/s/".alias = "/data/s/";
       locations."/e3/".alias = "/data/e3-nv/public/";
       locations."/anime/".alias = "/data/anime/";
@@ -78,7 +78,7 @@
 
     virtualHosts."tetsu.fbk.red" = {
       onlySSL = true;
-      useACMEHost = "_.fbk.red";
+      useACMEHost = "fbk.red";
       locations."/" = {
         proxyPass = "http://localhost:5352";
         proxyWebsockets = true;
@@ -87,7 +87,7 @@
 
     virtualHosts."syncthing.sinon.fbk.red" = {
       onlySSL = true;
-      useACMEHost = "_.sinon.fbk.red";
+      useACMEHost = "fbk.red";
       locations."/" = {
         proxyPass = "http://localhost:8384";
         proxyWebsockets = true;
@@ -101,7 +101,7 @@
 
     virtualHosts."grafana.fbk.red" = {
       onlySSL = true;
-      useACMEHost = "_.fbk.red";
+      useACMEHost = "fbk.red";
       locations."/" = {
         proxyPass = "http://localhost:3000";
         proxyWebsockets = true;

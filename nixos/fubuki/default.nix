@@ -34,6 +34,16 @@
       };
     };
 
+    virtualHosts."fbk.red" = {
+      default = true;
+      forceSSL = true;
+      enableACME = true;
+      locations."/" = {
+        proxyPass = "http://localhost:5916";
+        recommendedProxySettings = false;
+      };
+    };
+
     virtualHosts."s.dark.red" = {
       forceSSL = true;
       enableACME = true;

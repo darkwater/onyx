@@ -35,6 +35,7 @@
     };
 
     virtualHosts."fbk.red" = {
+      listen = [{ addr = "172.24.0.1"; port = 443; ssl = true; }];
       default = true;
       forceSSL = true;
       enableACME = true;

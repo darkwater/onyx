@@ -74,8 +74,8 @@ in
         g = "git";
         ip = "ip --color=auto";
         l = null;
-        lr = "exa -algFsnew";
-        lt = "exa -lgFL2 --tree";
+        lr = "eza -algFsnew";
+        lt = "eza -lgFL2 --tree";
         om = "overmind";
         pql = "pacman -Ql";
         psi = "pacman -Si";
@@ -84,13 +84,13 @@ in
         s = "ssh";
         scu = "systemctl --user";
         sd = "sudo docker";
-        sl = "sudo exa -Flgaa --group-directories-first";
+        sl = "sudo eza -Flgaa --group-directories-first";
         slr = "sudo ${lr}";
         slt = "sudo ${lt}";
         ssc = "sudo systemctl";
         svim = "sudo -E nvim";
-        tree = "exa --tree --group-directories-first";
-        treel = "exa --tree -lgF --group-directories-first";
+        tree = "eza --tree --group-directories-first";
+        treel = "eza --tree -lgF --group-directories-first";
       };
     };
 
@@ -115,7 +115,7 @@ in
         FZF_CTRL_T_OPTS = escape ''
           --height 80%
           --preview-window down:50%
-          --preview "(bat --color=always --style=header --paging=never {} 2> /dev/null || cat {} || exa -lgFL2 --tree --color=always {} | head -200) 2> /dev/null"
+          --preview "(bat --color=always --style=header --paging=never {} 2> /dev/null || cat {} || eza -lgFL2 --tree --color=always {} | head -200) 2> /dev/null"
         '';
       };
 
@@ -124,7 +124,7 @@ in
       bat
       du-dust
       ed
-      exa
+      eza
       fd
       fzf
       htop

@@ -26,55 +26,64 @@
     enable = true;
     wlr.enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "*";
   };
 
-  services.xserver = {
+  services.libinput.enable = true;
+  services.libinput.touchpad.accelProfile = "flat";
+
+  services.displayManager = {
+    autoLogin = {
       enable = true;
+      user = "dark";
+    };
 
-      videoDrivers = [ "amdgpu" ];
-      displayManager.autoLogin = {
-          enable = true;
-          user = "dark";
+    defaultSession = "none+i3";
+  };
+
+
+  services.xserver = {
+    enable = true;
+
+    videoDrivers = [ "amdgpu" ];
+
+    inputClassSections = [
+      ''
+        Identifier "Mouse Settings"
+        Driver "libinput"
+        MatchIsPointer "yes"
+        Option "AccelProfile" "flat"
+        Option "MiddleEmulation" "off"
+      ''
+    ];
+
+    wacom.enable = true;
+
+    xkb.options = "ctrl:nocaps";
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 35;
+
+    displayManager.lightdm = {
+      enable = true;
+      background = builtins.fetchurl {
+        url = https://dark.red/wallpapers/atsushi.png;
+        sha256 = "0a8y0d7ibrgzwp9lfw41vd9n1r7pzrbxkk9db6vi2pw1gkrqkyij";
       };
-
-      libinput.enable = true;
-      libinput.accelProfile = "flat";
-
-      inputClassSections = [
-          ''
-              Identifier "Mouse Settings"
-              Driver "libinput"
-              MatchIsPointer "yes"
-              Option "AccelProfile" "flat"
-              Option "MiddleEmulation" "off"
-          ''
-      ];
-
-      wacom.enable = true;
-
-      xkbOptions = "ctrl:nocaps";
-      autoRepeatDelay = 200;
-      autoRepeatInterval = 35;
-
-      displayManager.lightdm.enable = true;
-      displayManager.lightdm.background = builtins.fetchurl {
-          url = https://dark.red/wallpapers/atsushi.png;
-          sha256 = "0a8y0d7ibrgzwp9lfw41vd9n1r7pzrbxkk9db6vi2pw1gkrqkyij";
+      greeters.gtk = {
+        enable = true;
+        theme.name = "Adwaita-dark";
+        cursorTheme.name = "Capitaine Cursors - White";
+        cursorTheme.package = pkgs.capitaine-cursors;
+        extraConfig = ''
+          position = 50%,center 80%,center
+          hide-user-image = true
+        '';
       };
-      displayManager.lightdm.greeters.gtk = {
-          enable = true;
-          theme.name = "Adwaita-dark";
-          cursorTheme.name = "Capitaine Cursors - White";
-          cursorTheme.package = pkgs.capitaine-cursors;
-          extraConfig = ''
-              position = 50%,center 80%,center
-              hide-user-image = true
-          '';
-      };
+    };
 
-      displayManager.defaultSession = "none+i3";
-      windowManager.i3.enable = true;
-      desktopManager.xterm.enable = false;
+
+    windowManager.i3.enable = true;
+    desktopManager.xterm.enable = false;
   };
 
   services.picom = {
@@ -91,7 +100,7 @@
   #   wrapperFeatures.gtk = true;
   # };
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     dejavu_fonts
     hack-font
     noto-fonts

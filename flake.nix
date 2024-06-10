@@ -1,8 +1,8 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
-    shino.url = "github:darkwater/shino";
+    shino.url = "github:darkwater/shino-rust";
     hermes.url = "github:darkwater/hermes";
   };
 

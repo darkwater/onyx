@@ -47,7 +47,7 @@
   services.rdnssd.enable = true;
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
     hostName = config.networking.hostName;
     publish = {
       enable = true;

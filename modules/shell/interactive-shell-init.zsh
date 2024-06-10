@@ -70,7 +70,7 @@ man() { nvim +"Man $*" +only }
 l() {
     # -aa only in $HOME and without arguments
     aa="$([[ "$(pwd)" = "$HOME" && "$#" = 0 ]] || echo -n aa)"
-    exa -Flg$aa --group-directories-first "$@"
+    eza -Flg$aa --group-directories-first "$@"
 }
 
 downloads() {

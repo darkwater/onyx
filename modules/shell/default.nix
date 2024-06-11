@@ -74,8 +74,8 @@ in
         g = "git";
         ip = "ip --color=auto";
         l = null;
-        lr = "eza -algFsnew";
-        lt = "eza -lgFL2 --tree";
+        lr = "eza -algF -snew";
+        lt = "eza -lgF -L2 --tree";
         om = "overmind";
         pql = "pacman -Ql";
         psi = "pacman -Si";
@@ -84,7 +84,7 @@ in
         s = "ssh";
         scu = "systemctl --user";
         sd = "sudo docker";
-        sl = "sudo eza -Flgaa --group-directories-first";
+        sl = "sudo eza -F -lgaa --group-directories-first";
         slr = "sudo ${lr}";
         slt = "sudo ${lt}";
         ssc = "sudo systemctl";

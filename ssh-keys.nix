@@ -10,6 +10,7 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzaBU2sJeN8IYnxTt4UVtUMSszpR9qreLG7WUelezRe dark@tetsuya"
     "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIMKGwKgho6kTn896nw5y3bf9MTNzHDH1JyclvLK7FuxHyl23Zdm7kNR9MdfBOvhH0INfpYTcVyYyKhjf/LVTZo= termius@yuugure"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDC3MX9s9PXNel1N4Mwdt8NHxjBOyAwQvkuN/Epp3VUH shino yuugure"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII1xy6hArp38Mbwv1GkaC3U1I59JzZUG3wSjNDK9x9Xb shino tetsuya"
   ];
 
   arena = [

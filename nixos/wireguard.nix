@@ -13,7 +13,7 @@ let
 
   clients = {
     tetsuya   = { ip = "172.24.0.2/24";  allowed = "172.24.0.2/32";  pubkey = "TEtsuGEWh0lV4EWn+lQoMQH3IW3I1jRj2DCJ7LrlgS8="; };
-    nagumo    = { ip = "172.24.0.3/24";  allowed = "172.24.0.3/32";  pubkey = "k1NKYG+l9m7P99YTL8v7DQq3RZdvbr0NiH9/YKTb4Bo="; };
+    nagumo    = { ip = "172.24.0.3/24";  allowed = "172.24.0.3/32";  pubkey = "0mOSPlvp9QuC4F7ASdIIll6wYGalc8Ptfff5JB/ppQ0="; };
     sekiban   = { ip = "172.24.0.4/24";  allowed = "172.24.0.4/32";  pubkey = "SfFjkakUk1c6e/cRquxWmt8KB/4A2Cr7/iNsa8sr4GY="; };
     seiun     = { ip = "172.24.0.5/24";  allowed = "172.24.0.5/32";  pubkey = "mZYd6TlVO48O1osndhqTgoYNBfYeTmpHfoSJefvMwiQ="; };
     sinon     = { ip = "172.24.0.6/24";  allowed = "172.24.0.6/32";  pubkey = "sinon+Lpild6N42rIPl0AY1BbQ4Z7mjoZjDrPMtVTmo="; };

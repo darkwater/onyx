@@ -8,6 +8,7 @@ let
 in {
   services.transmission = {
     enable = true;
+    package = pkgs.transmission_4;
     downloadDirPermissions = "775";
     settings = {
       download-dir = "${torrentsLocation}/_misc";

@@ -23,7 +23,7 @@
     tailscale
     wayland
     wtype
-    youtube-dl
+    yt-dlp
   ];
 
   services.fwupd.enable = true;

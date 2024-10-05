@@ -105,6 +105,6 @@ in
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     zramSwap.enable = true;
-    system.stateVersion = "22.05";
+    system.stateVersion = "24.05";
   };
 }

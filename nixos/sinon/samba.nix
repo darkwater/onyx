@@ -6,11 +6,13 @@
     package = pkgs.samba4Full;
     securityType = "user";
     invalidUsers = [ "root" ];
-    extraConfig = ''
-      workgroup = DARKNESS
-      server string = sinon
-      server role = standalone server
-    '';
+    settings = {
+      global = {
+          "workgroup" = "DARKNESS";
+          "server string" = "sinon";
+          "server role" = "standalone server";
+      };
+    };
     shares = {
       data = {
         path = "/data/";

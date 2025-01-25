@@ -20,15 +20,12 @@
     mpv
     pulsemixer
     sway
-    tailscale
     wayland
     wtype
     yt-dlp
   ];
 
   services.fwupd.enable = true;
-
-  services.tailscale.enable = true;
 
   services.flatpak.enable = true;
 

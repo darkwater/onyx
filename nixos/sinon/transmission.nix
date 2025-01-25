@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixpkgs_transmission_4_0_5, ... }:
 
 let
   torrentsLocation = "/data/torrents";
@@ -8,7 +8,7 @@ let
 in {
   services.transmission = {
     enable = true;
-    package = pkgs.transmission_4;
+    package = nixpkgs_transmission_4_0_5.legacyPackages.x86_64-linux.transmission_4;
     downloadDirPermissions = "775";
     settings = {
       download-dir = "${torrentsLocation}/_misc";

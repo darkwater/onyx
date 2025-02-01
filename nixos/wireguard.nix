@@ -16,7 +16,7 @@ let
     nagumo    = { ip = "172.24.0.3/24";  allowed = "172.24.0.3/32";  pubkey = "0mOSPlvp9QuC4F7ASdIIll6wYGalc8Ptfff5JB/ppQ0="; };
     sekiban   = { ip = "172.24.0.4/24";  allowed = "172.24.0.4/32";  pubkey = "SfFjkakUk1c6e/cRquxWmt8KB/4A2Cr7/iNsa8sr4GY="; };
     seiun     = { ip = "172.24.0.5/24";  allowed = "172.24.0.5/32";  pubkey = "mZYd6TlVO48O1osndhqTgoYNBfYeTmpHfoSJefvMwiQ="; };
-    sinon     = { ip = "172.24.0.6/24";  allowed = "172.24.0.6/32";  pubkey = "sinon+Lpild6N42rIPl0AY1BbQ4Z7mjoZjDrPMtVTmo="; };
+    sinon     = { ip = "172.24.0.6/24";  allowed = "172.24.0.6/32";  pubkey = "qPOQgBXz5vd/YiD29f9ojAOFjWpWYbVng+GeXAOKHhk="; };
     winbox    = { ip = "172.24.0.8/24";  allowed = "172.24.0.8/32";  pubkey = "gsyX8QoLLER63uaO3OwhVX5eh5HMfeNVr9Ecf0z6lW4="; };
     atsushi   = { ip = "172.24.0.9/24";  allowed = "172.24.0.9/32";  pubkey = "AtsuOp3tY+ThpXLkIKfzv/2Z/NE17rbzNvWUmB/VmCM="; };
     yukiboshi = { ip = "172.24.0.10/24"; allowed = "172.24.0.10/32"; pubkey = "YUKI+YXmPhLKhsilEXsuUx1yUuWEmov4xjA6TWp56H0="; };

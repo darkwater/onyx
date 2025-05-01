@@ -7,11 +7,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1735427550,
-        "narHash": "sha256-eukZRQ31IaJHVratoaZGcqSTMJrL6R35B8JBI+j4XwA=",
+        "lastModified": 1741361032,
+        "narHash": "sha256-wvWxtdMI/8JSB16QjoDSGlKpTpPvhsTdKJ9WjOQq7tU=",
         "owner": "darkwater",
         "repo": "hermes",
-        "rev": "43455d30443f4ede4072acd213cd5b62c103cae1",
+        "rev": "28f4768d0ca2fed436fc1499302d47aae6a0ce43",
         "type": "github"
       },
       "original": {
@@ -90,11 +90,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1735531152,
-        "narHash": "sha256-As8I+ebItDKtboWgDXYZSIjGlKeqiLBvjxsQHUmAf1Q=",
+        "lastModified": 1745921652,
+        "narHash": "sha256-hEAvEN+y/OQ7wA7+u3bFJwXSe8yoSf2QaOMH3hyTJTQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3ffbbdbac0566a0977da3d2657b89cbcfe9a173b",
+        "rev": "b000159bba69b0106a42f65e52dbf27f77aca9d3",
         "type": "github"
       },
       "original": {
